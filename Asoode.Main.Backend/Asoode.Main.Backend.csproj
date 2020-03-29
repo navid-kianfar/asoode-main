@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\fonts\arabic" />
+      <Folder Include="wwwroot\fonts\english" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Asoode.Main.Business\Asoode.Main.Business.csproj" />
+      <ProjectReference Include="..\Asoode.Main.Core\Asoode.Main.Core.csproj" />
+      <ProjectReference Include="..\Asoode.Main.Data\Asoode.Main.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    </ItemGroup>
+</Project>

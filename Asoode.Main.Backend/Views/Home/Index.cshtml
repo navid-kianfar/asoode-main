@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+@{ Layout = ""; }
+<html dir="@ViewBag.Direction" lang="@ViewBag.Lang">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["PAGE_TITLE"]</title>
+    <link rel="stylesheet" href="~/stylesheets/bootstrap.@(ViewBag.Direction).min.css" />
+    <link rel="stylesheet" href="~/stylesheets/site.css" />
+</head>
+<body class="home-page lang-@ViewBag.Lang dir-@ViewBag.Direction">
+    <div class="image-container">
+        <img src="/images/main-bg.png" alt="">
+        <div class="header">
+            <div class="box">
+                <div class="logo">
+                    <img src="/images/asoode-logo.svg" alt="logo">
+                </div>
+                <a asp-controller="Home" asp-action="Why">Why Asoode</a>
+                <a asp-controller="Home" asp-action="Plans">Plans</a>
+                <a asp-controller="Home" asp-action="About">About us</a>
+            </div>
+            <div class="box">
+                <a href="https://panel.asoode.com/login">Login</a>
+                <a class="bordered" href="https://panel.asoode.com/register">Register</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

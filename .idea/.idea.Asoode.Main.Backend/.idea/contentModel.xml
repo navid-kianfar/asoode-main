@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Asoode.Main.Backend" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
+        <e p="appSetting.json" t="Include" />
+        <e p="Asoode.Main.Backend.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="Engine" t="Include">
+          <e p="JsonBiz.cs" t="Include" />
+          <e p="Program.cs" t="Include" />
+          <e p="ServerInfo.cs" t="Include" />
+          <e p="ServiceCollectionExtensions.cs" t="Include" />
+          <e p="Startup.cs" t="Include" />
+        </e>
+        <e p="Filters" t="Include">
+          <e p="LocalizeAttribute.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Asoode.Main.Backend.AssemblyInfo.cs" t="Include" />
+              <e p="Asoode.Main.Backend.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Home" t="Include">
+            <e p="About.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+            <e p="Plans.cshtml" t="Include" />
+            <e p="Why.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="fonts" t="Include">
+            <e p="arabic" t="Include" />
+            <e p="english" t="Include" />
+            <e p="icons" t="Include">
+              <e p="asoode" t="Include">
+                <e p="ASOODE.eot" t="Include" />
+                <e p="ASOODE.svg" t="Include" />
+                <e p="ASOODE.ttf" t="Include" />
+                <e p="ASOODE.woff" t="Include" />
+                <e p="style.css" t="Include" />
+              </e>
+            </e>
+            <e p="persian" t="Include">
+              <e p="iran-sans" t="Include">
+                <e p="eot" t="Include">
+                  <e p="IRANSansWeb.eot" t="Include" />
+                  <e p="IRANSansWeb_Black.eot" t="Include" />
+                  <e p="IRANSansWeb_Bold.eot" t="Include" />
+                  <e p="IRANSansWeb_Light.eot" t="Include" />
+                  <e p="IRANSansWeb_Medium.eot" t="Include" />
+                  <e p="IRANSansWeb_UltraLight.eot" t="Include" />
+                </e>
+                <e p="persian" t="Include">
+                  <e p="eot" t="Include">
+                    <e p="IRANSansWeb(FaNum).eot" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Black.eot" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Bold.eot" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Light.eot" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Medium.eot" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_UltraLight.eot" t="Include" />
+                  </e>
+                  <e p="ttf" t="Include">
+                    <e p="IRANSansWeb(FaNum).ttf" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Black.ttf" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Bold.ttf" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Light.ttf" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Medium.ttf" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_UltraLight.ttf" t="Include" />
+                  </e>
+                  <e p="woff" t="Include">
+                    <e p="IRANSansWeb(FaNum).woff" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Black.woff" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Bold.woff" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Light.woff" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Medium.woff" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_UltraLight.woff" t="Include" />
+                  </e>
+                  <e p="woff2" t="Include">
+                    <e p="IRANSansWeb(FaNum).woff2" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Black.woff2" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Bold.woff2" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Light.woff2" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_Medium.woff2" t="Include" />
+                    <e p="IRANSansWeb(FaNum)_UltraLight.woff2" t="Include" />
+                  </e>
+                </e>
+                <e p="ttf" t="Include">
+                  <e p="IRANSansWeb.ttf" t="Include" />
+                  <e p="IRANSansWeb_Black.ttf" t="Include" />
+                  <e p="IRANSansWeb_Bold.ttf" t="Include" />
+                  <e p="IRANSansWeb_Light.ttf" t="Include" />
+                  <e p="IRANSansWeb_Medium.ttf" t="Include" />
+                  <e p="IRANSansWeb_UltraLight.ttf" t="Include" />
+                </e>
+                <e p="woff" t="Include">
+                  <e p="IRANSansWeb.woff" t="Include" />
+                  <e p="IRANSansWeb_Black.woff" t="Include" />
+                  <e p="IRANSansWeb_Bold.woff" t="Include" />
+                  <e p="IRANSansWeb_Light.woff" t="Include" />
+                  <e p="IRANSansWeb_Medium.woff" t="Include" />
+                  <e p="IRANSansWeb_UltraLight.woff" t="Include" />
+                </e>
+                <e p="woff2" t="Include">
+                  <e p="IRANSansWeb.woff2" t="Include" />
+                  <e p="IRANSansWeb_Black.woff2" t="Include" />
+                  <e p="IRANSansWeb_Bold.woff2" t="Include" />
+                  <e p="IRANSansWeb_Light.woff2" t="Include" />
+                  <e p="IRANSansWeb_Medium.woff2" t="Include" />
+                  <e p="IRANSansWeb_UltraLight.woff2" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="images" t="Include">
+            <e p="asoode-logo.svg" t="Include" />
+            <e p="main-bg.png" t="Include" />
+            <e p="main-bg@2x.png" t="Include" />
+          </e>
+          <e p="stylesheets" t="Include">
+            <e p="bootstrap.ltr.min.css" t="Include" />
+            <e p="bootstrap.rtl.min.css" t="Include" />
+            <e p="site.css" t="Include" />
+            <e p="site.css.map" t="Include" />
+            <e p="site.scss" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Asoode.Main.Backend.sln" t="IncludeFlat" />
+      <e p="Asoode.Main.Business" t="IncludeRecursive">
+        <e p="Asoode.Main.Business.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="General" t="Include">
+          <e p="TranslateBiz.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Asoode.Main.Business.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ServiceCollectionExtensions.cs" t="Include" />
+      </e>
+      <e p="Asoode.Main.Core" t="IncludeRecursive">
+        <e p="Asoode.Main.Core.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contracts" t="Include">
+          <e p="General" t="Include">
+            <e p="IJsonBiz.cs" t="Include" />
+            <e p="IServerInfo.cs" t="Include" />
+            <e p="ITranslateBiz.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Asoode.Main.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Asoode.Main.Data" t="IncludeRecursive">
+        <e p="Asoode.Main.Data.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Asoode.Main.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ServiceCollectionExtensions.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Asoode.Main.Backend.161469836.00" t="ExcludeRecursive" />
+  </component>
+</project>
