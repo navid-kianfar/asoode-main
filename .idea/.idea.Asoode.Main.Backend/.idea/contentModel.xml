@@ -20,6 +20,10 @@
         <e p="Filters" t="Include">
           <e p="LocalizeAttribute.cs" t="Include" />
         </e>
+        <e p="I18n" t="Include">
+          <e p="en.json" t="Include" />
+          <e p="fa.json" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -144,6 +148,7 @@
       </e>
       <e p="Asoode.Main.Backend.sln" t="IncludeFlat" />
       <e p="Asoode.Main.Business" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
         <e p="Asoode.Main.Business.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="General" t="Include">
@@ -159,6 +164,7 @@
         <e p="ServiceCollectionExtensions.cs" t="Include" />
       </e>
       <e p="Asoode.Main.Core" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
         <e p="Asoode.Main.Core.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts" t="Include">
@@ -177,6 +183,7 @@
         </e>
       </e>
       <e p="Asoode.Main.Data" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
         <e p="Asoode.Main.Data.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
