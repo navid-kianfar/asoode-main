@@ -40,6 +40,9 @@
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="Home" t="Include">
             <e p="About.cshtml" t="Include" />
+            <e p="Blog.cshtml" t="Include" />
+            <e p="Contact.cshtml" t="Include" />
+            <e p="Faq.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="Plans.cshtml" t="Include" />
             <e p="Why.cshtml" t="Include" />
@@ -152,6 +155,7 @@
               <e p="owl.theme.green.css" t="Include" />
               <e p="owl.video.play.png" t="Include" />
             </e>
+            <e p="quotation.png" t="Include" />
             <e p="timespent.png" t="Include" />
             <e p="wbs.png" t="Include" />
           </e>

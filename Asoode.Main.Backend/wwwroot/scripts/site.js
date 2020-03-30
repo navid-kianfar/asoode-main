@@ -37,4 +37,13 @@
             }
         }
     });
+    $('.bx-1 .owl-carousel').owlCarousel({
+        rtl:rtl,
+        dot:true,
+        responsive:{
+            0:{
+                items:1
+            }
+        }
+    });
 })(jQuery, window, document);

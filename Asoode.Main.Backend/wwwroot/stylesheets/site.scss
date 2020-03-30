@@ -522,6 +522,85 @@ body {
       margin-bottom: 30px;
       font-weight: 500;
     }
+    
+    .boxes {
+      position: relative;
+      width: 500px;
+      height: 250px;
+      margin: 0 auto;
+      
+      .box {
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 
+          0 6px 10px 0 rgba(0, 0, 0, 0.14), 
+          0 1px 18px 0 rgba(0, 0, 0, 0.12);
+        height: 250px;
+        background: #fff;
+        position: absolute;
+        padding: 30px 10px 10px;
+        
+        .item {
+          display: flex;
+          flex-direction: column;
+          .image {
+            display: flex;
+            justify-content: center;
+            img {
+              width: 70px;
+              border-radius: 50px;
+            }
+          }
+          .name {
+            text-align: center;
+            padding: 20px 0 5px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #333333;
+          }
+          .job-title {
+            color: #b9b7b7;
+            font-weight: 300;
+            font-size: 0.7rem;
+            text-align: center;
+          }
+          .description {
+            font-size: 0.7rem;
+            color: #5a5a5a;
+            text-align: justify;
+            position: relative;
+            padding-top: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+            img {
+              position: absolute;
+              top: -20px;
+              width: 30px;
+            }
+          }
+        }
+      }
+      .bx-1 {
+        width: 490px;
+        z-index: 4;
+      }
+      .bx-2 {
+        width: 480px;
+        z-index: 3;
+        top: 5px;
+        right: 5px;
+      }
+      .bx-3 {
+        width: 470px;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+      }
+      .bx-4 {
+        width: 460px;
+        z-index: 1;
+        top: 15px;
+        right: 15px;
+      }
+    }
   }
   
   .footer {

@@ -411,6 +411,80 @@ body.dir-ltr {
   margin-bottom: 30px;
   font-weight: 500;
 }
+.home-page .others-say .boxes {
+  position: relative;
+  width: 500px;
+  height: 250px;
+  margin: 0 auto;
+}
+.home-page .others-say .boxes .box {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  height: 250px;
+  background: #fff;
+  position: absolute;
+  padding: 30px 10px 10px;
+}
+.home-page .others-say .boxes .box .item {
+  display: flex;
+  flex-direction: column;
+}
+.home-page .others-say .boxes .box .item .image {
+  display: flex;
+  justify-content: center;
+}
+.home-page .others-say .boxes .box .item .image img {
+  width: 70px;
+  border-radius: 50px;
+}
+.home-page .others-say .boxes .box .item .name {
+  text-align: center;
+  padding: 20px 0 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333333;
+}
+.home-page .others-say .boxes .box .item .job-title {
+  color: #b9b7b7;
+  font-weight: 300;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.home-page .others-say .boxes .box .item .description {
+  font-size: 0.7rem;
+  color: #5a5a5a;
+  text-align: justify;
+  position: relative;
+  padding-top: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.home-page .others-say .boxes .box .item .description img {
+  position: absolute;
+  top: -20px;
+  width: 30px;
+}
+.home-page .others-say .boxes .bx-1 {
+  width: 490px;
+  z-index: 4;
+}
+.home-page .others-say .boxes .bx-2 {
+  width: 480px;
+  z-index: 3;
+  top: 5px;
+  right: 5px;
+}
+.home-page .others-say .boxes .bx-3 {
+  width: 470px;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+}
+.home-page .others-say .boxes .bx-4 {
+  width: 460px;
+  z-index: 1;
+  top: 15px;
+  right: 15px;
+}
 .home-page .footer {
   background: #3c2359;
   padding: 30px;
