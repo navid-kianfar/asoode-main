@@ -1,4 +1,6 @@
 (function($, window, document, undefined){
+    const rtl = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
+    
     const win = $(window);
     const allMods = $(".feature");
 
@@ -17,5 +19,23 @@
             }
         });
 
+    });
+
+    $('.your-work .owl-carousel').owlCarousel({
+        rtl:rtl,
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
     });
 })(jQuery, window, document);

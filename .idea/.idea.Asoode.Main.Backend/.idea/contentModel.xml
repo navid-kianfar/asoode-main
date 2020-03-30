@@ -134,13 +134,26 @@
           </e>
           <e p="images" t="Include">
             <e p="asoode-logo.svg" t="Include" />
+            <e p="cards.png" t="Include" />
+            <e p="dashboard.png" t="Include" />
+            <e p="holding.png" t="Include" />
             <e p="main-bg.png" t="Include" />
             <e p="main-bg@2x.png" t="Include" />
-            <e p="tmp.png" t="Include" />
+            <e p="messenger-bot.png" t="Include" />
+            <e p="owl" t="Include">
+              <e p="ajax-loader.gif" t="Include" />
+              <e p="owl.carousel.css" t="Include" />
+              <e p="owl.theme.default.css" t="Include" />
+              <e p="owl.theme.green.css" t="Include" />
+              <e p="owl.video.play.png" t="Include" />
+            </e>
+            <e p="timespent.png" t="Include" />
+            <e p="wbs.png" t="Include" />
           </e>
           <e p="scripts" t="Include">
             <e p="jquery-3.4.1.min.js" t="Include" />
             <e p="jquery.visible.min.js" t="Include" />
+            <e p="owl.carousel.min.js" t="Include" />
             <e p="site.js" t="Include" />
           </e>
           <e p="stylesheets" t="Include">

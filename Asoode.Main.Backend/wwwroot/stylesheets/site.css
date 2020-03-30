@@ -1,4 +1,6 @@
 @import "../fonts/icons/asoode/style.css";
+@import "../images/owl/owl.carousel.css";
+@import "../images/owl/owl.theme.default.css";
 ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
@@ -111,10 +113,13 @@ body.dir-ltr {
   display: flex;
   width: 100px;
 }
-.home-page .image-container .header .box .logo img {
+.home-page .image-container .header .box .logo a {
+  width: 100px;
+}
+.home-page .image-container .header .box .logo a img {
   max-width: 100%;
 }
-.home-page .image-container .header .box a {
+.home-page .image-container .header .box a.link {
   display: flex;
   padding: 3px 15px;
   color: #ffffff;
@@ -122,7 +127,7 @@ body.dir-ltr {
   font-size: 0.9rem;
   text-decoration: none;
 }
-.home-page .image-container .header .box a.bordered {
+.home-page .image-container .header .box a.link.bordered {
   border: 1px solid #ffffff;
   border-radius: 10px;
 }
@@ -202,7 +207,7 @@ body.dir-ltr {
 .home-page .features {
   background: #ffffff;
   padding: 50px;
-  margin: 50px 0;
+  margin: 50px 0 0;
 }
 .home-page .features .feature {
   display: flex;
@@ -232,16 +237,110 @@ body.dir-ltr {
 }
 .home-page .come-in {
   transform: translateY(150px);
-  animation: come-in 0.8s ease forwards;
+  animation: come-in 1.5s ease forwards;
 }
 .home-page .come-in:nth-child(odd) {
-  animation-duration: 0.6s;
+  animation-duration: 1s;
   /* So they look staggered */
 }
 @keyframes come-in {
   to {
     transform: translateY(0);
   }
+}
+.home-page .applications {
+  background: #dedddd;
+  padding: 50px;
+}
+.home-page .applications h4 {
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.home-page .applications .boxes {
+  display: flex;
+}
+.home-page .applications .boxes .box {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.home-page .applications .boxes .box .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.home-page .applications .boxes .box .title i {
+  font-size: 20px;
+  margin-inline-end: 20px;
+}
+.home-page .applications .boxes .box .title span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.home-page .applications .boxes .box .image {
+  display: flex;
+  margin-top: 30px;
+}
+.home-page .applications .boxes .box .image a {
+  text-decoration: none;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin-inline-end: 10px;
+}
+.home-page .applications .boxes .box .image a i {
+  font-size: 25px;
+  color: #3683f0;
+}
+.home-page .your-work {
+  padding: 50px;
+  background: #ffffff;
+}
+.home-page .your-work h4 {
+  font-weight: 500;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.home-page .your-work .boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-page .your-work .boxes .box {
+  background: #1cc2d6;
+  padding: 20px;
+  border-radius: 10px;
+  margin-inline-end: 20px;
+  text-align: center;
+  min-width: 250px;
+  min-height: 250px;
+  position: relative;
+}
+.home-page .your-work .boxes .box i.ico {
+  color: #ffffff;
+  font-size: 25px;
+}
+.home-page .your-work .boxes .box i.bg {
+  color: #61d2e2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 120px;
+}
+.home-page .your-work .boxes .box h5 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.home-page .your-work .boxes .box h6 {
+  color: #4b5050;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  position: relative;
+  z-index: 1;
+  text-align: justify;
 }
 
 @media (max-width: 1200px) {

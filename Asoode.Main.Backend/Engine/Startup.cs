@@ -3,12 +3,21 @@ using Asoode.Main.Data;
 using Asoode.Web;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace Asoode.Main.Backend
 {
+    public class I18NRouteConstraint : RegexRouteConstraint
+    {
+        public I18NRouteConstraint() : 
+            base(@"(fa|en|ar|fr|it|lv|nl|es|ru|ms|da|pt|sv|de|tr|ga|fi|hi)$")
+        {
+        }
+    }
+    
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -43,8 +52,17 @@ namespace Asoode.Main.Backend
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    "root", 
+                    "{culture?}", 
+                    new { controller = "Home", action = "Index" }, 
+                    new { culture = new I18NRouteConstraint() }
+                );
+                endpoints.MapControllerRoute(
+                    "main", 
+                    "{culture}/{action=Index}/{id?}", 
+                    new { controller = "Home" }, 
+                    new { culture = new I18NRouteConstraint() }
+                );
             });
         }
     }
