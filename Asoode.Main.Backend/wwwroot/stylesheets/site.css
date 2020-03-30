@@ -148,6 +148,7 @@ body.dir-ltr {
   margin: 30px auto;
   font-size: 0.8rem;
   justify-content: center;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 .home-page .image-container .slider {
   background: #f2f2f2;
@@ -169,7 +170,7 @@ body.dir-ltr {
 .home-page .wrapper h4 {
   text-align: center;
   font-size: 0.9rem;
-  line-height: 1.2rem;
+  line-height: 1.6rem;
   margin-bottom: 20px;
 }
 .home-page .wrapper .section-1 {
@@ -197,6 +198,50 @@ body.dir-ltr {
 .home-page .wrapper .section-1 .box .description {
   text-align: justify;
   font-size: 0.8rem;
+}
+.home-page .features {
+  background: #ffffff;
+  padding: 50px;
+  margin: 50px 0;
+}
+.home-page .features .feature {
+  display: flex;
+  margin-bottom: 50px;
+}
+.home-page .features .feature .info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-inline-end: 50px;
+}
+.home-page .features .feature .info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.home-page .features .feature .info h5 {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+.home-page .features .feature:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.home-page .features .feature:nth-child(2n) .info {
+  margin-inline-end: initial;
+  margin-inline-start: 50px;
+}
+.home-page .come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.home-page .come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+  /* So they look staggered */
+}
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1200px) {
