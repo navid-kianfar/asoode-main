@@ -23,7 +23,6 @@
 
     $('.your-work .owl-carousel').owlCarousel({
         rtl:rtl,
-        loop:true,
         margin:10,
         nav:true,
         responsive:{
