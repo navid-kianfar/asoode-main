@@ -133,12 +133,17 @@
             </e>
           </e>
           <e p="images" t="Include">
+            <e p="adam-o-hava.png" t="Include" />
+            <e p="artwich.png" t="Include" />
             <e p="asoode-logo.svg" t="Include" />
+            <e p="axess-logo.png" t="Include" />
             <e p="cards.png" t="Include" />
             <e p="dashboard.png" t="Include" />
             <e p="holding.png" t="Include" />
             <e p="main-bg.png" t="Include" />
             <e p="main-bg@2x.png" t="Include" />
+            <e p="mashver-app.png" t="Include" />
+            <e p="max-duel.png" t="Include" />
             <e p="messenger-bot.png" t="Include" />
             <e p="owl" t="Include">
               <e p="ajax-loader.gif" t="Include" />

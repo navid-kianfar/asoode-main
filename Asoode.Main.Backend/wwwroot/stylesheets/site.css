@@ -384,6 +384,20 @@ body.dir-ltr {
   justify-content: center;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
+.home-page .from-today .customers {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-page .from-today .customers a img {
+  width: 150px;
+  max-width: 100%;
+}
+.home-page .from-today .customers a.mashverapp {
+  width: 50px;
+}
 .home-page .others-say {
   background: #FFFFFF;
   padding: 50px;

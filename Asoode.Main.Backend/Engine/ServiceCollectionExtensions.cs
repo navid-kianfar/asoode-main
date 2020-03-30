@@ -1,3 +1,5 @@
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 using Asoode.Core.Contracts.General;
 using Asoode.Main.Backend.Engine;
 using Microsoft.Extensions.Configuration;
@@ -14,6 +16,8 @@ namespace Asoode.Web
         {
             services.AddSingleton<IServerInfo, ServerInfo>();
             services.AddSingleton<IJsonBiz, JsonBiz>();
+            services.AddSingleton<HtmlEncoder>(
+                HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.All }));
             return services;
         }
     }
