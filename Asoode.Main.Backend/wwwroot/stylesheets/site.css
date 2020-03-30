@@ -355,6 +355,10 @@ body.dir-ltr {
   border-radius: 30px;
   outline: none;
   margin-inline-end: 10px;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+.home-page .your-work .boxes .owl-nav .owl-prev span, .home-page .your-work .boxes .owl-nav .owl-next span {
+  font-size: 29px;
 }
 .home-page .from-today {
   background: #f2f2f2;
@@ -409,7 +413,46 @@ body.dir-ltr {
 }
 .home-page .footer {
   background: #3c2359;
-  padding: 50px;
+  padding: 30px;
+  min-height: 230px;
+  display: flex;
+  justify-content: space-around;
+}
+.home-page .footer .box.asoode {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+.home-page .footer .box.asoode .logo img {
+  width: 100px;
+}
+.home-page .footer .box.asoode a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.home-page .footer .box.middle {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  color: #FFFFFF;
+  align-items: flex-end;
+  font-size: 0.7rem;
+}
+.home-page .footer .box.boozhan {
+  color: #fff;
+  font-size: 0.7rem;
+}
+.home-page .footer .box.boozhan h6 {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+.home-page .footer .box.boozhan > a {
+  color: #a45ed8;
+  margin-top: 10px;
+  margin-inline-end: 10px;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
 @media (max-width: 1200px) {

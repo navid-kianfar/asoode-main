@@ -23,5 +23,17 @@ namespace Asoode.Main.Backend.Controllers
         {
             return View();
         }
+        public IActionResult Contact()
+        {
+            return View();
+        }
+        public IActionResult Faq()
+        {
+            return View();
+        }
+        public IActionResult Blog()
+        {
+            return View();
+        }
     }
 }
