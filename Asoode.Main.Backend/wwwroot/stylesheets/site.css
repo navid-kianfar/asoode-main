@@ -637,6 +637,9 @@ body.dir-ltr {
   .home-page .image-container .summary h2 {
     font-size: 0.7rem;
   }
+  .home-page .others-say .bx-2, .home-page .others-say .bx-3, .home-page .others-say .bx-4 {
+    display: none;
+  }
 }
 @media (max-width: 400px) {
   .home-page .image-container .box a {
