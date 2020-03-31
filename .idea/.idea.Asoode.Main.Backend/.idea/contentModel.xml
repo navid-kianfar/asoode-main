@@ -145,6 +145,8 @@
             <e p="favicons" t="Include">
               <e p="android-chrome-192x192.png" t="Include" />
               <e p="android-chrome-512x512.png" t="Include" />
+              <e p="app.en.manifest.txt" t="Include" />
+              <e p="app.fa.manifest.txt" t="Include" />
               <e p="app.webmanifest" t="Include" />
               <e p="apple-touch-icon.png" t="Include" />
               <e p="browserconfig.xml" t="Include" />
