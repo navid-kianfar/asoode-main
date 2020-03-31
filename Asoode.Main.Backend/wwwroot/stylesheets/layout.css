@@ -388,6 +388,10 @@ body {
   .header nav {
     padding: 10px;
   }
+  .header nav .box a {
+    font-size: 0.7rem !important;
+    padding: 3px 10px !important;
+  }
 }
 @media (max-width: 460px) {
   .footer {
