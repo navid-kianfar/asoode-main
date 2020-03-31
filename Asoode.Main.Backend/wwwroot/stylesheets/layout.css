@@ -235,6 +235,71 @@ body {
   height: 300px;
 }
 
+.page-plans h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.page-plans i {
+  color: #D4AF37;
+  margin: 20px 0;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+.page-plans table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.page-plans th {
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.7rem;
+  vertical-align: top;
+  border-inline-end: 2px solid #ddd;
+}
+.page-plans th:first-child {
+  border-inline-start: none;
+}
+.page-plans th .title {
+  color: #333333;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.page-plans th .price {
+  color: #FF5584;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.page-plans th .price-unit {
+  color: #626061;
+  font-size: 0.7rem;
+}
+.page-plans th button {
+  color: #333333;
+  margin: 10px 0;
+  background: #D4AF37;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.page-plans td {
+  border-inline-end: 2px solid #ddd;
+  border-bottom: 1px dashed #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.7rem;
+  vertical-align: bottom;
+}
+.page-plans td:first-child {
+  text-align: inherit;
+}
+
 @media (max-width: 780px) {
   .page-about {
     padding: 350px 50px 50px;
