@@ -249,7 +249,7 @@ body.dir-ltr {
   }
 }
 .home-page .applications {
-  background: #dedddd;
+  background: #dedddd url("/images/phone.png") left center no-repeat;
   padding: 50px;
 }
 .home-page .applications h4 {
@@ -395,12 +395,19 @@ body.dir-ltr {
   justify-content: space-between;
   align-items: center;
 }
+.home-page .from-today .customers a {
+  margin-bottom: 20px;
+}
 .home-page .from-today .customers a img {
   width: 150px;
   max-width: 100%;
 }
 .home-page .from-today .customers a.mashverapp {
-  width: 50px;
+  margin: 0 20px 20px;
+}
+.home-page .from-today .customers a.mashverapp img {
+  width: 50px !important;
+  min-width: 50px !important;
 }
 .home-page .others-say {
   background: #FFFFFF;
@@ -532,6 +539,97 @@ body.dir-ltr {
 @media (max-width: 1200px) {
   .home-page {
     background-size: auto;
+    background-position: inherit;
+  }
+  .home-page .image-container .summary h1 {
+    font-size: 1.5rem;
+    margin: 40px 0;
+  }
+  .home-page .image-container .summary h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 1050px) {
+  .home-page .wrapper {
+    margin: 380px 50px 0;
+  }
+}
+@media (max-width: 850px) {
+  .home-page .customers {
+    flex-wrap: wrap;
+  }
+  .home-page .customers a img {
+    min-width: 150px;
+    max-width: 150px;
+  }
+}
+@media (max-width: 750px) {
+  .home-page .image-container .header {
+    padding: 10px;
+  }
+  .home-page .image-container .summary {
+    padding: 0 20px;
+  }
+  .home-page .image-container .summary h1 {
+    font-size: 1.2rem;
+    margin: 30px 0;
+  }
+  .home-page .image-container .summary h2 {
+    font-size: 0.9rem;
+  }
+  .home-page .image-container .box a {
+    font-size: 0.7rem !important;
+    padding: 3px 10px !important;
+  }
+}
+@media (max-width: 630px) {
+  .home-page .image-container .slider {
+    width: 90vw !important;
+    height: 45vw !important;
+    right: 5vw !important;
+  }
+  .home-page .wrapper {
+    margin: calc(45vw + 80px) 50px 0;
+  }
+  .home-page .wrapper .section-1 {
+    flex-direction: column;
+  }
+  .home-page .wrapper .section-1 .box {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 570px) {
+  .home-page .image-container .summary h1 {
+    font-size: 0.9rem;
+    margin: 20px 0;
+  }
+  .home-page .image-container .summary h2 {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 400px) {
+  .home-page .image-container .box a {
+    font-size: 0.7rem !important;
+    padding: 3px 10px !important;
+  }
+  .home-page .image-container .box a.bordered {
+    display: none !important;
+  }
+}
+@media (max-width: 460px) {
+  .home-page .customers {
+    flex-direction: column;
+  }
+  .home-page .footer {
+    flex-direction: column;
+  }
+  .home-page .footer .middle {
+    margin: 50px 0;
+  }
+}
+@media (max-width: 350px) {
+  .home-page .image-container .box a.login {
+    display: none !important;
   }
 }
 

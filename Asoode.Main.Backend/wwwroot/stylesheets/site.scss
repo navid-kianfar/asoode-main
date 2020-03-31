@@ -1,21 +1,21 @@
 @import "../fonts/icons/asoode/style.css";
 @import "../images/owl/owl.carousel.css";
 @import "../images/owl/owl.theme.default.css";
+
 ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
   background: #fff;
 }
-
 ::-webkit-scrollbar-thumb {
   background: rgba(68, 68, 68, 0.4);
   -webkit-border-radius: 1ex;
   -webkit-box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.75);
 }
-
 ::-webkit-scrollbar-corner {
   background: #fff;
 }
+
 @font-face {
   font-family: 'ASOODE';
   src: url('/fonts/icons/asoode/ASOODE.eot?j3anoh');
@@ -45,7 +45,6 @@
   url('/fonts/persian/iran-sans/persian/ttf/IRANSansWeb(FaNum)_Black.ttf')
   format('truetype');
 }
-
 @font-face {
   font-family: IRANSans;
   font-style: normal;
@@ -63,7 +62,6 @@
   url('/fonts/persian/iran-sans/persian/ttf/IRANSansWeb(FaNum)_Bold.ttf')
   format('truetype');
 }
-
 @font-face {
   font-family: IRANSans;
   font-style: normal;
@@ -81,7 +79,6 @@
   url('/fonts/persian/iran-sans/persian/ttf/IRANSansWeb(FaNum)_Medium.ttf')
   format('truetype');
 }
-
 @font-face {
   font-family: IRANSans;
   font-style: normal;
@@ -99,7 +96,6 @@
   url('/fonts/persian/iran-sans/persian/ttf/IRANSansWeb(FaNum)_Light.ttf')
   format('truetype');
 }
-
 @font-face {
   font-family: IRANSans;
   font-style: normal;
@@ -117,7 +113,6 @@
   url('/fonts/persian/iran-sans/persian/ttf/IRANSansWeb(FaNum)_UltraLight.ttf')
   format('truetype');
 }
-
 @font-face {
   font-family: IRANSans;
   font-style: normal;
@@ -340,7 +335,7 @@ body {
   
   
   .applications {
-    background: #dedddd;
+    background: #dedddd url("/images/phone.png") left center no-repeat;
     padding: 50px;
     
     h4 {
@@ -501,13 +496,18 @@ body {
       justify-content: space-between;
       align-items: center;
       a {
+        margin-bottom: 20px;
         img {
           width: 150px;
           max-width: 100%;
         }
         
         &.mashverapp {
-          width: 50px;
+          img {
+            width: 50px !important;
+            min-width: 50px !important;
+          }
+          margin: 0 20px 20px;
         }
       }
     }
@@ -661,5 +661,142 @@ body {
 @media (max-width: 1200px) {
   .home-page {
     background-size: auto;
+    background-position: inherit;
+    .image-container {
+      .summary {
+        h1 {
+          font-size: 1.5rem;
+          margin: 40px 0;
+        }
+        h2 {
+          font-size: 1.2rem
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .home-page {
+    .wrapper {
+      margin: 380px 50px 0;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .home-page {
+    .customers {
+      flex-wrap: wrap;
+      a {
+        img {
+          min-width: 150px;
+          max-width: 150px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .home-page {
+    .image-container {
+      .header {
+        padding: 10px;
+      }
+      .summary {
+        padding: 0 20px;
+        h1 {
+          font-size: 1.2rem;
+          margin: 30px 0;
+        }
+        h2 {
+          font-size: 0.9rem
+        }
+      }
+      .box {
+        a {
+          font-size: 0.7rem !important;
+          padding: 3px 10px !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 630px) {
+  .home-page {
+    .image-container {
+      .slider {
+        width: 90vw !important;
+        height: 45vw !important;
+        right: 5vw !important;
+      }
+    }
+    .wrapper {
+      margin: calc(45vw + 80px) 50px 0;
+      
+      .section-1 {
+        flex-direction: column;
+        .box {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 570px) {
+  .home-page {
+    .image-container {
+      .summary {
+        h1 {
+          font-size: 0.9rem;
+          margin: 20px 0;
+        }
+        h2 {
+          font-size: 0.7rem
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .home-page {
+    .image-container {
+      .box {
+        a {
+          font-size: 0.7rem !important;
+          padding: 3px 10px !important;
+          
+          &.bordered {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 460px) {
+  .home-page {
+    .customers {
+      flex-direction: column;
+    }
+    
+    .footer {
+      flex-direction: column;
+      
+      .middle {
+        margin: 50px 0;
+      }
+    }
+  }
+}
+@media (max-width: 350px) {
+  .home-page {
+    .image-container {
+      .box {
+        a {
+          &.login {
+            display: none !important;
+          }
+        }
+      }
+    }
   }
 }

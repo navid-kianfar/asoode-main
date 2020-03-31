@@ -23,8 +23,7 @@
 
     $('.your-work .owl-carousel').owlCarousel({
         rtl:rtl,
-        margin:10,
-        nav:true,
+        dots:true,
         responsive:{
             0:{
                 items:1
@@ -39,7 +38,7 @@
     });
     $('.bx-1 .owl-carousel').owlCarousel({
         rtl:rtl,
-        dot:true,
+        dots:true,
         responsive:{
             0:{
                 items:1

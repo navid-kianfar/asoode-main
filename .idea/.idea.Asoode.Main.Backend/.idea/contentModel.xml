@@ -155,6 +155,7 @@
               <e p="owl.theme.green.css" t="Include" />
               <e p="owl.video.play.png" t="Include" />
             </e>
+            <e p="phone.png" t="Include" />
             <e p="quotation.png" t="Include" />
             <e p="timespent.png" t="Include" />
             <e p="wbs.png" t="Include" />
