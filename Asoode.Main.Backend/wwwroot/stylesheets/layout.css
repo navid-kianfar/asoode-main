@@ -189,12 +189,45 @@ body {
   min-height: 300px;
 }
 
+.page-about {
+  background: url("/images/bicycle.png") left top no-repeat;
+  min-height: 450px;
+}
+.page-about .about {
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+@media (max-width: 780px) {
+  .page-about {
+    padding: 350px 50px 50px;
+  }
+}
+@media (max-width: 750px) {
+  .header nav {
+    padding: 10px;
+  }
+}
 @media (max-width: 460px) {
   .footer {
     flex-direction: column;
   }
   .footer .middle {
     margin: 50px 0;
+  }
+}
+@media (max-width: 400px) {
+  .header .box a {
+    font-size: 0.7rem !important;
+    padding: 3px 10px !important;
+  }
+  .header .box a.bordered {
+    display: none !important;
+  }
+}
+@media (max-width: 350px) {
+  .header .box a.login {
+    display: none !important;
   }
 }
 
