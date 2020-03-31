@@ -310,12 +310,15 @@ body {
   font-size: 0.9rem;
   font-weight: 400;
   color: #333333;
+  white-space: normal;
 }
 .page-faq .faq-holder .card .collapse .card-body {
   font-size: 0.7rem;
+  text-align: justify;
 }
 .page-faq .faq-holder .card .collapsing .card-body {
   font-size: 0.7rem;
+  text-align: justify;
 }
 
 .page-blog h2.summary {

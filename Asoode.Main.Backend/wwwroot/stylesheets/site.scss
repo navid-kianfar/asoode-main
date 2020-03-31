@@ -707,6 +707,22 @@
   }
 }
 
+@media (max-width: 460px) {
+  .home-page {
+    .customers {
+      flex-direction: column;
+    }
+
+    .footer {
+      flex-direction: column;
+
+      .middle {
+        margin: 50px 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 400px) {
   .home-page {
     .image-container {
@@ -724,22 +740,6 @@
 
     .applications {
       background-image: none;
-    }
-  }
-}
-
-@media (max-width: 460px) {
-  .home-page {
-    .customers {
-      flex-direction: column;
-    }
-
-    .footer {
-      flex-direction: column;
-
-      .middle {
-        margin: 50px 0;
-      }
     }
   }
 }

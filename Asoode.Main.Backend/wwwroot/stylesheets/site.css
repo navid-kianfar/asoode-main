@@ -641,6 +641,17 @@ body.dir-ltr {
     display: none;
   }
 }
+@media (max-width: 460px) {
+  .home-page .customers {
+    flex-direction: column;
+  }
+  .home-page .footer {
+    flex-direction: column;
+  }
+  .home-page .footer .middle {
+    margin: 50px 0;
+  }
+}
 @media (max-width: 400px) {
   .home-page .image-container .box a {
     font-size: 0.7rem !important;
@@ -651,17 +662,6 @@ body.dir-ltr {
   }
   .home-page .applications {
     background-image: none;
-  }
-}
-@media (max-width: 460px) {
-  .home-page .customers {
-    flex-direction: column;
-  }
-  .home-page .footer {
-    flex-direction: column;
-  }
-  .home-page .footer .middle {
-    margin: 50px 0;
   }
 }
 @media (max-width: 350px) {
