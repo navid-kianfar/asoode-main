@@ -1,0 +1,123 @@
+@import "shared";
+body {
+  background: #FFFFFF;
+}
+.header {
+  .image {
+    background: url("/images/header.png") left top no-repeat;
+    height: 174px;
+    background-size: cover;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    cursor: pointer;
+
+    .box {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        display: flex;
+        width: 100px;
+
+        a {
+          width: 100px;
+
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+
+      a.link {
+        display: flex;
+        padding: 3px 15px;
+        color: #ffffff;
+        justify-content: center;
+        font-size: 0.9rem;
+        text-decoration: none;
+
+        &.bordered {
+          border: 1px solid #ffffff;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    top: -30px;
+  }
+}
+.footer {
+  background: #3c2359;
+  padding: 30px;
+  min-height: 230px;
+  display: flex;
+  justify-content: space-around;
+
+  .box {
+    &.asoode {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+
+      .logo {
+        img {
+          width: 100px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #FFFFFF;
+      }
+    }
+
+    &.middle {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      color: #FFFFFF;
+      align-items: flex-end;
+      font-size: 0.7rem;
+    }
+
+    &.boozhan {
+      color: #fff;
+      font-size: 0.7rem;
+
+      h6 {
+        font-size: 0.7rem;
+        font-weight: 300;
+      }
+
+      > a {
+        color: #a45ed8;
+        margin-top: 10px;
+        margin-inline-end: 10px;
+        font-size: 1.3rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.pg {
+  min-height: 300px;
+}
+
+@media (max-width: 460px) {
+  .footer {
+    flex-direction: column;
+
+    .middle {
+      margin: 50px 0;
+    }
+  }
+}

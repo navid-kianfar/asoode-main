@@ -142,6 +142,7 @@
             <e p="axess-logo.png" t="Include" />
             <e p="cards.png" t="Include" />
             <e p="dashboard.png" t="Include" />
+            <e p="header.png" t="Include" />
             <e p="holding.png" t="Include" />
             <e p="main-bg.png" t="Include" />
             <e p="main-bg@2x.png" t="Include" />
@@ -169,6 +170,12 @@
           <e p="stylesheets" t="Include">
             <e p="bootstrap.ltr.min.css" t="Include" />
             <e p="bootstrap.rtl.min.css" t="Include" />
+            <e p="layout.css" t="Include" />
+            <e p="layout.css.map" t="Include" />
+            <e p="layout.scss" t="Include" />
+            <e p="shared.css" t="Include" />
+            <e p="shared.css.map" t="Include" />
+            <e p="shared.scss" t="Include" />
             <e p="site.css" t="Include" />
             <e p="site.css.map" t="Include" />
             <e p="site.scss" t="Include" />

@@ -420,16 +420,17 @@ body.dir-ltr {
 }
 .home-page .others-say .boxes {
   position: relative;
-  width: 500px;
-  height: 250px;
+  max-width: 500px;
+  height: 270px;
   margin: 0 auto;
 }
 .home-page .others-say .boxes .box {
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-  height: 250px;
+  height: 270px;
   background: #fff;
   position: absolute;
   padding: 30px 10px 10px;
+  border-radius: 5px;
 }
 .home-page .others-say .boxes .box .item {
   display: flex;
@@ -471,26 +472,30 @@ body.dir-ltr {
   width: 30px;
 }
 .home-page .others-say .boxes .bx-1 {
-  width: 490px;
+  width: 100%;
+  max-width: 490px;
   z-index: 4;
 }
 .home-page .others-say .boxes .bx-2 {
-  width: 480px;
+  width: 100%;
+  max-width: 430px;
   z-index: 3;
   top: 5px;
-  right: 5px;
+  right: 30px;
 }
 .home-page .others-say .boxes .bx-3 {
-  width: 470px;
+  width: 100%;
+  max-width: 370px;
   z-index: 2;
   top: 10px;
-  right: 10px;
+  right: 60px;
 }
 .home-page .others-say .boxes .bx-4 {
-  width: 460px;
+  width: 100%;
+  max-width: 310px;
   z-index: 1;
   top: 15px;
-  right: 15px;
+  right: 90px;
 }
 .home-page .footer {
   background: #3c2359;

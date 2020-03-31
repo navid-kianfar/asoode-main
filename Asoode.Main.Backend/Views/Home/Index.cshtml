@@ -15,7 +15,7 @@
 </head>
 <body class="home-page lang-@ViewBag.Lang dir-@ViewBag.Direction">
 <div class="image-container">
-    <div class="header">
+    <nav class="header">
         <div class="box">
             <div class="logo">
                 <a href="/">
@@ -40,7 +40,7 @@
                 @translate.Get("REGISTER")
             </a>
         </div>
-    </div>
+    </nav>
 
     <div class="summary">
         <h1>@translate.Get("EVERY_THING_YOU_NEED")</h1>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="slider">
-        
+
     </div>
 </div>
 <div class="wrapper">
@@ -85,138 +85,138 @@
         </div>
     </div>
 </div>
- <div class="features"> 
-     <section class="feature"> 
-         <div class="info"> 
-             <h4 class="title">@translate.Get("FEATURE_WBS")</h4> 
-             <h5 class="description">@translate.Get("FEATURE_WBS_DESCRIPTION")</h5> 
-         </div> 
-         <div class="image"> 
-             <img src="/images/wbs.png" alt="temp"> 
-         </div> 
-     </section> 
-     <section class="feature"> 
-         <div class="info"> 
-             <h4 class="title">@translate.Get("FEATURE_WP")</h4> 
-             <h5 class="description">@translate.Get("FEATURE_WP_DESCRIPTION")</h5> 
-         </div> 
-         <div class="image"> 
-             <img src="/images/cards.png" alt="temp"> 
-         </div> 
-     </section> 
-     <section class="feature"> 
-         <div class="info"> 
-             <h4 class="title">@translate.Get("FEATURE_BOT")</h4> 
-             <h5 class="description">@translate.Get("FEATURE_BOT_DESCRIPTION")</h5> 
-         </div> 
-         <div class="image"> 
-             <img src="/images/messenger-bot.png" alt="temp"> 
-         </div> 
-     </section> 
-     <section class="feature"> 
-         <div class="info"> 
-             <h4 class="title">@translate.Get("FEATURE_TS")</h4> 
-             <h5 class="description">@translate.Get("FEATURE_TS_DESCRIPTION")</h5> 
-         </div> 
-         <div class="image"> 
-             <img src="/images/timespent.png" alt="temp"> 
-         </div> 
-     </section> 
-     <section class="feature"> 
-         <div class="info"> 
-             <h4 class="title">@translate.Get("FEATURE_DASHBOARD")</h4> 
-             <h5 class="description">@translate.Get("FEATURE_DASHBOARD_DESCRIPTION")</h5> 
-         </div> 
-         <div class="image"> 
-             <img src="/images/dashboard.png" alt="temp"> 
-         </div> 
-     </section> 
-     <section class="feature"> 
-         <div class="info"> 
-             <h4 class="title">@translate.Get("FEATURE_HOLDING")</h4> 
-             <h5 class="description">@translate.Get("FEATURE_HOLDING_DESCRIPTION")</h5> 
-         </div> 
-         <div class="image"> 
-             <img src="/images/holding.png" alt="temp"> 
-         </div> 
-     </section> 
- </div> 
- <div class="applications"> 
-     <h4>@translate.Get("ASOODE_APPLICATIONS")</h4> 
-     <div class="boxes"> 
-         <div class="box"> 
-             <div class="title"> 
-                 <i class="icon-download4"></i> 
-                 <span>@translate.Get("DOWNLOAD_PWA")</span> 
-             </div> 
-             <div class="image"> 
-                 <a href="#"> 
-                     <i class="icon-download41"></i> 
-                 </a> 
-             </div> 
-         </div> 
-         <div class="box"> 
-             <div class="title"> 
-                 <i class="icon-download4"></i> 
-                 <span>@translate.Get("DOWNLOAD_DESKTOP")</span> 
-             </div> 
-             <div class="image"> 
-                 <a href="#"> 
-                     <i class="icon-download41"></i> 
-                 </a> 
-             </div> 
-         </div> 
-         <div class="box mobile"> 
-             <div class="title"> 
-                 <i class="icon-download4"></i> 
-                 <span>@translate.Get("DOWNLOAD_NATIVE")</span> 
-             </div> 
-             <div class="image"> 
-                 <a href="#"> 
-                     <i class="icon-android"></i> 
-                 </a> 
-                 <a href="#"> 
-                     <i class="icon-appleinc"></i> 
-                 </a> 
-             </div> 
-         </div> 
-     </div> 
- </div> 
- <div class="your-work"> 
-     <h4>@translate.Get("ASOODE_FOR_YOUR_WORK")</h4> 
-     <div class="owl-carousel boxes"> 
-         <div class="box"> 
-             <i class="ico icon-android"></i> 
-             <h5>@translate.Get("ORGANIZATIONS")</h5> 
-             <h6>@translate.Get("ORGANIZATIONS_DESCRIPTION")</h6> 
-             <i class="bg icon-android"></i> 
-         </div> 
-         <div class="box"> 
-             <i class="ico icon-android"></i> 
-             <h5>@translate.Get("STARTUPS")</h5> 
-             <h6>@translate.Get("STARTUPS_DESCRIPTION")</h6> 
-             <i class="bg icon-android"></i> 
-         </div> 
-         <div class="box"> 
-             <i class="ico icon-android"></i> 
-             <h5>@translate.Get("CONSULATES")</h5> 
-             <h6>@translate.Get("CONSULATES_DESCRIPTION")</h6> 
-             <i class="bg icon-android"></i> 
-         </div> 
-         <div class="box"> 
-             <i class="ico icon-android"></i> 
-             <h5>@translate.Get("DOCTORS")</h5> 
-             <h6>@translate.Get("DOCTORS_DESCRIPTION")</h6> 
-             <i class="bg icon-android"></i> 
-         </div> 
-         <div class="box"> 
-             <i class="ico icon-android"></i> 
-             <h5>@translate.Get("INSTITUTES")</h5> 
-             <h6>@translate.Get("INSTITUTES_DESCRIPTION")</h6> 
-             <i class="bg icon-android"></i> 
-         </div> 
-     </div> 
- </div> 
+<div class="features">
+    <section class="feature">
+        <div class="info">
+            <h4 class="title">@translate.Get("FEATURE_WBS")</h4>
+            <h5 class="description">@translate.Get("FEATURE_WBS_DESCRIPTION")</h5>
+        </div>
+        <div class="image">
+            <img src="/images/wbs.png" alt="temp">
+        </div>
+    </section>
+    <section class="feature">
+        <div class="info">
+            <h4 class="title">@translate.Get("FEATURE_WP")</h4>
+            <h5 class="description">@translate.Get("FEATURE_WP_DESCRIPTION")</h5>
+        </div>
+        <div class="image">
+            <img src="/images/cards.png" alt="temp">
+        </div>
+    </section>
+    <section class="feature">
+        <div class="info">
+            <h4 class="title">@translate.Get("FEATURE_BOT")</h4>
+            <h5 class="description">@translate.Get("FEATURE_BOT_DESCRIPTION")</h5>
+        </div>
+        <div class="image">
+            <img src="/images/messenger-bot.png" alt="temp">
+        </div>
+    </section>
+    <section class="feature">
+        <div class="info">
+            <h4 class="title">@translate.Get("FEATURE_TS")</h4>
+            <h5 class="description">@translate.Get("FEATURE_TS_DESCRIPTION")</h5>
+        </div>
+        <div class="image">
+            <img src="/images/timespent.png" alt="temp">
+        </div>
+    </section>
+    <section class="feature">
+        <div class="info">
+            <h4 class="title">@translate.Get("FEATURE_DASHBOARD")</h4>
+            <h5 class="description">@translate.Get("FEATURE_DASHBOARD_DESCRIPTION")</h5>
+        </div>
+        <div class="image">
+            <img src="/images/dashboard.png" alt="temp">
+        </div>
+    </section>
+    <section class="feature">
+        <div class="info">
+            <h4 class="title">@translate.Get("FEATURE_HOLDING")</h4>
+            <h5 class="description">@translate.Get("FEATURE_HOLDING_DESCRIPTION")</h5>
+        </div>
+        <div class="image">
+            <img src="/images/holding.png" alt="temp">
+        </div>
+    </section>
+</div>
+<div class="applications">
+    <h4>@translate.Get("ASOODE_APPLICATIONS")</h4>
+    <div class="boxes">
+        <div class="box">
+            <div class="title">
+                <i class="icon-download4"></i>
+                <span>@translate.Get("DOWNLOAD_PWA")</span>
+            </div>
+            <div class="image">
+                <a href="#">
+                    <i class="icon-download41"></i>
+                </a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="title">
+                <i class="icon-download4"></i>
+                <span>@translate.Get("DOWNLOAD_DESKTOP")</span>
+            </div>
+            <div class="image">
+                <a href="#">
+                    <i class="icon-download41"></i>
+                </a>
+            </div>
+        </div>
+        <div class="box mobile">
+            <div class="title">
+                <i class="icon-download4"></i>
+                <span>@translate.Get("DOWNLOAD_NATIVE")</span>
+            </div>
+            <div class="image">
+                <a href="#">
+                    <i class="icon-android"></i>
+                </a>
+                <a href="#">
+                    <i class="icon-appleinc"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="your-work">
+    <h4>@translate.Get("ASOODE_FOR_YOUR_WORK")</h4>
+    <div class="owl-carousel boxes">
+        <div class="box">
+            <i class="ico icon-android"></i>
+            <h5>@translate.Get("ORGANIZATIONS")</h5>
+            <h6>@translate.Get("ORGANIZATIONS_DESCRIPTION")</h6>
+            <i class="bg icon-android"></i>
+        </div>
+        <div class="box">
+            <i class="ico icon-android"></i>
+            <h5>@translate.Get("STARTUPS")</h5>
+            <h6>@translate.Get("STARTUPS_DESCRIPTION")</h6>
+            <i class="bg icon-android"></i>
+        </div>
+        <div class="box">
+            <i class="ico icon-android"></i>
+            <h5>@translate.Get("CONSULATES")</h5>
+            <h6>@translate.Get("CONSULATES_DESCRIPTION")</h6>
+            <i class="bg icon-android"></i>
+        </div>
+        <div class="box">
+            <i class="ico icon-android"></i>
+            <h5>@translate.Get("DOCTORS")</h5>
+            <h6>@translate.Get("DOCTORS_DESCRIPTION")</h6>
+            <i class="bg icon-android"></i>
+        </div>
+        <div class="box">
+            <i class="ico icon-android"></i>
+            <h5>@translate.Get("INSTITUTES")</h5>
+            <h6>@translate.Get("INSTITUTES_DESCRIPTION")</h6>
+            <i class="bg icon-android"></i>
+        </div>
+    </div>
+</div>
 <div class="from-today">
     <h4>@translate.Get("FROM_TODAY_JOIN")</h4>
     <div class="join">
@@ -245,29 +245,29 @@
     </div>
 
 </div>
-@* <div class="others-say"> *@
-@*     <h4>@translate.Get("WHAT_OTHERS_SAY")</h4> *@
-@*     <div class="boxes"> *@
-@*         <div class="box bx-1"> *@
-@*             <div class="owl-carousel"> *@
-@*                 <div class="item"> *@
-@*                     <div class="image"> *@
-@*                         <img src="https://i.picsum.photos/id/866/70/70.jpg" alt=""> *@
-@*                     </div> *@
-@*                     <div class="name">Navid Kianfar</div> *@
-@*                     <div class="job-title">Software Developer</div> *@
-@*                     <div class="description"> *@
-@*                         <img src="/images/quotation.png" alt=""> *@
-@*                         @translate.Get("CONSULATES_DESCRIPTION") *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-@*         <div class="box bx-2"></div> *@
-@*         <div class="box bx-3"></div> *@
-@*         <div class="box bx-4"></div> *@
-@*     </div> *@
-@* </div> *@
+<div class="others-say">
+    <h4>@translate.Get("WHAT_OTHERS_SAY")</h4>
+    <div class="boxes">
+        <div class="box bx-1">
+            <div class="owl-carousel">
+                <div class="item">
+                    <div class="image">
+                        <img src="https://i.picsum.photos/id/866/70/70.jpg" alt="">
+                    </div>
+                    <div class="name">Navid Kianfar</div>
+                    <div class="job-title">Software Developer</div>
+                    <div class="description">
+                        <img src="/images/quotation.png" alt="">
+                        @translate.Get("CONSULATES_DESCRIPTION")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box bx-2"></div>
+        <div class="box bx-3"></div>
+        <div class="box bx-4"></div>
+    </div>
+</div>
 <div class="footer">
     <div class="box asoode">
         <a class="logo" href="/">

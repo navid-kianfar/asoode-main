@@ -1,1 +1,13 @@
-﻿
+﻿@using Asoode.Core.Contracts.General
+@inject ITranslateBiz translate
+@{
+    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_PLANS_TITLE"));
+    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_PLANS_DESCRIPTION"));
+}
+<div class="page-plans pg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+    </div>
+</div>
