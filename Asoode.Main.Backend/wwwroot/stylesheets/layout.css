@@ -198,6 +198,43 @@ body {
   text-align: justify;
 }
 
+.page-why table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.page-why th {
+  border-bottom: 1px dashed #ddd;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.7rem;
+  vertical-align: bottom;
+  border-inline-end: 2px solid #ddd;
+}
+.page-why td {
+  border-inline-end: 2px solid #ddd;
+  border-bottom: 1px dashed #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.7rem;
+  vertical-align: bottom;
+}
+.page-why td:first-child {
+  text-align: inherit;
+}
+.page-why h1 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.page-why .video-container {
+  margin: 50px auto;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  width: 600px;
+  max-width: 90vw;
+  height: 300px;
+}
+
 @media (max-width: 780px) {
   .page-about {
     padding: 350px 50px 50px;

@@ -141,6 +141,13 @@
             <e p="asoode-logo.svg" t="Include" />
             <e p="axess-logo.png" t="Include" />
             <e p="bicycle.png" t="Include" />
+            <e p="brands" t="Include">
+              <e p="as-ico.png" t="Include" />
+              <e p="bn-ico.png" t="Include" />
+              <e p="tc-ico.png" t="Include" />
+              <e p="tk-ico.png" t="Include" />
+              <e p="tr-ico.png" t="Include" />
+            </e>
             <e p="cards.png" t="Include" />
             <e p="dashboard.png" t="Include" />
             <e p="favicons" t="Include">
