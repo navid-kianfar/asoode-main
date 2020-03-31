@@ -45,6 +45,7 @@
             <e p="Faq.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="Plans.cshtml" t="Include" />
+            <e p="Post.cshtml" t="Include" />
             <e p="Why.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
@@ -184,8 +185,10 @@
             <e p="wbs.png" t="Include" />
           </e>
           <e p="scripts" t="Include">
+            <e p="bootstrap.min.js" t="Include" />
             <e p="jquery-3.4.1.min.js" t="Include" />
             <e p="jquery.visible.min.js" t="Include" />
+            <e p="layout.js" t="Include" />
             <e p="owl.carousel.min.js" t="Include" />
             <e p="site.js" t="Include" />
           </e>

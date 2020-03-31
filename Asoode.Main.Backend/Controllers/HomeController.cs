@@ -35,5 +35,9 @@ namespace Asoode.Main.Backend.Controllers
         {
             return View();
         }
+        public IActionResult Post()
+        {
+            return View();
+        }
     }
 }

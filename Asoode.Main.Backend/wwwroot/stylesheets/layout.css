@@ -235,7 +235,7 @@ body {
   height: 300px;
 }
 
-.page-plans h1 {
+.page-plans h2 {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 400;
@@ -298,6 +298,78 @@ body {
 }
 .page-plans td:first-child {
   text-align: inherit;
+}
+
+.page-faq .faq-holder {
+  padding: 30px 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.page-faq .faq-holder .card .card-header h2 button {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #333333;
+}
+.page-faq .faq-holder .card .collapse .card-body {
+  font-size: 0.7rem;
+}
+.page-faq .faq-holder .card .collapsing .card-body {
+  font-size: 0.7rem;
+}
+
+.page-blog h2.summary {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+}
+.page-blog .post {
+  margin-bottom: 50px;
+}
+.page-blog .post.large {
+  margin-top: 50px;
+}
+.page-blog .post img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.page-blog .post a {
+  color: #2b2a2a;
+}
+.page-blog .post h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.page-blog .post h3 {
+  font-size: 0.9rem;
+  color: #858282;
+  text-align: justify;
+}
+.page-blog .post .info .name {
+  color: #454343;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.page-blog .post .info .date {
+  color: #454343;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.page-post h2 {
+  color: #adabab;
+  font-size: 0.9rem;
+}
+.page-post img.full {
+  width: 100%;
+}
+.page-post .content {
+  color: #5f5c5c;
+  padding: 30px;
+  text-align: justify;
+  font-size: 0.9rem;
+  line-height: 2rem;
 }
 
 @media (max-width: 780px) {

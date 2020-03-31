@@ -170,7 +170,7 @@ body {
 }
 
 .page-plans {
-  h1 {
+  h2 {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 400;
@@ -241,6 +241,98 @@ body {
   }
 }
 
+.page-faq {
+  .faq-holder {
+    padding: 30px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    .card {
+      .card-header {
+        h2 {
+          button {
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #333333;
+          }
+        }
+      }
+      
+      .collapse {
+        .card-body {
+          font-size: 0.7rem;
+        }
+      }
+      .collapsing {
+        .card-body {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+.page-blog {
+  h2.summary {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .post {
+    margin-bottom: 50px;
+    &.large {
+      margin-top: 50px;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #2b2a2a;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    h3 {
+      font-size: 0.9rem;
+      color: #858282;
+      text-align: justify;
+    }
+    .info {
+      .name {
+        color: #454343;
+        font-size: 0.7rem;
+        font-weight: 400;
+      }
+      .date {
+        color: #454343;
+        font-size: 0.7rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.page-post {
+  h2 {
+    color: #adabab;
+    font-size: 0.9rem;
+  }
+  img.full {
+    width: 100%;
+  }
+  .content {
+    color: #5f5c5c;
+    padding: 30px;
+    text-align: justify;
+    font-size: 0.9rem;
+    line-height: 2rem;
+  }
+}
 
 @media (max-width: 780px) {
   .page-about {
