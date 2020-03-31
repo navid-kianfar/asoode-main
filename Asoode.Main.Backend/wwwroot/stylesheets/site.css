@@ -548,6 +548,20 @@ body.dir-ltr {
   .home-page .image-container .summary h2 {
     font-size: 1.2rem;
   }
+  .home-page .features .feature {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .home-page .features .feature .info {
+    margin-inline-end: 0;
+    text-align: justify;
+  }
+  .home-page .features .feature img {
+    max-width: 100%;
+  }
+  .home-page .features .feature:nth-child(2n) {
+    flex-direction: column !important;
+  }
 }
 @media (max-width: 1050px) {
   .home-page .wrapper {
