@@ -372,6 +372,10 @@ body {
   line-height: 2rem;
 }
 
+.page-contact img {
+  max-width: 100%;
+}
+
 @media (max-width: 780px) {
   .page-about {
     padding: 350px 50px 50px;

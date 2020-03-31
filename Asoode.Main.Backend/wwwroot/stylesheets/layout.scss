@@ -333,6 +333,11 @@ body {
     line-height: 2rem;
   }
 }
+.page-contact {
+  img {
+    max-width: 100%;
+  }
+}
 
 @media (max-width: 780px) {
   .page-about {
