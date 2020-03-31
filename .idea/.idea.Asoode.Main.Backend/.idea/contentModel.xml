@@ -142,6 +142,18 @@
             <e p="axess-logo.png" t="Include" />
             <e p="cards.png" t="Include" />
             <e p="dashboard.png" t="Include" />
+            <e p="favicons" t="Include">
+              <e p="android-chrome-192x192.png" t="Include" />
+              <e p="android-chrome-512x512.png" t="Include" />
+              <e p="app.webmanifest" t="Include" />
+              <e p="apple-touch-icon.png" t="Include" />
+              <e p="browserconfig.xml" t="Include" />
+              <e p="favicon-16x16.png" t="Include" />
+              <e p="favicon-32x32.png" t="Include" />
+              <e p="favicon.ico" t="Include" />
+              <e p="mstile-150x150.png" t="Include" />
+              <e p="safari-pinned-tab.svg" t="Include" />
+            </e>
             <e p="header.png" t="Include" />
             <e p="holding.png" t="Include" />
             <e p="main-bg.png" t="Include" />
