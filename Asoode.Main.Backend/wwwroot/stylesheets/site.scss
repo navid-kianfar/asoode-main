@@ -355,7 +355,7 @@ body {
           align-items: center;
           i {
             font-size: 20px;
-            margin-inline-end: 20px;
+            margin-inline-end: 10px;
           }
           span {
             font-size: 0.8rem;
@@ -711,6 +711,11 @@ body {
         }
       }
     }
+    .applications {
+      .mobile {
+        color: #807d7d;
+      }
+    }
   }
 }
 @media (max-width: 750px) {
@@ -757,6 +762,17 @@ body {
         }
       }
     }
+    .applications {
+      .boxes {
+        flex-direction: column;
+        .box {
+          margin-bottom: 50px;
+        }
+      }
+      .mobile {
+        color: inherit;
+      }
+    }
   }
 }
 @media (max-width: 570px) {
@@ -787,6 +803,9 @@ body {
           }
         }
       }
+    }
+    .applications {
+      background-image: none;
     }
   }
 }

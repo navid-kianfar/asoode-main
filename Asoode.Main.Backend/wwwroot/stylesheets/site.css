@@ -271,7 +271,7 @@ body.dir-ltr {
 }
 .home-page .applications .boxes .box .title i {
   font-size: 20px;
-  margin-inline-end: 20px;
+  margin-inline-end: 10px;
 }
 .home-page .applications .boxes .box .title span {
   font-size: 0.8rem;
@@ -576,6 +576,9 @@ body.dir-ltr {
     min-width: 150px;
     max-width: 150px;
   }
+  .home-page .applications .mobile {
+    color: #807d7d;
+  }
 }
 @media (max-width: 750px) {
   .home-page .image-container .header {
@@ -611,6 +614,15 @@ body.dir-ltr {
   .home-page .wrapper .section-1 .box {
     margin-bottom: 20px;
   }
+  .home-page .applications .boxes {
+    flex-direction: column;
+  }
+  .home-page .applications .boxes .box {
+    margin-bottom: 50px;
+  }
+  .home-page .applications .mobile {
+    color: inherit;
+  }
 }
 @media (max-width: 570px) {
   .home-page .image-container .summary h1 {
@@ -628,6 +640,9 @@ body.dir-ltr {
   }
   .home-page .image-container .box a.bordered {
     display: none !important;
+  }
+  .home-page .applications {
+    background-image: none;
   }
 }
 @media (max-width: 460px) {
