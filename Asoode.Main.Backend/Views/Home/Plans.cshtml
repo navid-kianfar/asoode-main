@@ -97,6 +97,33 @@
 </tr>
 
 <tr>
+    <td>@translate.Get("FEATURE_CHAT")</td>
+    @foreach (var plan in Model)
+    {
+        <td class="ico">
+            <i class="@(plan.FeatureChat ? "icon-checkmark3" : "icon-blocked")"></i>
+        </td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("FEATURE_FILES")</td>
+    @foreach (var plan in Model)
+    {
+        <td class="ico">
+            <i class="@(plan.FeatureFiles ? "icon-checkmark3" : "icon-blocked")"></i>
+        </td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("FEATURE_CALENDAR")</td>
+    @foreach (var plan in Model)
+    {
+        <td class="ico">
+            <i class="@(plan.FeatureCalendar ? "icon-checkmark3" : "icon-blocked")"></i>
+        </td>
+    }
+</tr>
+<tr>
     <td>@translate.Get("FEATURE_WBS")</td>
     @foreach (var plan in Model)
     {
@@ -241,38 +268,11 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_CHAT")</td>
-    @foreach (var plan in Model)
-    {
-        <td class="ico">
-            <i class="@(plan.FeatureChat ? "icon-checkmark3" : "icon-blocked")"></i>
-        </td>
-    }
-</tr>
-<tr>
-    <td>@translate.Get("FEATURE_FILES")</td>
-    @foreach (var plan in Model)
-    {
-        <td class="ico">
-            <i class="@(plan.FeatureFiles ? "icon-checkmark3" : "icon-blocked")"></i>
-        </td>
-    }
-</tr>
-<tr>
     <td>@translate.Get("FEATURE_KARTABL")</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
             <i class="@(plan.FeatureKartabl ? "icon-checkmark3" : "icon-blocked")"></i>
-        </td>
-    }
-</tr>
-<tr>
-    <td>@translate.Get("FEATURE_CALENDAR")</td>
-    @foreach (var plan in Model)
-    {
-        <td class="ico">
-            <i class="@(plan.FeatureCalendar ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
     }
 </tr>
