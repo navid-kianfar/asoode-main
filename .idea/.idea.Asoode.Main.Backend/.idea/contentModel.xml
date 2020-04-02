@@ -216,6 +216,12 @@
         <e p="General" t="Include">
           <e p="TranslateBiz.cs" t="Include" />
         </e>
+        <e p="Logging" t="Include">
+          <e p="ErrorBiz.cs" t="Include" />
+        </e>
+        <e p="Membership" t="Include">
+          <e p="PlanBiz.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -235,6 +241,21 @@
             <e p="IServerInfo.cs" t="Include" />
             <e p="ITranslateBiz.cs" t="Include" />
           </e>
+          <e p="Logging" t="Include">
+            <e p="IErrorBiz.cs" t="Include" />
+          </e>
+          <e p="Membership" t="Include">
+            <e p="IPlanBiz.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="DateExtensions.cs" t="Include" />
+          <e p="StringExtensions.cs" t="Include" />
+        </e>
+        <e p="Helpers" t="Include">
+          <e p="DateHelper.cs" t="Include" />
+          <e p="GuidExtensions.cs" t="Include" />
+          <e p="IOHelper.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -243,11 +264,50 @@
             </e>
           </e>
         </e>
+        <e p="Primitives" t="Include">
+          <e p="Enums" t="Include">
+            <e p="CostUnit.cs" t="Include" />
+            <e p="FileType.cs" t="Include" />
+            <e p="OperationResultStatus.cs" t="Include" />
+            <e p="PlanType.cs" t="Include" />
+            <e p="RequestStatus.cs" t="Include" />
+            <e p="ShiftType.cs" t="Include" />
+          </e>
+          <e p="Exceptions" t="Include">
+            <e p="InvalidDateException.cs" t="Include" />
+          </e>
+          <e p="OperationResult.cs" t="Include" />
+        </e>
+        <e p="ViewModel" t="Include">
+          <e p="General" t="Include">
+            <e p="BaseViewModel.cs" t="Include" />
+            <e p="GridFilter.cs" t="Include" />
+            <e p="GridFilterWithParams.cs" t="Include" />
+            <e p="GridResult.cs" t="Include" />
+            <e p="SelectableItem.cs" t="Include" />
+          </e>
+          <e p="Membership" t="Include">
+            <e p="PlanViewModel.cs" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Asoode.Main.Data" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="Asoode.Main.Data.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Contexts" t="Include">
+          <e p="_ContextOverrides.cs" t="Include" />
+          <e p="ApplicationDbContext.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Base" t="Include">
+            <e p="BaseEntity.cs" t="Include" />
+            <e p="PlanExtensions.cs" t="Include" />
+          </e>
+          <e p="ErrorLog.cs" t="Include" />
+          <e p="Plan.cs" t="Include" />
+          <e p="Post.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

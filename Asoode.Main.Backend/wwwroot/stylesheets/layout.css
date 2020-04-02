@@ -240,7 +240,7 @@ body {
   font-size: 1.2rem;
   font-weight: 400;
 }
-.page-plans i {
+.page-plans .header i {
   color: #D4AF37;
   margin: 20px 0;
   font-size: 40px;
@@ -293,11 +293,21 @@ body {
   border-bottom: 1px dashed #ddd;
   padding: 15px;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   vertical-align: bottom;
+  font-weight: 500;
 }
 .page-plans td:first-child {
   text-align: inherit;
+}
+.page-plans td.ico {
+  font-size: 30px;
+  padding: 5px;
+  font-weight: 300;
+}
+.page-plans td.ico i {
+  font-size: 15px;
+  color: #FF5584;
 }
 
 .page-faq .faq-holder {

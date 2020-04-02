@@ -1,4 +1,4 @@
-using Asoode.Core.Contracts.General;
+using Asoode.Main.Core.Contracts.General;
 
 namespace Asoode.Main.Backend.Engine
 {

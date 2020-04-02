@@ -1,3 +1,5 @@
+using Asoode.Main.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,6 +11,8 @@ namespace Asoode.Main.Data
             this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<ApplicationDbContext>(options => { options.UseMySql(connectionString); });
+            services.AddTransient<ApplicationDbContext, ApplicationDbContext>();
             return services;
         }
     }

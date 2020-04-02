@@ -1,4 +1,4 @@
-namespace Asoode.Core.Contracts.General
+namespace Asoode.Main.Core.Contracts.General
 {
     public interface IJsonBiz
     {

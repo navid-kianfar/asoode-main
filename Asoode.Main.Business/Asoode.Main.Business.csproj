@@ -8,6 +8,7 @@
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.2" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2" />
         <ProjectReference Include="..\Asoode.Main.Core\Asoode.Main.Core.csproj" />
+        <ProjectReference Include="..\Asoode.Main.Data\Asoode.Main.Data.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,12 +1,21 @@
-﻿using Asoode.Main.Backend.Filters;
+﻿using System;
+using System.Threading.Tasks;
+using Asoode.Main.Backend.Filters;
+using Asoode.Main.Core.Contracts.Membership;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Asoode.Main.Backend.Controllers
 {
     [Localize]
     public class HomeController : Controller
     {
+        private readonly IServiceProvider _serviceProvider;
 
+        public HomeController(IServiceProvider serviceProvider)
+        {
+            _serviceProvider = serviceProvider;
+        }
         public IActionResult Index()
         {
             return View();
@@ -15,9 +24,10 @@ namespace Asoode.Main.Backend.Controllers
         {
             return View();
         }
-        public IActionResult Plans()
+        public async Task<IActionResult> Plans()
         {
-            return View();
+            var op = await _serviceProvider.GetService<IPlanBiz>().List();
+            return View(op.Data);
         }
         public IActionResult About()
         {

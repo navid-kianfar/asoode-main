@@ -1,4 +1,4 @@
-﻿@using Asoode.Core.Contracts.General
+﻿@using Asoode.Main.Core.Contracts.General
 @inject ITranslateBiz translate
 @{
     ViewData.Add("PAGE_TITLE", translate.Get("PAGE_WHY_TITLE"));
@@ -36,56 +36,160 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>FEATURE #1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>FEATURE #2</td>
-                        <td></td>
+                        <td>@translate.Get("FEATURE_WBS")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>FEATURE #3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>FEATURE #4</td>
-                        <td></td>
+                        <td>@translate.Get("FEATURE_ROAD_MAP")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>FEATURE #5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>FEATURE #6</td>
-                        <td></td>
+                        <td>@translate.Get("FEATURE_TREE")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>FEATURE #7</td>
+                        <td>@translate.Get("FEATURE_OBJECTIVES")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_SEASON")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_CUSTOM_FIELD")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_VOTE")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_SUB_TASK")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_BLOCKING")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_RELATED")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_TIME_SPENT")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_TIME_OFF")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_SHIFT")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_REPORTS")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_PAYMENTS")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_TIME_VALUE")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_CHAT")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_FILES")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_KARTABL")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>@translate.Get("FEATURE_CALENDAR")</td>
+                        <td class="icon"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
                         <td></td>

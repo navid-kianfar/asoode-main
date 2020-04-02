@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
-using Asoode.Core.Contracts.General;
+using Asoode.Main.Core.Contracts.General;
 using Microsoft.Extensions.Configuration;
 
 namespace Asoode.Main.Business.General
