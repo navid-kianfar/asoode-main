@@ -46,9 +46,11 @@ namespace Asoode.Main.Data.Models
         public bool FeatureSeasons { get; set; }
         public bool FeatureVote { get; set; }
         public bool FeatureSubTask { get; set; }
-        public bool Kartabl { get; set; }
-        public bool Calendar { get; set; }
-        public bool Blocking { get; set; }
-        public bool Related { get; set; }
+        public bool FeatureKartabl { get; set; }
+        public bool FeatureCalendar { get; set; }
+        public bool FeatureBlocking { get; set; }
+        public bool FeatureRelated { get; set; }
+        public bool FeatureComplexGroup { get; set; }
+        public bool FeatureGroupTimeSpent { get; set; }
     }
 }

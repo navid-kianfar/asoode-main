@@ -118,4 +118,6 @@
   "FEATURE_CALENDAR": "تقویم",
   "FEATURE_BLOCKING": "مدیریت مسدودی",
   "FEATURE_RELATED": "وظایف مرتبط",
+  "FEATURE_COMPLEX_GROUP": "گروه ساختار دار",
+  "FEATURE_GROUP_TIME_SPENT": "زمان\u200Cهای سپری شده گروه"
 }

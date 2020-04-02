@@ -49,10 +49,12 @@ namespace Asoode.Main.Data.Models.Base
                 FeatureSeasons = plan.FeatureSeasons,
                 FeatureVote = plan.FeatureVote,
                 FeatureSubTask = plan.FeatureSubTask,
-                FeatureCalendar = plan.Calendar,
-                FeatureKartabl = plan.Kartabl,
-                FeatureBlocking = plan.Blocking,
-                FeatureRelated = plan.Related
+                FeatureCalendar = plan.FeatureCalendar,
+                FeatureKartabl = plan.FeatureKartabl,
+                FeatureBlocking = plan.FeatureBlocking,
+                FeatureRelated = plan.FeatureRelated,
+                FeatureComplexGroup = plan.FeatureComplexGroup,
+                FeatureGroupTimeSpent = plan.FeatureGroupTimeSpent
             };
         }
     }

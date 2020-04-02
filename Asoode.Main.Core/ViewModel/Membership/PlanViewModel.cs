@@ -49,5 +49,7 @@ namespace Asoode.Main.Core.ViewModel.Membership
         public bool FeatureCalendar { get; set; }
         public bool FeatureBlocking { get; set; }
         public bool FeatureRelated { get; set; }
+        public bool FeatureComplexGroup { get; set; }
+        public bool FeatureGroupTimeSpent { get; set; }
     }
 }
