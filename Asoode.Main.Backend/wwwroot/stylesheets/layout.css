@@ -309,6 +309,9 @@ body {
   font-size: 15px;
   color: #FF5584;
 }
+.page-plans td.ico i.icon-checkmark3 {
+  color: #40a220;
+}
 
 .page-faq .faq-holder {
   padding: 30px 0;
