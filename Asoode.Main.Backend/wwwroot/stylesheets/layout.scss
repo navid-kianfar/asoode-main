@@ -152,6 +152,20 @@ body {
     &:first-child {
       text-align: inherit;
     }
+
+    &.ico {
+      font-size: 30px;
+      padding: 5px;
+      font-weight: 300;
+      i {
+        font-size: 15px;
+        color: #FF5584;
+
+        &.icon-checkmark3 {
+          color: #40a220;
+        }
+      }
+    }
   }
   
   h1 {

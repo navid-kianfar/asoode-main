@@ -222,6 +222,18 @@ body {
 .page-why td:first-child {
   text-align: inherit;
 }
+.page-why td.ico {
+  font-size: 30px;
+  padding: 5px;
+  font-weight: 300;
+}
+.page-why td.ico i {
+  font-size: 15px;
+  color: #FF5584;
+}
+.page-why td.ico i.icon-checkmark3 {
+  color: #40a220;
+}
 .page-why h1 {
   text-align: center;
   font-size: 1.3rem;

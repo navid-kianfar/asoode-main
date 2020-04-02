@@ -223,6 +223,24 @@
     }
 </tr>
 <tr>
+    <td>@translate.Get("FEATURE_KARTABL")</td>
+    @foreach (var plan in Model)
+    {
+        <td class="ico">
+            <i class="@(plan.FeatureKartabl ? "icon-checkmark3" : "icon-blocked")"></i>
+        </td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("FEATURE_REPORTS")</td>
+    @foreach (var plan in Model)
+    {
+        <td class="ico">
+            <i class="@(plan.FeatureReports ? "icon-checkmark3" : "icon-blocked")"></i>
+        </td>
+    }
+</tr>
+<tr>
     <td>@translate.Get("FEATURE_TIME_OFF")</td>
     @foreach (var plan in Model)
     {
@@ -241,15 +259,6 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_REPORTS")</td>
-    @foreach (var plan in Model)
-    {
-        <td class="ico">
-            <i class="@(plan.FeatureReports ? "icon-checkmark3" : "icon-blocked")"></i>
-        </td>
-    }
-</tr>
-<tr>
     <td>@translate.Get("FEATURE_PAYMENTS")</td>
     @foreach (var plan in Model)
     {
@@ -264,15 +273,6 @@
     {
         <td class="ico">
             <i class="@(plan.FeatureTimeValue ? "icon-checkmark3" : "icon-blocked")"></i>
-        </td>
-    }
-</tr>
-<tr>
-    <td>@translate.Get("FEATURE_KARTABL")</td>
-    @foreach (var plan in Model)
-    {
-        <td class="ico">
-            <i class="@(plan.FeatureKartabl ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
     }
 </tr>
