@@ -54,17 +54,17 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("SIMPLE_GROUP")</td>
+    <td>@translate.Get("COMPLEX_PROJECT")</td>
     @foreach (var plan in Model)
     {
-        <td>@plan.SimpleGroup</td>
+        <td>@plan.Project</td>
     }
 </tr>
 <tr>
     <td>@translate.Get("SIMPLE_PROJECT")</td>
     @foreach (var plan in Model)
     {
-        <td>@plan.SimpleProject</td>
+        <td>@plan.WorkPackage</td>
     }
 </tr>
 <tr>
@@ -75,17 +75,24 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("COMPLEX_PROJECT")</td>
+    <td>@translate.Get("SIMPLE_GROUP")</td>
     @foreach (var plan in Model)
     {
-        <td>@plan.ComplexProject</td>
+        <td>@plan.SimpleGroup</td>
     }
 </tr>
 <tr>
     <td>@translate.Get("DISK_SPACE")</td>
     @foreach (var plan in Model)
     {
-        <td>@($"{plan.DiskSpace / 1024 / 1024:n0}") MB</td>
+        if (plan.Type == PlanType.Free)
+        {
+            <td>@($"{plan.DiskSpace / 1024 / 1024:n0}") MB</td>
+        }
+        else
+        {
+            <td>@($"{plan.DiskSpace /1024 / 1024 / 1024:n0}") GB</td>
+        }
     }
 </tr>
 <tr>
@@ -93,6 +100,41 @@
     @foreach (var plan in Model)
     {
         <td>@($"{plan.AttachmentSize / 1024 / 1024:n0}") MB</td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("ADDITIONAL_DISK_SPACE_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    @foreach (var plan in Model)
+    {
+        <td>@($"{plan.AdditionalSpaceCost:n0}")</td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("ADDITIONAL_USERS_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    @foreach (var plan in Model)
+    {
+        <td>@($"{plan.AdditionalUserCost:n0}")</td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("ADDITIONAL_GROUP_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    @foreach (var plan in Model)
+    {
+        <td>@($"{plan.AdditionalGroupCost:n0}")</td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("ADDITIONAL_PROJECT_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    @foreach (var plan in Model)
+    {
+        <td>@($"{plan.AdditionalProjectCost:n0}")</td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("ADDITIONAL_WP_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    @foreach (var plan in Model)
+    {
+        <td>@($"{plan.AdditionalWorkPackageCost:n0}")</td>
     }
 </tr>
 

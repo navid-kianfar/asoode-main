@@ -21,15 +21,16 @@ namespace Asoode.Main.Data.Models
         public int AdditionalUserCost { get; set; }
         public int AdditionalSpaceCost { get; set; }
         public int AdditionalProjectCost { get; set; }
+        public int AdditionalWorkPackageCost { get; set; }
         public int AdditionalGroupCost { get; set; }
         public bool CanExtend { get; set; }
         
         public int Users { get; set; }
-        public int SimpleProject { get; set; }
-        public int ComplexProject { get; set; }
+        public int WorkPackage { get; set; }
+        public int Project { get; set; }
         public int SimpleGroup { get; set; }
         public int ComplexGroup { get; set; }
-        
+
         public bool FeatureCustomField { get; set; }
         public bool FeatureTimeSpent { get; set; }
         public bool FeatureTimeValue { get; set; }

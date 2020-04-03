@@ -24,8 +24,8 @@ namespace Asoode.Main.Core.ViewModel.Membership
         public bool CanExtend { get; set; }
         
         public int Users { get; set; }
-        public int SimpleProject { get; set; }
-        public int ComplexProject { get; set; }
+        public int WorkPackage { get; set; }
+        public int Project { get; set; }
         public int SimpleGroup { get; set; }
         public int ComplexGroup { get; set; }
         public bool FeatureCustomField { get; set; }
@@ -51,5 +51,6 @@ namespace Asoode.Main.Core.ViewModel.Membership
         public bool FeatureRelated { get; set; }
         public bool FeatureComplexGroup { get; set; }
         public bool FeatureGroupTimeSpent { get; set; }
+        public int AdditionalWorkPackageCost { get; set; }
     }
 }

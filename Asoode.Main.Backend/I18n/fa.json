@@ -119,5 +119,10 @@
   "FEATURE_BLOCKING": "مدیریت مسدودی",
   "FEATURE_RELATED": "وظایف مرتبط",
   "FEATURE_COMPLEX_GROUP": "گروه ساختار دار",
-  "FEATURE_GROUP_TIME_SPENT": "زمان\u200Cهای سپری شده گروه"
+  "FEATURE_GROUP_TIME_SPENT": "زمان\u200Cهای سپری شده گروه",
+  "ADDITIONAL_WP_COST": "هر پروژه ساده جدید",
+  "ADDITIONAL_PROJECT_COST": "هر پروژه ساختار دار جدید",
+  "ADDITIONAL_GROUP_COST": "هر گروه جدید",
+  "ADDITIONAL_USERS_COST": "هر عضو جدید",
+  "ADDITIONAL_DISK_SPACE_COST": "هر گیگ فضای اضافه",
 }
