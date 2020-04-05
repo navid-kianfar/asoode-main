@@ -21,8 +21,10 @@
           <e p="LocalizeAttribute.cs" t="Include" />
         </e>
         <e p="I18n" t="Include">
+          <e p="ar.json" t="Include" />
           <e p="en.json" t="Include" />
           <e p="fa.json" t="Include" />
+          <e p="fr.json" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
