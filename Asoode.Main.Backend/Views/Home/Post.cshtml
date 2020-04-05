@@ -2,7 +2,7 @@
 @inject ITranslateBiz translate
 @{
     ViewData.Add("PAGE_TITLE", "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.");
-    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_BLOG_DESCRIPTION"));
+    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_BLOG_DESCRIPTION", ViewBag.Lang));
 }
 <div class="page-post pg">
     <div class="container">

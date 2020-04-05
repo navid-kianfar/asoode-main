@@ -18,10 +18,15 @@ namespace Asoode.Main.Data.Models
         public long DiskSpace { get; set; }
         public int AttachmentSize { get; set; }
         public int PlanCost { get; set; }
+        public int AdditionalUser { get; set; }
+        public int AdditionalSpace { get; set; }
+        public int AdditionalProject { get; set; }
+        public int AdditionalGroup { get; set; }
+        public int AdditionalWorkPackage { get; set; }
+        public int AdditionalWorkPackageCost { get; set; }
         public int AdditionalUserCost { get; set; }
         public int AdditionalSpaceCost { get; set; }
         public int AdditionalProjectCost { get; set; }
-        public int AdditionalWorkPackageCost { get; set; }
         public int AdditionalGroupCost { get; set; }
         public bool CanExtend { get; set; }
         

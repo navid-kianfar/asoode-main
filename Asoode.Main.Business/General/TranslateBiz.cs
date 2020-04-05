@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Threading;
 using Asoode.Main.Core.Contracts.General;
 using Microsoft.Extensions.Configuration;
 
@@ -29,12 +31,11 @@ namespace Asoode.Main.Business.General
         public string Root { get; set; }
         public Dictionary<string, Dictionary<string, string>> Vocabulary { get; set; }
 
-        public string Get(string key, string culture = null)
+        public string Get(string key, string culture)
         {
             try
             {
-                if (string.IsNullOrEmpty(culture))
-                    // culture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+                if (string.IsNullOrEmpty(culture) || !AllowedCultures.Contains(culture))
                     culture = DefaultCulture;
                 return Vocabulary[culture][key];
             }

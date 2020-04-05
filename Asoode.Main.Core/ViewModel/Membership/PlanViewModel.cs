@@ -21,6 +21,11 @@ namespace Asoode.Main.Core.ViewModel.Membership
         public int AdditionalSpaceCost { get; set; }
         public int AdditionalProjectCost { get; set; }
         public int AdditionalGroupCost { get; set; }
+        public int AdditionalUser { get; set; }
+        public int AdditionalSpace { get; set; }
+        public int AdditionalProject { get; set; }
+        public int AdditionalGroup { get; set; }
+        public int AdditionalWorkPackage { get; set; }
         public bool CanExtend { get; set; }
         
         public int Users { get; set; }

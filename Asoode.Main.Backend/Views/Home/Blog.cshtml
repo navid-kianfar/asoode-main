@@ -1,14 +1,14 @@
 ﻿@using Asoode.Main.Core.Contracts.General
 @inject ITranslateBiz translate
 @{
-    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_BLOG_TITLE"));
-    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_BLOG_DESCRIPTION"));
+    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_BLOG_TITLE", ViewBag.Lang));
+    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_BLOG_DESCRIPTION", ViewBag.Lang));
 }
 <div class="page-blog pg">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="summary">@translate.Get("PAGE_BLOG_SUMMARY")</h2>
+                <h2 class="summary">@translate.Get("PAGE_BLOG_SUMMARY", ViewBag.Lang)</h2>
             </div>
         </div>
         <section class="row post large">

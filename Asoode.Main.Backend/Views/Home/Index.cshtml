@@ -8,10 +8,10 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"/>
-    <meta name="description" content="@translate.Get("SUMMARY")">
+    <meta name="description" content="@translate.Get("SUMMARY", ViewBag.Lang)">
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <title>@translate.Get("EVERY_THING_YOU_NEED")</title>
+    <title>@translate.Get("EVERY_THING_YOU_NEED", ViewBag.Lang)</title>
     <link rel="stylesheet" href="~/stylesheets/bootstrap.@(ViewBag.Direction).min.css"/>
     <link rel="stylesheet" href="~/stylesheets/site.css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
@@ -30,33 +30,33 @@
                 </a>
             </div>
             <a class="link" href="/@ViewBag.Lang/why">
-                @translate.Get("WHY_ASOODE")
+                @translate.Get("WHY_ASOODE", ViewBag.Lang)
             </a>
             <a class="link" href="/@ViewBag.Lang/plans">
-                @translate.Get("PLANS")
+                @translate.Get("PLANS", ViewBag.Lang)
             </a>
             <a class="link" href="/@ViewBag.Lang/about">
-                @translate.Get("ABOUT_US")
+                @translate.Get("ABOUT_US", ViewBag.Lang)
             </a>
         </div>
         <div class="box">
             <a class="link login" href="https://panel.asoode.com/login">
-                @translate.Get("LOGIN")
+                @translate.Get("LOGIN", ViewBag.Lang)
             </a>
             <a class="link bordered" href="https://panel.asoode.com/register">
-                @translate.Get("REGISTER")
+                @translate.Get("REGISTER", ViewBag.Lang)
             </a>
         </div>
     </nav>
 
     <div class="summary">
-        <h1>@translate.Get("EVERY_THING_YOU_NEED")</h1>
-        <h2>@translate.Get("SUMMARY")</h2>
+        <h1>@translate.Get("EVERY_THING_YOU_NEED", ViewBag.Lang)</h1>
+        <h2>@translate.Get("SUMMARY", ViewBag.Lang)</h2>
     </div>
 
     <div class="join">
         <a href="https://panel.asoode.com/register">
-            @translate.Get("JOIN_NOW")
+            @translate.Get("JOIN_NOW", ViewBag.Lang)
         </a>
     </div>
 
@@ -65,38 +65,38 @@
     </div>
 </div>
 <div class="wrapper">
-    <h3>@translate.Get("BE_ASOODE")</h3>
-    <h4>@translate.Get("BE_ASOODE_DESCRIPTION")</h4>
+    <h3>@translate.Get("BE_ASOODE", ViewBag.Lang)</h3>
+    <h4>@translate.Get("BE_ASOODE_DESCRIPTION", ViewBag.Lang)</h4>
 
     <div class="section-1">
         <div class="box">
             <div class="ico">
                 <i class="icon-target"></i>
             </div>
-            <div class="title">@translate.Get("IN_ONE_PLACE")</div>
-            <div class="description">@translate.Get("IN_ONE_PLACE_DESCRIPTION")</div>
+            <div class="title">@translate.Get("IN_ONE_PLACE", ViewBag.Lang)</div>
+            <div class="description">@translate.Get("IN_ONE_PLACE_DESCRIPTION", ViewBag.Lang)</div>
         </div>
         <div class="box">
             <div class="ico">
                 <i class="icon-team"></i>
             </div>
-            <div class="title">@translate.Get("MANAGE_EMPLOYEE")</div>
-            <div class="description">@translate.Get("MANAGE_EMPLOYEE_DESCRIPTION")</div>
+            <div class="title">@translate.Get("MANAGE_EMPLOYEE", ViewBag.Lang)</div>
+            <div class="description">@translate.Get("MANAGE_EMPLOYEE_DESCRIPTION", ViewBag.Lang)</div>
         </div>
         <div class="box">
             <div class="ico">
                 <i class="icon-timer"></i>
             </div>
-            <div class="title">@translate.Get("TRACK_PROGRESS")</div>
-            <div class="description">@translate.Get("TRACK_PROGRESS_DESCRIPTION")</div>
+            <div class="title">@translate.Get("TRACK_PROGRESS", ViewBag.Lang)</div>
+            <div class="description">@translate.Get("TRACK_PROGRESS_DESCRIPTION", ViewBag.Lang)</div>
         </div>
     </div>
 </div>
 <div class="features">
     <section class="feature">
         <div class="info">
-            <h4 class="title">@translate.Get("FEATURE_WBS")</h4>
-            <h5 class="description">@translate.Get("FEATURE_WBS_DESCRIPTION")</h5>
+            <h4 class="title">@translate.Get("FEATURE_WBS", ViewBag.Lang)</h4>
+            <h5 class="description">@translate.Get("FEATURE_WBS_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
             <img src="/images/wbs.png" alt="temp">
@@ -104,8 +104,8 @@
     </section>
     <section class="feature">
         <div class="info">
-            <h4 class="title">@translate.Get("FEATURE_WP")</h4>
-            <h5 class="description">@translate.Get("FEATURE_WP_DESCRIPTION")</h5>
+            <h4 class="title">@translate.Get("FEATURE_WP", ViewBag.Lang)</h4>
+            <h5 class="description">@translate.Get("FEATURE_WP_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
             <img src="/images/cards.png" alt="temp">
@@ -113,8 +113,8 @@
     </section>
     <section class="feature">
         <div class="info">
-            <h4 class="title">@translate.Get("FEATURE_BOT")</h4>
-            <h5 class="description">@translate.Get("FEATURE_BOT_DESCRIPTION")</h5>
+            <h4 class="title">@translate.Get("FEATURE_BOT", ViewBag.Lang)</h4>
+            <h5 class="description">@translate.Get("FEATURE_BOT_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
             <img src="/images/messenger-bot.png" alt="temp">
@@ -122,8 +122,8 @@
     </section>
     <section class="feature">
         <div class="info">
-            <h4 class="title">@translate.Get("FEATURE_TS")</h4>
-            <h5 class="description">@translate.Get("FEATURE_TS_DESCRIPTION")</h5>
+            <h4 class="title">@translate.Get("FEATURE_TS", ViewBag.Lang)</h4>
+            <h5 class="description">@translate.Get("FEATURE_TS_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
             <img src="/images/timespent.png" alt="temp">
@@ -131,8 +131,8 @@
     </section>
     <section class="feature">
         <div class="info">
-            <h4 class="title">@translate.Get("FEATURE_DASHBOARD")</h4>
-            <h5 class="description">@translate.Get("FEATURE_DASHBOARD_DESCRIPTION")</h5>
+            <h4 class="title">@translate.Get("FEATURE_DASHBOARD", ViewBag.Lang)</h4>
+            <h5 class="description">@translate.Get("FEATURE_DASHBOARD_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
             <img src="/images/dashboard.png" alt="temp">
@@ -140,8 +140,8 @@
     </section>
     <section class="feature">
         <div class="info">
-            <h4 class="title">@translate.Get("FEATURE_HOLDING")</h4>
-            <h5 class="description">@translate.Get("FEATURE_HOLDING_DESCRIPTION")</h5>
+            <h4 class="title">@translate.Get("FEATURE_HOLDING", ViewBag.Lang)</h4>
+            <h5 class="description">@translate.Get("FEATURE_HOLDING_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
             <img src="/images/holding.png" alt="temp">
@@ -149,12 +149,12 @@
     </section>
 </div>
 <div class="applications">
-    <h4>@translate.Get("ASOODE_APPLICATIONS")</h4>
+    <h4>@translate.Get("ASOODE_APPLICATIONS", ViewBag.Lang)</h4>
     <div class="boxes">
         <div class="box">
             <div class="title">
                 <i class="icon-download4"></i>
-                <span>@translate.Get("DOWNLOAD_PWA")</span>
+                <span>@translate.Get("DOWNLOAD_PWA", ViewBag.Lang)</span>
             </div>
             <div class="image">
                 <a href="#">
@@ -165,7 +165,7 @@
         <div class="box">
             <div class="title">
                 <i class="icon-download4"></i>
-                <span>@translate.Get("DOWNLOAD_DESKTOP")</span>
+                <span>@translate.Get("DOWNLOAD_DESKTOP", ViewBag.Lang)</span>
             </div>
             <div class="image">
                 <a href="#">
@@ -176,7 +176,7 @@
         <div class="box mobile">
             <div class="title">
                 <i class="icon-download4"></i>
-                <span>@translate.Get("DOWNLOAD_NATIVE")</span>
+                <span>@translate.Get("DOWNLOAD_NATIVE", ViewBag.Lang)</span>
             </div>
             <div class="image">
                 <a href="#">
@@ -190,48 +190,48 @@
     </div>
 </div>
 <div class="your-work">
-    <h4>@translate.Get("ASOODE_FOR_YOUR_WORK")</h4>
+    <h4>@translate.Get("ASOODE_FOR_YOUR_WORK", ViewBag.Lang)</h4>
     <div class="owl-carousel boxes">
         <div class="box">
             <i class="ico icon-city"></i>
-            <h5>@translate.Get("ORGANIZATIONS")</h5>
-            <h6>@translate.Get("ORGANIZATIONS_DESCRIPTION")</h6>
+            <h5>@translate.Get("ORGANIZATIONS", ViewBag.Lang)</h5>
+            <h6>@translate.Get("ORGANIZATIONS_DESCRIPTION", ViewBag.Lang)</h6>
             <i class="bg icon-city"></i>
         </div>
         <div class="box">
             <i class="ico icon-trophy4"></i>
-            <h5>@translate.Get("STARTUPS")</h5>
-            <h6>@translate.Get("STARTUPS_DESCRIPTION")</h6>
+            <h5>@translate.Get("STARTUPS", ViewBag.Lang)</h5>
+            <h6>@translate.Get("STARTUPS_DESCRIPTION", ViewBag.Lang)</h6>
             <i class="bg icon-trophy4"></i>
         </div>
         <div class="box">
             <i class="ico icon-emoji"></i>
-            <h5>@translate.Get("DEVELOPERS")</h5>
-            <h6>@translate.Get("DEVELOPERS_DESCRIPTION")</h6>
+            <h5>@translate.Get("DEVELOPERS", ViewBag.Lang)</h5>
+            <h6>@translate.Get("DEVELOPERS_DESCRIPTION", ViewBag.Lang)</h6>
             <i class="bg icon-emoji"></i>
         </div>
         <div class="box">
             <i class="ico icon-stethoscope"></i>
-            <h5>@translate.Get("DOCTORS")</h5>
-            <h6>@translate.Get("DOCTORS_DESCRIPTION")</h6>
+            <h5>@translate.Get("DOCTORS", ViewBag.Lang)</h5>
+            <h6>@translate.Get("DOCTORS_DESCRIPTION", ViewBag.Lang)</h6>
             <i class="bg icon-stethoscope"></i>
         </div>
         <div class="box">
             <i class="ico icon-office"></i>
-            <h5>@translate.Get("INSTITUTES")</h5>
-            <h6>@translate.Get("INSTITUTES_DESCRIPTION")</h6>
+            <h5>@translate.Get("INSTITUTES", ViewBag.Lang)</h5>
+            <h6>@translate.Get("INSTITUTES_DESCRIPTION", ViewBag.Lang)</h6>
             <i class="bg icon-office"></i>
         </div>
     </div>
 </div>
 <div class="from-today">
-    <h4>@translate.Get("FROM_TODAY_JOIN")</h4>
+    <h4>@translate.Get("FROM_TODAY_JOIN", ViewBag.Lang)</h4>
     <div class="join">
         <a href="https://panel.asoode.com/register">
-            @translate.Get("JOIN_NOW")
+            @translate.Get("JOIN_NOW", ViewBag.Lang)
         </a>
     </div>
-    <h5>@translate.Get("THOSE_JOINED")</h5>
+    <h5>@translate.Get("THOSE_JOINED", ViewBag.Lang)</h5>
 
     <div class="customers">
         <a href="#">
@@ -253,7 +253,7 @@
 
 </div>
 <div class="others-say">
-    <h4>@translate.Get("WHAT_OTHERS_SAY")</h4>
+    <h4>@translate.Get("WHAT_OTHERS_SAY", ViewBag.Lang)</h4>
     <div class="boxes">
         <div class="box bx-1">
             <div class="owl-carousel">
@@ -280,15 +280,15 @@
         <a class="logo" href="/">
             <img src="/images/asoode-logo.svg" alt="">
         </a>
-        <a href="/@ViewBag.Lang/contact">@translate.Get("CONTACT_US")</a>
-        <a href="javascript:void(0)">@translate.Get("JOB_OPPORTUNITIES")</a>
-        <a href="/@ViewBag.Lang/faq">@translate.Get("FAQ")</a>
-        <a href="/@ViewBag.Lang/blog">@translate.Get("BLOG")</a>
+        <a href="/@ViewBag.Lang/contact">@translate.Get("CONTACT_US", ViewBag.Lang)</a>
+        <a href="javascript:void(0)">@translate.Get("JOB_OPPORTUNITIES", ViewBag.Lang)</a>
+        <a href="/@ViewBag.Lang/faq">@translate.Get("FAQ", ViewBag.Lang)</a>
+        <a href="/@ViewBag.Lang/blog">@translate.Get("BLOG", ViewBag.Lang)</a>
     </div>
     <div class="box middle">
         <div>
-            @translate.Get("SHARIF_UNIVERSITY")<br>
-            @translate.Get("COPY_RIGHT")&nbsp;&copy;@(DateTime.Now.Year)
+            @translate.Get("SHARIF_UNIVERSITY", ViewBag.Lang)<br>
+            @translate.Get("COPY_RIGHT", ViewBag.Lang)&nbsp;&copy;@(DateTime.Now.Year)
         </div>
     </div>
     <div class="box boozhan">
@@ -301,7 +301,7 @@
                 </svg>
             </a>
         </div>
-        <h6>@translate.Get("BOOZHAN_PRODUCT")</h6>
+        <h6>@translate.Get("BOOZHAN_PRODUCT", ViewBag.Lang)</h6>
         <br>
         <a target="_blank" href="https://www.linkedin.com/company/asoode" class="linkedin">
             <i class="icon-linkedin2"></i>

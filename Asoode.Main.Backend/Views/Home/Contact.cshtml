@@ -1,8 +1,8 @@
 ﻿@using Asoode.Main.Core.Contracts.General
 @inject ITranslateBiz translate
 @{
-    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_CONTACT_TITLE"));
-    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_CONTACT_DESCRIPTION"));
+    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_CONTACT_TITLE", ViewBag.Lang));
+    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_CONTACT_DESCRIPTION", ViewBag.Lang));
 }
 <div class="page-contact pg">
     <div class="container-fluid">

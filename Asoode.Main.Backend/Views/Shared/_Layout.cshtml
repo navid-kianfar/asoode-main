@@ -31,21 +31,21 @@
                     </a>
                 </div>
                 <a class="link" href="/@ViewBag.Lang/why">
-                    @translate.Get("WHY_ASOODE")
+                    @translate.Get("WHY_ASOODE", ViewBag.Lang)
                 </a>
                 <a class="link" href="/@ViewBag.Lang/plans">
-                    @translate.Get("PLANS")
+                    @translate.Get("PLANS", ViewBag.Lang)
                 </a>
                 <a class="link" href="/@ViewBag.Lang/about">
-                    @translate.Get("ABOUT_US")
+                    @translate.Get("ABOUT_US", ViewBag.Lang)
                 </a>
             </div>
             <div class="box">
                 <a class="link login" href="https://panel.asoode.com/login">
-                    @translate.Get("LOGIN")
+                    @translate.Get("LOGIN", ViewBag.Lang)
                 </a>
                 <a class="link bordered" href="https://panel.asoode.com/register">
-                    @translate.Get("REGISTER")
+                    @translate.Get("REGISTER", ViewBag.Lang)
                 </a>
             </div>
         </nav>
@@ -59,15 +59,15 @@
         <a class="logo" href="/">
             <img src="/images/asoode-logo.svg" alt="">
         </a>
-        <a href="/@ViewBag.Lang/contact">@translate.Get("CONTACT_US")</a>
-        <a href="javascript:void(0)">@translate.Get("JOB_OPPORTUNITIES")</a>
-        <a href="/@ViewBag.Lang/faq">@translate.Get("FAQ")</a>
-        <a href="/@ViewBag.Lang/blog">@translate.Get("BLOG")</a>
+        <a href="/@ViewBag.Lang/contact">@translate.Get("CONTACT_US", ViewBag.Lang)</a>
+        <a href="javascript:void(0)">@translate.Get("JOB_OPPORTUNITIES", ViewBag.Lang)</a>
+        <a href="/@ViewBag.Lang/faq">@translate.Get("FAQ", ViewBag.Lang)</a>
+        <a href="/@ViewBag.Lang/blog">@translate.Get("BLOG", ViewBag.Lang)</a>
     </div>
     <div class="box middle">
         <div>
-            @translate.Get("SHARIF_UNIVERSITY")<br>
-            @translate.Get("COPY_RIGHT")&nbsp;&copy;@(DateTime.Now.Year)
+            @translate.Get("SHARIF_UNIVERSITY", ViewBag.Lang)<br>
+            @translate.Get("COPY_RIGHT", ViewBag.Lang)&nbsp;&copy;@(DateTime.Now.Year)
         </div>
     </div>
     <div class="box boozhan">
@@ -80,7 +80,7 @@
                 </svg>
             </a>
         </div>
-        <h6>@translate.Get("BOOZHAN_PRODUCT")</h6>
+        <h6>@translate.Get("BOOZHAN_PRODUCT", ViewBag.Lang)</h6>
         <br>
         <a target="_blank" href="https://www.linkedin.com/company/asoode" class="linkedin">
             <i class="icon-linkedin2"></i>

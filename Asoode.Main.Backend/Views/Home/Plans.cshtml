@@ -3,15 +3,15 @@
 @inject ITranslateBiz translate
 @model Asoode.Main.Core.ViewModel.Membership.PlanViewModel[]
 @{
-    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_PLANS_TITLE"));
-    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_PLANS_DESCRIPTION"));
+    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_PLANS_TITLE", ViewBag.Lang));
+    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_PLANS_DESCRIPTION", ViewBag.Lang));
 }
 <div class="page-plans pg">
 <div class="container">
 <div class="row header">
     <div class="col-md-12">
         <i class="icon-trophy4"></i>
-        <h2>@translate.Get("PAGE_PLANS_SUMMARY")</h2>
+        <h2>@translate.Get("PAGE_PLANS_SUMMARY", ViewBag.Lang)</h2>
     </div>
 </div>
 <div class="row">
@@ -23,22 +23,22 @@
     @foreach (var plan in Model)
     {
         <th>
-            <div class="title">@translate.Get(plan.Title)</div>
+            <div class="title">@translate.Get(plan.Title, ViewBag.Lang)</div>
             @if (plan.Type == PlanType.Free)
             {
-                <div class="price">@translate.Get("FREE")</div>
+                <div class="price">@translate.Get("FREE", ViewBag.Lang)</div>
                 <div class="price-unit">
-                    @translate.Get("FOREVER")
+                    @translate.Get("FOREVER", ViewBag.Lang)
                 </div>
             }
             else
             {
                 <div class="price">@($"{plan.PlanCost:n0}")</div>
                 <div class="price-unit">
-                    @translate.Get("TOMAN")&nbsp;/&nbsp;
-                    @plan.Days&nbsp;@translate.Get("DAYS")
+                    @translate.Get("TOMAN", ViewBag.Lang)&nbsp;/&nbsp;
+                    @plan.Days&nbsp;@translate.Get("DAYS", ViewBag.Lang)
                 </div>
-                <button>@translate.Get("CHOOSE")</button>
+                <button>@translate.Get("CHOOSE", ViewBag.Lang)</button>
             }
 
         </th>
@@ -47,42 +47,42 @@
 </thead>
 <tbody>
 <tr>
-    <td>@translate.Get("USERS")</td>
+    <td>@translate.Get("USERS", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td>@plan.Users</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("COMPLEX_PROJECT")</td>
+    <td>@translate.Get("COMPLEX_PROJECT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td>@plan.Project</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("SIMPLE_PROJECT")</td>
+    <td>@translate.Get("SIMPLE_PROJECT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td>@plan.WorkPackage</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("COMPLEX_GROUP")</td>
+    <td>@translate.Get("COMPLEX_GROUP", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td>@plan.ComplexGroup</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("SIMPLE_GROUP")</td>
+    <td>@translate.Get("SIMPLE_GROUP", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td>@plan.SimpleGroup</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("DISK_SPACE")</td>
+    <td>@translate.Get("DISK_SPACE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         if (plan.Type == PlanType.Free)
@@ -96,42 +96,42 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("ATTACHMENT_SIZE")</td>
+    <td>@translate.Get("ATTACHMENT_SIZE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td>@($"{plan.AttachmentSize / 1024 / 1024:n0}") MB</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("ADDITIONAL_DISK_SPACE_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    <td>@translate.Get("ADDITIONAL_DISK_SPACE_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
         <td>@($"{plan.AdditionalSpaceCost:n0}")</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("ADDITIONAL_USERS_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    <td>@translate.Get("ADDITIONAL_USERS_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
         <td>@($"{plan.AdditionalUserCost:n0}")</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("ADDITIONAL_GROUP_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    <td>@translate.Get("ADDITIONAL_GROUP_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
         <td>@($"{plan.AdditionalGroupCost:n0}")</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("ADDITIONAL_PROJECT_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    <td>@translate.Get("ADDITIONAL_PROJECT_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
         <td>@($"{plan.AdditionalProjectCost:n0}")</td>
     }
 </tr>
 <tr>
-    <td>@translate.Get("ADDITIONAL_WP_COST")&nbsp;(@translate.Get("TOMAN"))</td>
+    <td>@translate.Get("ADDITIONAL_WP_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
         <td>@($"{plan.AdditionalWorkPackageCost:n0}")</td>
@@ -139,7 +139,7 @@
 </tr>
 
 <tr>
-    <td>@translate.Get("FEATURE_CHAT")</td>
+    <td>@translate.Get("FEATURE_CHAT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -148,7 +148,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_FILES")</td>
+    <td>@translate.Get("FEATURE_FILES", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -157,7 +157,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_CALENDAR")</td>
+    <td>@translate.Get("FEATURE_CALENDAR", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -166,7 +166,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_WBS")</td>
+    <td>@translate.Get("FEATURE_BREAK", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -175,7 +175,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_ROAD_MAP")</td>
+    <td>@translate.Get("FEATURE_ROAD_MAP", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -184,7 +184,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_TREE")</td>
+    <td>@translate.Get("FEATURE_TREE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -193,7 +193,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_OBJECTIVES")</td>
+    <td>@translate.Get("FEATURE_OBJECTIVES", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -202,7 +202,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_SEASON")</td>
+    <td>@translate.Get("FEATURE_SEASON", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -211,7 +211,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_CUSTOM_FIELD")</td>
+    <td>@translate.Get("FEATURE_CUSTOM_FIELD", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -220,7 +220,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_VOTE")</td>
+    <td>@translate.Get("FEATURE_VOTE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -229,7 +229,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_SUB_TASK")</td>
+    <td>@translate.Get("FEATURE_SUB_TASK", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -238,7 +238,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_BLOCKING")</td>
+    <td>@translate.Get("FEATURE_BLOCKING", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -247,7 +247,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_RELATED")</td>
+    <td>@translate.Get("FEATURE_RELATED", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -256,7 +256,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_TIME_SPENT")</td>
+    <td>@translate.Get("FEATURE_TIME_SPENT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -265,7 +265,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_KARTABL")</td>
+    <td>@translate.Get("FEATURE_KARTABL", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -274,7 +274,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_REPORTS")</td>
+    <td>@translate.Get("FEATURE_REPORTS", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -283,7 +283,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_TIME_OFF")</td>
+    <td>@translate.Get("FEATURE_TIME_OFF", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -292,7 +292,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_SHIFT")</td>
+    <td>@translate.Get("FEATURE_SHIFT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -301,7 +301,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_PAYMENTS")</td>
+    <td>@translate.Get("FEATURE_PAYMENTS", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -310,7 +310,7 @@
     }
 </tr>
 <tr>
-    <td>@translate.Get("FEATURE_TIME_VALUE")</td>
+    <td>@translate.Get("FEATURE_TIME_VALUE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
         <td class="ico">
@@ -325,16 +325,16 @@
 <div class="row">
     <div class="container">
         <div class="col-md-12 more">
-            <h3>@translate.Get("IF_YOU_ARE_STARTUP")</h3>
-            <h4>@translate.Get("IF_YOU_ARE_STARTUP_DESCRIPTION")</h4>
+            <h3>@translate.Get("IF_YOU_ARE_STARTUP", ViewBag.Lang)</h3>
+            <h4>@translate.Get("IF_YOU_ARE_STARTUP_DESCRIPTION", ViewBag.Lang)</h4>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="container">
         <div class="col-md-12 more">
-            <h3>@translate.Get("IF_YOU_ARE_STUDENT")</h3>
-            <h4>@translate.Get("IF_YOU_ARE_STUDENT_DESCRIPTION")</h4>
+            <h3>@translate.Get("IF_YOU_ARE_STUDENT", ViewBag.Lang)</h3>
+            <h4>@translate.Get("IF_YOU_ARE_STUDENT_DESCRIPTION", ViewBag.Lang)</h4>
         </div>
     </div>
 </div>

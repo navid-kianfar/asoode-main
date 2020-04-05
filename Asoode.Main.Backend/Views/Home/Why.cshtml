@@ -1,8 +1,8 @@
 ﻿@using Asoode.Main.Core.Contracts.General
 @inject ITranslateBiz translate
 @{
-    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_WHY_TITLE"));
-    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_WHY_DESCRIPTION"));
+    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_WHY_TITLE", ViewBag.Lang));
+    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_WHY_DESCRIPTION", ViewBag.Lang));
 }
 <div class="page-why pg">
     <div class="container-fluid">
@@ -14,29 +14,29 @@
                         <th></th>
                         <th>
                             <img src="/images/brands/as-ico.png" alt="">
-                            <div class="name">@translate.Get("ASOODE")</div>
+                            <div class="name">@translate.Get("ASOODE", ViewBag.Lang)</div>
                         </th>
                         <th>
                             <img src="/images/brands/tr-ico.png" alt="">
-                            <div class="name">@translate.Get("TRELLO")</div>
+                            <div class="name">@translate.Get("TRELLO", ViewBag.Lang)</div>
                         </th>
                         <th>
                             <img src="/images/brands/tk-ico.png" alt="">
-                            <div class="name">@translate.Get("TASKULU")</div>
+                            <div class="name">@translate.Get("TASKULU", ViewBag.Lang)</div>
                         </th>
                         <th>
                             <img src="/images/brands/tc-ico.png" alt="">
-                            <div class="name">@translate.Get("TEAM_CAMP")</div>
+                            <div class="name">@translate.Get("TEAM_CAMP", ViewBag.Lang)</div>
                         </th>
                         <th>
                             <img src="/images/brands/bn-ico.png" alt="">
-                            <div class="name">@translate.Get("BALONET")</div>
+                            <div class="name">@translate.Get("BALONET", ViewBag.Lang)</div>
                         </th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>@translate.Get("FEATURE_CHAT")</td>
+                        <td>@translate.Get("FEATURE_CHAT", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -44,7 +44,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_FILES")</td>
+                        <td>@translate.Get("FEATURE_FILES", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -52,7 +52,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_CALENDAR")</td>
+                        <td>@translate.Get("FEATURE_CALENDAR", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -60,7 +60,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_WBS")</td>
+                        <td>@translate.Get("FEATURE_BREAK", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -68,7 +68,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_ROAD_MAP")</td>
+                        <td>@translate.Get("FEATURE_ROAD_MAP", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -76,7 +76,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_TREE")</td>
+                        <td>@translate.Get("FEATURE_TREE", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -84,7 +84,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_OBJECTIVES")</td>
+                        <td>@translate.Get("FEATURE_OBJECTIVES", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -92,7 +92,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_SEASON")</td>
+                        <td>@translate.Get("FEATURE_SEASON", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -100,7 +100,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_CUSTOM_FIELD")</td>
+                        <td>@translate.Get("FEATURE_CUSTOM_FIELD", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -108,7 +108,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_VOTE")</td>
+                        <td>@translate.Get("FEATURE_VOTE", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -116,7 +116,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_SUB_TASK")</td>
+                        <td>@translate.Get("FEATURE_SUB_TASK", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -124,7 +124,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_BLOCKING")</td>
+                        <td>@translate.Get("FEATURE_BLOCKING", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -132,7 +132,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_RELATED")</td>
+                        <td>@translate.Get("FEATURE_RELATED", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -140,7 +140,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_TIME_SPENT")</td>
+                        <td>@translate.Get("FEATURE_TIME_SPENT", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -148,7 +148,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_COMPLEX_GROUP")</td>
+                        <td>@translate.Get("FEATURE_COMPLEX_GROUP", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -156,7 +156,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_GROUP_TIME_SPENT")</td>
+                        <td>@translate.Get("FEATURE_GROUP_TIME_SPENT", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -164,7 +164,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_REPORTS")</td>
+                        <td>@translate.Get("FEATURE_REPORTS", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -172,7 +172,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_TIME_OFF")</td>
+                        <td>@translate.Get("FEATURE_TIME_OFF", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -180,7 +180,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_SHIFT")</td>
+                        <td>@translate.Get("FEATURE_SHIFT", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -188,7 +188,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_PAYMENTS")</td>
+                        <td>@translate.Get("FEATURE_PAYMENTS", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -196,7 +196,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_TIME_VALUE")</td>
+                        <td>@translate.Get("FEATURE_TIME_VALUE", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -204,7 +204,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>@translate.Get("FEATURE_KARTABL")</td>
+                        <td>@translate.Get("FEATURE_KARTABL", ViewBag.Lang)</td>
                         <td class="ico"><i class="icon-checkmark3"></i></td>
                         <td></td>
                         <td></td>
@@ -217,7 +217,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h1>@translate.Get("HOW_ASOODE_WORKS")</h1>
+                <h1>@translate.Get("HOW_ASOODE_WORKS", ViewBag.Lang)</h1>
             </div>
         </div>
         <div class="row">
