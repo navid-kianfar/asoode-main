@@ -30,12 +30,14 @@ namespace Asoode.Main.Data.Models.Base
                 WorkPackage = plan.WorkPackage,
                 UpdatedAt = plan.UpdatedAt,
                 AdditionalWorkPackageCost = plan.AdditionalWorkPackageCost,
-                AdditionalGroupCost = plan.AdditionalGroupCost,
+                AdditionalSimpleGroupCost = plan.AdditionalSimpleGroupCost,
+                AdditionalComplexGroupCost = plan.AdditionalComplexGroupCost,
                 AdditionalProjectCost = plan.AdditionalProjectCost,
                 AdditionalSpaceCost = plan.AdditionalSpaceCost,
                 AdditionalUserCost = plan.AdditionalUserCost,
                 AdditionalWorkPackage = plan.AdditionalWorkPackage,
-                AdditionalGroup = plan.AdditionalGroup,
+                AdditionalSimpleGroup = plan.AdditionalSimpleGroup,
+                AdditionalComplexGroup = plan.AdditionalComplexGroup,
                 AdditionalProject = plan.AdditionalProject,
                 AdditionalSpace = plan.AdditionalSpace,
                 AdditionalUser = plan.AdditionalUser,
@@ -60,7 +62,7 @@ namespace Asoode.Main.Data.Models.Base
                 FeatureBlocking = plan.FeatureBlocking,
                 FeatureRelated = plan.FeatureRelated,
                 FeatureComplexGroup = plan.FeatureComplexGroup,
-                FeatureGroupTimeSpent = plan.FeatureGroupTimeSpent
+                FeatureGroupTimeSpent = plan.FeatureGroupTimeSpent,
             };
         }
     }

@@ -5,6 +5,8 @@ namespace Asoode.Main.Core.ViewModel.Membership
 {
     public class PlanViewModel : BaseViewModel
     {
+        #region Props
+        
         public string Title { get; set; }
         public string Description { get; set; }
         public string Picture { get; set; }
@@ -14,25 +16,40 @@ namespace Asoode.Main.Core.ViewModel.Membership
         public bool OneTime { get; set; }
         public int Order { get; set; }
         public int Days { get; set; }
-        public long DiskSpace { get; set; }
         public int AttachmentSize { get; set; }
         public int PlanCost { get; set; }
-        public int AdditionalUserCost { get; set; }
-        public int AdditionalSpaceCost { get; set; }
-        public int AdditionalProjectCost { get; set; }
-        public int AdditionalGroupCost { get; set; }
-        public int AdditionalUser { get; set; }
-        public int AdditionalSpace { get; set; }
-        public int AdditionalProject { get; set; }
-        public int AdditionalGroup { get; set; }
-        public int AdditionalWorkPackage { get; set; }
         public bool CanExtend { get; set; }
         
+        #endregion
+        
+        #region Def
+        public long DiskSpace { get; set; }
         public int Users { get; set; }
         public int WorkPackage { get; set; }
         public int Project { get; set; }
         public int SimpleGroup { get; set; }
         public int ComplexGroup { get; set; }
+        #endregion
+
+        #region Additional
+        public int AdditionalUser { get; set; }
+        public int AdditionalSpace { get; set; }
+        public int AdditionalProject { get; set; }
+        public int AdditionalSimpleGroup { get; set; }
+        public int AdditionalComplexGroup { get; set; }
+        public int AdditionalWorkPackage { get; set; }
+        #endregion
+        
+        #region Additional Cost
+        public int AdditionalWorkPackageCost { get; set; }
+        public int AdditionalUserCost { get; set; }
+        public int AdditionalSpaceCost { get; set; }
+        public int AdditionalProjectCost { get; set; }
+        public int AdditionalSimpleGroupCost { get; set; }
+        public int AdditionalComplexGroupCost { get; set; }
+        #endregion
+        
+        #region Features
         public bool FeatureCustomField { get; set; }
         public bool FeatureTimeSpent { get; set; }
         public bool FeatureTimeValue { get; set; }
@@ -49,13 +66,12 @@ namespace Asoode.Main.Core.ViewModel.Membership
         public bool FeatureSeasons { get; set; }
         public bool FeatureVote { get; set; }
         public bool FeatureSubTask { get; set; }
-        
         public bool FeatureKartabl { get; set; }
         public bool FeatureCalendar { get; set; }
         public bool FeatureBlocking { get; set; }
         public bool FeatureRelated { get; set; }
         public bool FeatureComplexGroup { get; set; }
         public bool FeatureGroupTimeSpent { get; set; }
-        public int AdditionalWorkPackageCost { get; set; }
+        #endregion
     }
 }

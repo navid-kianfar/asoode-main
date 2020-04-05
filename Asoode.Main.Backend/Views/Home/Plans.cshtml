@@ -120,7 +120,14 @@
     <td>@translate.Get("ADDITIONAL_GROUP_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
-        <td>@($"{plan.AdditionalGroupCost:n0}")</td>
+        <td>@($"{plan.AdditionalSimpleGroupCost:n0}")</td>
+    }
+</tr>
+<tr>
+    <td>@translate.Get("ADDITIONAL_COMPLEX_GROUP_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
+    @foreach (var plan in Model)
+    {
+        <td>@($"{plan.AdditionalComplexGroupCost:n0}")</td>
     }
 </tr>
 <tr>
