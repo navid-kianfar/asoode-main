@@ -12,19 +12,7 @@ namespace Asoode.Main.Backend.Filters
         {
             if (context.HttpContext.Request.Path.Value.Contains(".")) return;
             string culture = context.RouteData.Values["culture"]?.ToString();
-            if (string.IsNullOrEmpty(culture))
-            {
-                culture = context.HttpContext.Request.Headers["culture"];
-                if (string.IsNullOrEmpty(culture))
-                {
-                    culture = context.HttpContext.Request.Cookies["culture"];
-                }
-            }
-
-            if (string.IsNullOrEmpty(culture))
-            {
-                culture = "fa";
-            }
+            if (string.IsNullOrEmpty(culture)) culture = "fa";
 
             context.HttpContext.Response.Cookies.Delete("culture");
             context.HttpContext.Response.Cookies.Append("culture", culture);
