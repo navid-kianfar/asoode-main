@@ -96,6 +96,12 @@ body.dir-ltr {
   background: #f2f2f2 url("/images/main-bg.png") top center no-repeat;
   background-size: contain;
 }
+.home-page .change-password {
+  background: #3c2359;
+  color: #fff;
+  padding: 10px;
+  font-size: 0.8rem;
+}
 .home-page .image-container {
   position: relative;
 }
@@ -249,6 +255,7 @@ body.dir-ltr {
   }
 }
 .home-page .applications {
+  display: none;
   background: #dedddd url("/images/phone.png") left center no-repeat;
   padding: 50px;
 }
