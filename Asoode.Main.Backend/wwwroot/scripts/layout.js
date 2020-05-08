@@ -50,15 +50,18 @@
                 $.ajax({
                     url : 'https://api.asoode.com/v2/contact',
                     type : 'POST',
-                    data : model,
-                    dataType:'json',
+                    data: JSON.stringify(model),
+                    contentType: "application/json",
                     crossDomain: true,
                     success : function(data) {
+                        console.log(data);
                         contactFormButton.removeAttr('disabled');
-                        contactFormFirstName.val('');
-                        contactFormLastName.val('');
-                        contactFormEmail.val('');
-                        contactFormMessage.val('');
+                        if (data.status === 2) {
+                            contactFormFirstName.val('');
+                            contactFormLastName.val('');
+                            contactFormEmail.val('');
+                            contactFormMessage.val('');
+                        }
                     },
                     error : function(request, error) {
                         contactFormButton.removeAttr('disabled');
