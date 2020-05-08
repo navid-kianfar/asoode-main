@@ -592,6 +592,11 @@
 
         &:nth-child(2n) {
           flex-direction: column !important;
+          
+          .info {
+            margin-inline-end: initial;
+            margin-inline-start: initial;
+          }
         }
       }
     }

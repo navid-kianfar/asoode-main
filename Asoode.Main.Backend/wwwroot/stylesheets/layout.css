@@ -1,4 +1,5 @@
-@import "../fonts/icons/asoode/style.css";
+@import "../fonts/icons/asoode/asoode.css";
+@import "../fonts/icons/asoode/ikon.css";
 @import "../images/owl/owl.carousel.css";
 @import "../images/owl/owl.theme.default.css";
 ::-webkit-scrollbar {
@@ -21,6 +22,14 @@
   font-family: "ASOODE";
   src: url("/fonts/icons/asoode/ASOODE.eot?j3anoh");
   src: url("/fonts/icons/asoode/ASOODE.eot?j3anoh#iefix") format("embedded-opentype"), url("/fonts/icons/asoode/ASOODE.ttf?j3anoh") format("truetype"), url("/fonts/icons/asoode/ASOODE.woff?j3anoh") format("woff"), url("/fonts/icons/asoode/ASOODE.svg?j3anoh#ASOODE") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "ikon-asoode";
+  src: url("/assets/fonts/icons/asoode/ikon-asoode.eot?6klnj8");
+  src: url("/assets/fonts/icons/asoode/ikon-asoode.eot?6klnj8#iefix") format("embedded-opentype"), url("/assets/fonts/icons/asoode/ikon-asoode.ttf?6klnj8") format("truetype"), url("/assets/fonts/icons/asoode/ikon-asoode.woff?6klnj8") format("woff"), url("/assets/fonts/icons/asoode/ikon-asoode.svg?6klnj8#ikon-asoode") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -196,6 +205,7 @@ body {
 .page-about .about {
   font-size: 0.9rem;
   text-align: justify;
+  line-height: 2.2rem;
 }
 
 .page-why table {
@@ -414,6 +424,53 @@ body {
 
 .page-contact img {
   max-width: 100%;
+}
+.page-contact form {
+  padding: 30px 0;
+}
+.page-contact form .form-group small {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #bd2130 !important;
+}
+.page-contact form .form-group input {
+  border: 2px solid #ddd;
+  padding: 15px;
+  font-size: 0.8rem;
+  width: 350px;
+  max-width: 100%;
+}
+.page-contact form .form-group input:focus {
+  outline: none;
+  border-color: #80bdff;
+}
+.page-contact form .form-group textarea {
+  border: 2px solid #ddd;
+  padding: 15px;
+  font-size: 0.8rem;
+  width: 350px;
+  max-width: 100%;
+  resize: none;
+}
+.page-contact form .form-group textarea:focus {
+  outline: none;
+  border-color: #80bdff;
+}
+.page-contact form .form-group.error input, .page-contact form .form-group.error textarea {
+  border-color: #bd2130 !important;
+  color: #bd2130 !important;
+}
+.page-contact form .form-group.error input:focus, .page-contact form .form-group.error textarea:focus {
+  outline: none;
+  border-color: #bd2130;
+}
+.page-contact form button {
+  background: #6f42c1 !important;
+  border: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 10px 20px;
 }
 
 @media (max-width: 780px) {
