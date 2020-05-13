@@ -22,6 +22,7 @@
     <th></th>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <th>
             <div class="title">@translate.Get(plan.Title, ViewBag.Lang)</div>
             @if (plan.Type == PlanType.Free)
@@ -57,6 +58,7 @@
     <td>@translate.Get("COMPLEX_PROJECT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.Project > 0)
         {
             <td>@plan.Project</td>
