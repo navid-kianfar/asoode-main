@@ -51,6 +51,7 @@
     <td>@translate.Get("USERS", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td>@plan.Users</td>
     }
 </tr>
@@ -75,6 +76,7 @@
     <td>@translate.Get("SIMPLE_PROJECT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td>@plan.WorkPackage</td>
     }
 </tr>
@@ -82,6 +84,7 @@
     <td>@translate.Get("COMPLEX_GROUP", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.ComplexGroup > 0)
         {
             <td>@plan.ComplexGroup</td>
@@ -98,6 +101,7 @@
     <td>@translate.Get("SIMPLE_GROUP", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td>@plan.SimpleGroup</td>
     }
 </tr>
@@ -105,13 +109,14 @@
     <td>@translate.Get("DISK_SPACE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.Type == PlanType.Free)
         {
             <td>@($"{plan.DiskSpace / 1024 / 1024:n0}") MB</td>
         }
         else
         {
-            <td>@($"{plan.DiskSpace /1024 / 1024 / 1024:n0}") GB</td>
+            <td>@($"{plan.DiskSpace / 1024 / 1024 / 1024:n0}") GB</td>
         }
     }
 </tr>
@@ -119,6 +124,7 @@
     <td>@translate.Get("ATTACHMENT_SIZE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td>@($"{plan.AttachmentSize / 1024 / 1024:n0}") MB</td>
     }
 </tr>
@@ -126,6 +132,7 @@
     <td>@translate.Get("ADDITIONAL_DISK_SPACE_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.AdditionalSpaceCost > 0)
         {
             <td>@($"{plan.AdditionalSpaceCost:n0}")</td>
@@ -142,6 +149,7 @@
     <td>@translate.Get("ADDITIONAL_USERS_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.AdditionalUserCost > 0)
         {
             <td>@($"{plan.AdditionalUserCost:n0}")</td>
@@ -158,6 +166,7 @@
     <td>@translate.Get("ADDITIONAL_GROUP_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.AdditionalSimpleGroupCost > 0)
         {
             <td>@($"{plan.AdditionalSimpleGroupCost:n0}")</td>
@@ -174,6 +183,7 @@
     <td>@translate.Get("ADDITIONAL_COMPLEX_GROUP_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.AdditionalComplexGroupCost > 0)
         {
             <td>@($"{plan.AdditionalComplexGroupCost:n0}")</td>
@@ -190,6 +200,7 @@
     <td>@translate.Get("ADDITIONAL_PROJECT_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.AdditionalProjectCost > 0)
         {
             <td>@($"{plan.AdditionalProjectCost:n0}")</td>
@@ -206,6 +217,7 @@
     <td>@translate.Get("ADDITIONAL_WP_COST", ViewBag.Lang)&nbsp;(@translate.Get("TOMAN", ViewBag.Lang))</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         if (plan.AdditionalWorkPackageCost > 0)
         {
             <td>@($"{plan.AdditionalWorkPackageCost:n0}")</td>
@@ -223,6 +235,7 @@
     <td>@translate.Get("FEATURE_CHAT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureChat ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -232,6 +245,7 @@
     <td>@translate.Get("FEATURE_FILES", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureFiles ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -241,6 +255,7 @@
     <td>@translate.Get("FEATURE_CALENDAR", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureCalendar ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -250,6 +265,7 @@
     <td>@translate.Get("FEATURE_BREAK", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureWbs ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -259,6 +275,7 @@
     <td>@translate.Get("FEATURE_ROAD_MAP", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureRoadMap ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -268,6 +285,7 @@
     <td>@translate.Get("FEATURE_TREE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureTree ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -277,6 +295,7 @@
     <td>@translate.Get("FEATURE_OBJECTIVES", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureObjectives ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -286,6 +305,7 @@
     <td>@translate.Get("FEATURE_SEASON", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureSeasons ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -295,6 +315,7 @@
     <td>@translate.Get("FEATURE_CUSTOM_FIELD", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureCustomField ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -304,6 +325,7 @@
     <td>@translate.Get("FEATURE_VOTE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureVote ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -313,6 +335,7 @@
     <td>@translate.Get("FEATURE_SUB_TASK", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureSubTask ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -322,6 +345,7 @@
     <td>@translate.Get("FEATURE_BLOCKING", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureBlocking ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -331,6 +355,7 @@
     <td>@translate.Get("FEATURE_RELATED", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureRelated ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -340,6 +365,7 @@
     <td>@translate.Get("FEATURE_TIME_SPENT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureTimeSpent ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -349,6 +375,7 @@
     <td>@translate.Get("FEATURE_KARTABL", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureKartabl ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -358,6 +385,7 @@
     <td>@translate.Get("FEATURE_REPORTS", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureReports ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -367,6 +395,7 @@
     <td>@translate.Get("FEATURE_TIME_OFF", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureTimeOff ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -376,6 +405,7 @@
     <td>@translate.Get("FEATURE_SHIFT", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureShift ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -385,6 +415,7 @@
     <td>@translate.Get("FEATURE_PAYMENTS", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeaturePayments ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
@@ -394,6 +425,7 @@
     <td>@translate.Get("FEATURE_TIME_VALUE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
     {
+        if (plan.Type == PlanType.Custom) { continue; }
         <td class="ico">
             <i class="@(plan.FeatureTimeValue ? "icon-checkmark3" : "icon-blocked")"></i>
         </td>
