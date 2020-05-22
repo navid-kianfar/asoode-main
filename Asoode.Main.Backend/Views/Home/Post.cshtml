@@ -13,7 +13,10 @@
             </div>
         </div>
     </div>
-    <img src="https://i.picsum.photos/id/909/1000/250.jpg" class="full" alt="">
+    @if (!string.IsNullOrEmpty(Model.LargeImage))
+    {
+        <img src="@Model.LargeImage" class="full" alt="@Model.Title">
+    }
     <div class="container">
         <div class="row">
             <div class="col-md-12">

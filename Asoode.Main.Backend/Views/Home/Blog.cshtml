@@ -5,7 +5,6 @@
 @{
     ViewData.Add("PAGE_TITLE", Model.Blog.Title);
     ViewData.Add("PAGE_DESCRIPTION", Model.Blog.Description);
-    var counter = 1;
 }
 <div class="page-blog pg">
     <div class="container-fluid">
@@ -14,15 +13,16 @@
                 <h2 class="summary">@Model.Blog.Description</h2>
             </div>
         </div>
-        @foreach (var post in Model.Posts.Items)
+        @for (var counter = 0; counter < Model.Posts.Items.Length; counter++)
         {
-            <section class="row post @(counter++ == 1 ? "large" : "")">
-                <div class="col-md-6">
+            var post = Model.Posts.Items[counter];
+            <section class="row post @(counter == 0 ? "large" : "")">
+                <div class="col-md-@(counter == 0 ? "6" : "4")">
                     <a title="@post.Title" href="@post.Permalink">
-                        <img src="https://i.picsum.photos/id/591/536/354.jpg" alt="">
+                        <img src="@post.MediumImage" alt="">
                     </a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-@(counter == 0 ? "6" : "8")">
                     <a title="@post.Title" href="@post.Permalink">
                         <h2>@post.Title</h2>
                     </a>
