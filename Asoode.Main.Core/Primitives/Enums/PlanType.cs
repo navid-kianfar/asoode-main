@@ -12,4 +12,11 @@ namespace Asoode.Main.Core.Primitives.Enums
         Startup = 8,
         Student = 9
     }
+    
+    public enum BlogType : byte
+    {
+        Post = 1,
+        Faq = 2,
+        Page = 3
+    }
 }

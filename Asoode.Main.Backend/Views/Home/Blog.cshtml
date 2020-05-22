@@ -1,100 +1,55 @@
 ﻿@using Asoode.Main.Core.Contracts.General
+@using Asoode.Main.Core.Helpers
 @inject ITranslateBiz translate
+@model Asoode.Main.Core.ViewModel.Blog.BlogResultViewModel
 @{
-    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_BLOG_TITLE", ViewBag.Lang));
-    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_BLOG_DESCRIPTION", ViewBag.Lang));
+    ViewData.Add("PAGE_TITLE", Model.Blog.Title);
+    ViewData.Add("PAGE_DESCRIPTION", Model.Blog.Description);
+    var counter = 1;
 }
 <div class="page-blog pg">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="summary">@translate.Get("PAGE_BLOG_SUMMARY", ViewBag.Lang)</h2>
+                <h2 class="summary">@Model.Blog.Description</h2>
             </div>
         </div>
-        <section class="row post large">
-            <div class="col-md-6">
-                <a href="/@ViewBag.Lang/post">
-                    <img src="https://i.picsum.photos/id/591/536/354.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="/@ViewBag.Lang/post">
-                    <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h2>
-                </a>
-                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</h3>
-                <div class="info">
-                    <span class="name">Navid Kianfar</span>&nbsp;
-                    <span class="date">21 Esfand 98</span>
+        @foreach (var post in Model.Posts.Items)
+        {
+            <section class="row post @(counter++ == 1 ? "large" : "")">
+                <div class="col-md-6">
+                    <a title="@post.Title" href="@post.Permalink">
+                        <img src="https://i.picsum.photos/id/591/536/354.jpg" alt="">
+                    </a>
                 </div>
-            </div>
-        </section>
-        <section class="row post">
-            <div class="col-md-4">
-                <a href="/@ViewBag.Lang/post">
-                    <img src="https://i.picsum.photos/id/591/536/354.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <a href="/@ViewBag.Lang/post">
-                    <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h2>
-                </a>
-                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</h3>
-                <div class="info">
-                    <span class="name">Navid Kianfar</span>&nbsp;
-                    <span class="date">21 Esfand 98</span>
+                <div class="col-md-6">
+                    <a title="@post.Title" href="@post.Permalink">
+                        <h2>@post.Title</h2>
+                    </a>
+                    <h3>@(string.IsNullOrEmpty(post.Summary) ? post.Description : post.Summary)</h3>
+                    <div class="info">
+                        <span class="name">Navid Kianfar</span>&nbsp;
+                        <span class="date">@DateHelper.Format(post.CreatedAt, null, ViewBag.Lang)</span>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="row post">
-            <div class="col-md-4">
-                <a href="/@ViewBag.Lang/post">
-                    <img src="https://i.picsum.photos/id/591/536/354.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <a href="/@ViewBag.Lang/post">
-                    <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h2>
-                </a>
-                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</h3>
-                <div class="info">
-                    <span class="name">Navid Kianfar</span>&nbsp;
-                    <span class="date">21 Esfand 98</span>
-                </div>
-            </div>
-        </section>
-        <section class="row post">
-            <div class="col-md-4">
-                <a href="/@ViewBag.Lang/post">
-                    <img src="https://i.picsum.photos/id/591/536/354.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <a href="/@ViewBag.Lang/post">
-                    <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h2>
-                </a>
-                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</h3>
-                <div class="info">
-                    <span class="name">Navid Kianfar</span>&nbsp;
-                    <span class="date">21 Esfand 98</span>
-                </div>
-            </div>
-        </section>
-        <section class="row post">
-            <div class="col-md-4">
-                <a href="/@ViewBag.Lang/post">
-                    <img src="https://i.picsum.photos/id/591/536/354.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <a href="/@ViewBag.Lang/post">
-                    <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h2>
-                </a>
-                <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</h3>
-                <div class="info">
-                    <span class="name">Navid Kianfar</span>&nbsp;
-                    <span class="date">21 Esfand 98</span>
-                </div>
-            </div>
-        </section>
+            </section>
+        }
+        
+        @if (Model.Posts.TotalPages > 1)
+        {
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="/@ViewBag.Lang/blog">
+                    @translate.Get("FIRST_PAGE", ViewBag.Lang)
+                </a></li>
+                @for (int p = 1; p < Model.Posts.TotalPages; p++)
+                {
+                    <li class="page-item"><a class="page-link" href="/@ViewBag.Lang/blog/?page=@p">@p</a></li>
+                }
+                <li class="page-item"><a class="page-link" 
+                                         href="/@ViewBag.Lang/blog/?page=@Model.Posts.TotalPages">
+                    @translate.Get("LAST_PAGE", ViewBag.Lang)
+                </a></li>
+            </ul>
+        }
     </div>
 </div>

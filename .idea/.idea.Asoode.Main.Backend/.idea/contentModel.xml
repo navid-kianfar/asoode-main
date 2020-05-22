@@ -220,7 +220,11 @@
         <e p=".gitignore" t="Include" />
         <e p="Asoode.Main.Business.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="DbHelper.cs" t="Include" />
+        </e>
         <e p="General" t="Include">
+          <e p="BlogBiz.cs" t="Include" />
           <e p="TranslateBiz.cs" t="Include" />
         </e>
         <e p="Logging" t="Include">
@@ -244,6 +248,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts" t="Include">
           <e p="General" t="Include">
+            <e p="IBlogBiz.cs" t="Include" />
             <e p="IJsonBiz.cs" t="Include" />
             <e p="IServerInfo.cs" t="Include" />
             <e p="ITranslateBiz.cs" t="Include" />
@@ -286,6 +291,13 @@
           <e p="OperationResult.cs" t="Include" />
         </e>
         <e p="ViewModel" t="Include">
+          <e p="Blog" t="Include">
+            <e p="BlogEditViewModel.cs" t="Include" />
+            <e p="BlogPostEditViewModel.cs" t="Include" />
+            <e p="BlogResultViewModel.cs" t="Include" />
+            <e p="BlogViewModel.cs" t="Include" />
+            <e p="PostViewModel.cs" t="Include" />
+          </e>
           <e p="General" t="Include">
             <e p="BaseViewModel.cs" t="Include" />
             <e p="GridFilter.cs" t="Include" />
@@ -309,11 +321,14 @@
         <e p="Models" t="Include">
           <e p="Base" t="Include">
             <e p="BaseEntity.cs" t="Include" />
+            <e p="BlogExtensions.cs" t="Include" />
             <e p="PlanExtensions.cs" t="Include" />
           </e>
+          <e p="Blog.cs" t="Include" />
+          <e p="BlogCategory.cs" t="Include" />
+          <e p="BlogPost.cs" t="Include" />
           <e p="ErrorLog.cs" t="Include" />
           <e p="Plan.cs" t="Include" />
-          <e p="Post.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

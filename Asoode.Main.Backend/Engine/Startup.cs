@@ -63,6 +63,12 @@ namespace Asoode.Main.Backend.Engine
                     new { controller = "Home" }, 
                     new { culture = new I18NRouteConstraint() }
                 );
+                endpoints.MapControllerRoute(
+                    "posts", 
+                    "{culture}/post/{key}/{title}", 
+                    new { controller = "Home", action = "Post" }, 
+                    new { culture = new I18NRouteConstraint() }
+                );
             });
         }
     }
