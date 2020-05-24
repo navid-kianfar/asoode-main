@@ -1,8 +1,11 @@
 ﻿@using Asoode.Main.Core.Contracts.General
+@using Asoode.Main.Core.Helpers
 @inject ITranslateBiz translate
+@model Asoode.Main.Core.ViewModel.Blog.BlogResultViewModel
 @{
-    ViewData.Add("PAGE_TITLE", translate.Get("PAGE_FAQ_TITLE", ViewBag.Lang));
-    ViewData.Add("PAGE_DESCRIPTION", translate.Get("PAGE_FAQ_DESCRIPTION", ViewBag.Lang));
+    ViewData.Add("PAGE_TITLE", Model.Blog.Title);
+    ViewData.Add("PAGE_DESCRIPTION", Model.Blog.Description);
+    int counter = 1;
 }
 <div class="page-faq pg">
     <div class="container-fluid">
@@ -10,61 +13,26 @@
             <div class="col-md-12">
                 <div class="faq-holder">
                     <div class="accordion">
-                        <div class="card">
-                            <div class="card-header">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" 
-                                            data-toggle="collapse" 
-                                            data-target="#faq1"
-                                            aria-controls="faq1" 
-                                            aria-expanded="true">
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                                    </button>
-                                </h2>
-                            </div>
+                        @foreach (var faq in Model.Posts.Items)
+                        {
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" 
+                                                data-toggle="collapse" 
+                                                data-target="#faq@(counter)"
+                                                aria-controls="faq@(counter)" 
+                                                aria-expanded="true">
+                                            @faq.Title
+                                        </button>
+                                    </h2>
+                                </div>
 
-                            <div id="faq1" class="collapse">
-                                <div class="card-body">
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                                <div id="faq@(counter++)" class="collapse">
+                                    <div class="card-body">@Html.Raw(faq.Title)</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button"  
-                                            data-toggle="collapse" 
-                                            data-target="#faq2"
-                                            aria-controls="faq2">
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                                    </button>
-                                </h2>
-                            </div>
-
-                            <div id="faq2" class="collapse">
-                                <div class="card-body">
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" 
-                                            data-toggle="collapse" 
-                                            data-target="#faq3"
-                                            aria-controls="faq3">
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                                    </button>
-                                </h2>
-                            </div>
-
-                            <div id="faq3" class="collapse">
-                                <div class="card-body">
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                                </div>
-                            </div>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>

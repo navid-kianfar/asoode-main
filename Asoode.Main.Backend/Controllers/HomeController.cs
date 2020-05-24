@@ -41,9 +41,21 @@ namespace Asoode.Main.Backend.Controllers
         {
             return View();
         }
-        public IActionResult Faq()
+        public async Task<IActionResult> Faq(int page = 1)
         {
-            return View();
+            var blogBiz = _serviceProvider.GetService<IBlogBiz>();
+            var culture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.ToLower();
+            var blog = await blogBiz.Faq(culture);
+            var posts = await blogBiz.Posts(blog.Data.Id, new GridFilter
+            {
+                Page = page,
+                PageSize = 5
+            });
+            return View(new BlogResultViewModel
+            {
+                Blog = blog.Data,
+                Posts = posts.Data
+            });
         }
         public async Task<IActionResult> Blog(int page = 1)
         {
@@ -53,7 +65,7 @@ namespace Asoode.Main.Backend.Controllers
             var posts = await blogBiz.Posts(blog.Data.Id, new GridFilter
             {
                 Page = page,
-                PageSize = 10
+                PageSize = 5
             });
             return View(new BlogResultViewModel
             {

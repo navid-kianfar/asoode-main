@@ -42,6 +42,25 @@ namespace Asoode.Main.Business.General
                 return OperationResult<BlogViewModel>.Failed();
             }
         }
+        
+        public async Task<OperationResult<BlogViewModel>> Faq(string culture)
+        {
+            try
+            {
+                using (var unit = _serviceProvider.GetService<ApplicationDbContext>())
+                {
+                    var blog = await unit.Blogs.AsNoTracking()
+                        .SingleOrDefaultAsync(i => i.Culture == culture && i.Type == BlogType.Faq);
+                    
+                    return OperationResult<BlogViewModel>.Success(blog.ToViewModel());
+                }
+            }
+            catch (Exception ex)
+            {
+                await _serviceProvider.GetService<IErrorBiz>().LogException(ex);
+                return OperationResult<BlogViewModel>.Failed();
+            }
+        }
 
         public async Task<OperationResult<GridResult<PostViewModel>>> Posts(Guid blogId, GridFilter model)
         {
@@ -51,7 +70,7 @@ namespace Asoode.Main.Business.General
                 {
                     var query = unit.BlogPosts
                         .Where(i => i.BlogId == blogId)
-                        .OrderBy(i => i.CreatedAt);
+                        .OrderByDescending(i => i.CreatedAt);
                     return await DbHelper.GetPaginatedData(query, tuple =>
                     {
                         var (items, startIndex) = tuple;
@@ -90,5 +109,6 @@ namespace Asoode.Main.Business.General
                 return OperationResult<PostViewModel>.Failed();
             }
         }
+
     }
 }
