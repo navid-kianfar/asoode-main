@@ -473,6 +473,15 @@ body {
   padding: 10px 20px;
 }
 
+.pagination {
+  margin: 0 auto 20px;
+  max-width: 500px;
+}
+.pagination .page-link {
+  color: #3c2359;
+  border-color: transparent;
+}
+
 @media (max-width: 780px) {
   .page-about {
     padding: 350px 50px 50px;

@@ -35,6 +35,24 @@
                         }
                     </div>
                 </div>
+                
+                
+                @if (Model.Posts.TotalPages > 1)
+                {
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="/@ViewBag.Lang/faq">
+                            @translate.Get("FIRST_PAGE", ViewBag.Lang)
+                        </a></li>
+                        @for (int p = 1; p <= Model.Posts.TotalPages; p++)
+                        {
+                            <li class="page-item"><a class="page-link" href="/@ViewBag.Lang/faq/?page=@p">@p</a></li>
+                        }
+                        <li class="page-item"><a class="page-link" 
+                                                 href="/@ViewBag.Lang/faq/?page=@Model.Posts.TotalPages">
+                            @translate.Get("LAST_PAGE", ViewBag.Lang)
+                        </a></li>
+                    </ul>
+                }
             </div>
         </div>
     </div>
