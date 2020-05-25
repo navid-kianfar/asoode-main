@@ -21,7 +21,7 @@
     <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
 </head>
 <body class="home-page lang-@ViewBag.Lang dir-@ViewBag.Direction">
-<div class="change-password">@translate.Get("OLD_USERS_CHANGE_PASSWORD")</div>
+@* <div class="change-password">@translate.Get("OLD_USERS_CHANGE_PASSWORD")</div> *@
 <div class="image-container">
     <nav class="header">
         <div class="box">
@@ -38,6 +38,9 @@
             </a>
             <a class="link" href="/@ViewBag.Lang/about">
                 @translate.Get("ABOUT_US", ViewBag.Lang)
+            </a>
+            <a class="link" href="/@ViewBag.Lang/contact">
+                @translate.Get("CONTACT_US", ViewBag.Lang)
             </a>
         </div>
         <div class="box">
@@ -285,6 +288,7 @@
         <a href="javascript:void(0)">@translate.Get("JOB_OPPORTUNITIES", ViewBag.Lang)</a>
         <a href="/@ViewBag.Lang/faq">@translate.Get("FAQ", ViewBag.Lang)</a>
         <a href="/@ViewBag.Lang/blog">@translate.Get("BLOG", ViewBag.Lang)</a>
+        <a href="https://api.asoode.com/">@translate.Get("API_FOR_DEVELOPERS", ViewBag.Lang)</a>
     </div>
     <div class="box middle">
         <div>
