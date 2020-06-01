@@ -410,8 +410,14 @@ body {
 .page-post h2 {
   color: #adabab;
   font-size: 0.9rem;
+  text-align: justify;
+  line-height: 1.5rem;
 }
-.page-post img.full {
+.page-post img {
+  max-width: 100%;
+  height: auto !important;
+}
+.page-post img .full {
   width: 100%;
 }
 .page-post .content {
