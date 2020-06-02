@@ -411,16 +411,16 @@
         </td>
     }
 </tr>
-<tr>
-    <td>@translate.Get("FEATURE_PAYMENTS", ViewBag.Lang)</td>
-    @foreach (var plan in Model)
-    {
-        if (plan.Type == PlanType.Custom) { continue; }
-        <td class="ico">
-            <i class="@(plan.FeaturePayments ? "icon-checkmark3" : "icon-blocked")"></i>
-        </td>
-    }
-</tr>
+@* <tr> *@
+@*     <td>@translate.Get("FEATURE_PAYMENTS", ViewBag.Lang)</td> *@
+@*     @foreach (var plan in Model) *@
+@*     { *@
+@*         if (plan.Type == PlanType.Custom) { continue; } *@
+@*         <td class="ico"> *@
+@*             <i class="@(plan.FeaturePayments ? "icon-checkmark3" : "icon-blocked")"></i> *@
+@*         </td> *@
+@*     } *@
+@* </tr> *@
 <tr>
     <td>@translate.Get("FEATURE_TIME_VALUE", ViewBag.Lang)</td>
     @foreach (var plan in Model)
