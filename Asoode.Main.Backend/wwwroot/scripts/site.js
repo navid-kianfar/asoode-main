@@ -42,6 +42,23 @@
     $('.bx-1 .owl-carousel').owlCarousel({
         rtl:rtl,
         dots:true,
+        autoplay:true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        loop: true,
+        responsive:{
+            0:{
+                items:1
+            }
+        }
+    });
+    $('.slider .owl-carousel').owlCarousel({
+        rtl:rtl,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        loop: true,
         responsive:{
             0:{
                 items:1

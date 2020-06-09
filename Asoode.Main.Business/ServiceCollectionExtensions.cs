@@ -15,6 +15,7 @@ namespace Asoode.Main.Business
             this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton<ITranslateBiz, TranslateBiz>();
+            services.AddTransient<ITestimonailBiz, TestimonialBiz>();
             services.AddTransient<IBlogBiz, BlogBiz>();
             services.AddTransient<IPlanBiz, PlanBiz>();
             services.AddTransient<IErrorBiz, ErrorBiz>();

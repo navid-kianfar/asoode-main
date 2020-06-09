@@ -1,7 +1,12 @@
-﻿@using Asoode.Main.Core.Contracts.General
-<!DOCTYPE html>
-@{ Layout = ""; }
+﻿<!DOCTYPE html>
+@using Asoode.Main.Core.Contracts.General
+@using Asoode.Main.Core.Primitives.Enums
 @inject ITranslateBiz translate
+@inject ITestimonailBiz testimonailBiz
+@{
+    Layout = "";
+    var testimonials = await testimonailBiz.Top5(ViewBag.Lang);
+}
 <html dir="@ViewBag.Direction" lang="@ViewBag.Lang">
 <head>
     <meta charset="utf-8"/>
@@ -65,7 +70,14 @@
     </div>
 
     <div class="slider">
-
+        <div class="owl-carousel">
+            <img src="/images/slider/slide-1.png" alt="light-theme">
+            <img src="/images/slider/slide-2.png" alt="dark-theme">
+            <img src="/images/slider/slide-3.png" alt="dark-theme">
+            <img src="/images/slider/slide-4.png" alt="dark-theme">
+            <img src="/images/slider/slide-5.png" alt="dark-theme">
+            <img src="/images/slider/slide-6.png" alt="api">
+        </div>
     </div>
 </div>
 <div class="wrapper">
@@ -256,29 +268,43 @@
     </div>
 
 </div>
-<div class="others-say">
-    <h4>@translate.Get("WHAT_OTHERS_SAY", ViewBag.Lang)</h4>
-    <div class="boxes">
-        <div class="box bx-1">
-            <div class="owl-carousel">
-                <div class="item">
-                    <div class="image">
-                        <img src="https://i.picsum.photos/id/866/70/70.jpg" alt="">
-                    </div>
-                    <div class="name">Navid Kianfar</div>
-                    <div class="job-title">Software Developer</div>
-                    <div class="description">
-                        <img src="/images/quotation.png" alt="">
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-                    </div>
+@if (testimonials.Status == OperationResultStatus.Success)
+{
+    <div class="others-say">
+        <h4>@translate.Get("WHAT_OTHERS_SAY", ViewBag.Lang)</h4>
+        <div class="boxes">
+            <div class="box bx-1">
+                <div class="owl-carousel">
+                
+                    @foreach (var testimonail in testimonials.Data)
+                    {
+                        <div class="item">
+                            <div class="image">
+                                @if (!string.IsNullOrEmpty(testimonail.Avatar))
+                                {
+                                    <img src="@(testimonail.Avatar)" alt="avatar"/>
+                                }
+                                else
+                                {
+                                    <i class="icon-user"></i>
+                                }
+                            </div>
+                            <div class="name">@testimonail.FullName</div>
+                            <div class="job-title">@testimonail.Bio</div>
+                            <div class="description">
+                                <img src="/images/quotation.png" alt="">
+                                @testimonail.Message
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
+            <div class="box bx-2"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-4"></div>
         </div>
-        <div class="box bx-2"></div>
-        <div class="box bx-3"></div>
-        <div class="box bx-4"></div>
     </div>
-</div>
+}
 <div class="footer">
     <div class="box asoode">
         <a class="logo" href="/@(ViewBag.Lang)/">

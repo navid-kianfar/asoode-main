@@ -189,6 +189,14 @@
             <e p="phone.png" t="Include" />
             <e p="quotation.png" t="Include" />
             <e p="report-1.png" t="Include" />
+            <e p="slider" t="Include">
+              <e p="slide-1.png" t="Include" />
+              <e p="slide-2.png" t="Include" />
+              <e p="slide-3.png" t="Include" />
+              <e p="slide-4.png" t="Include" />
+              <e p="slide-5.png" t="Include" />
+              <e p="slide-6.png" t="Include" />
+            </e>
             <e p="timespent.png" t="Include" />
             <e p="wbs.png" t="Include" />
           </e>
@@ -225,6 +233,7 @@
         </e>
         <e p="General" t="Include">
           <e p="BlogBiz.cs" t="Include" />
+          <e p="TestimonialBiz.cs" t="Include" />
           <e p="TranslateBiz.cs" t="Include" />
         </e>
         <e p="Logging" t="Include">
@@ -251,6 +260,7 @@
             <e p="IBlogBiz.cs" t="Include" />
             <e p="IJsonBiz.cs" t="Include" />
             <e p="IServerInfo.cs" t="Include" />
+            <e p="ITestimonailBiz.cs" t="Include" />
             <e p="ITranslateBiz.cs" t="Include" />
           </e>
           <e p="Logging" t="Include">
@@ -278,12 +288,14 @@
         </e>
         <e p="Primitives" t="Include">
           <e p="Enums" t="Include">
+            <e p="CalendarType.cs" t="Include" />
             <e p="CostUnit.cs" t="Include" />
             <e p="FileType.cs" t="Include" />
             <e p="OperationResultStatus.cs" t="Include" />
             <e p="PlanType.cs" t="Include" />
             <e p="RequestStatus.cs" t="Include" />
             <e p="ShiftType.cs" t="Include" />
+            <e p="UserType.cs" t="Include" />
           </e>
           <e p="Exceptions" t="Include">
             <e p="InvalidDateException.cs" t="Include" />
@@ -304,6 +316,7 @@
             <e p="GridFilterWithParams.cs" t="Include" />
             <e p="GridResult.cs" t="Include" />
             <e p="SelectableItem.cs" t="Include" />
+            <e p="TestimonialViewModel.cs" t="Include" />
           </e>
           <e p="Membership" t="Include">
             <e p="PlanViewModel.cs" t="Include" />
@@ -329,6 +342,8 @@
           <e p="BlogPost.cs" t="Include" />
           <e p="ErrorLog.cs" t="Include" />
           <e p="Plan.cs" t="Include" />
+          <e p="Testimonial.cs" t="Include" />
+          <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

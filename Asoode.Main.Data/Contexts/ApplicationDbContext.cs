@@ -11,7 +11,9 @@ namespace Asoode.Main.Data.Contexts
         {
         }
 
+        public DbSet<User> Users { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<BlogPost> BlogPosts { get; set; }
         public DbSet<Plan> Plans { get; set; }
