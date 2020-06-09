@@ -33,6 +33,7 @@ namespace Asoode.Main.Business.General
                     var blog = await unit.Blogs.AsNoTracking()
                         .SingleOrDefaultAsync(i => i.Culture == culture && i.Type == BlogType.Post);
                     
+                    if (blog == null) return OperationResult<BlogViewModel>.NotFound();
                     return OperationResult<BlogViewModel>.Success(blog.ToViewModel());
                 }
             }
