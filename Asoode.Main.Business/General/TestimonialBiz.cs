@@ -54,26 +54,12 @@ namespace Asoode.Main.Business.General
                     {
                         result = new[]
                         {
-                            // new TestimonialViewModel
-                            // {
-                            //     Avatar = null,
-                            //     Bio = "تولید کننده صنایع چوب",
-                            //     FullName = "علی زمانی",
-                            //     Message = "",
-                            //     Approved = true,
-                            //     Culture = culture,
-                            //     Id = Guid.Empty,
-                            //     Rate = 5,
-                            //     CreatedAt = DateTime.UtcNow,
-                            //     UpdatedAt = null,
-                            //     UserId = Guid.Empty
-                            // },
                             new TestimonialViewModel
                             {
                                 Avatar = null,
                                 Bio = "کارشناس فروش",
                                 FullName = "مصطفی محمدپور",
-                                Message = "به آسودگی! دیگه هرکی ازم بپرسه: چطوری تونستی زندگی و کسب و کارات به بهترین شکل مدیریت و برنامه ریزی کنی میگم با  asoode. یقین دارم بیشتر از شما خواهیم شنید.",
+                                Message = "به آسودگی! دیگه هرکی ازم بپرسه: چطوری تونستی زندگی و کسب و کارات به بهترین شکل مدیریت و برنامه ریزی کنی میگم با آسوده! یقین دارم بیشتر از شما خواهیم شنید.",
                                 Approved = true,
                                 Culture = culture,
                                 Id = Guid.Empty,
@@ -81,7 +67,21 @@ namespace Asoode.Main.Business.General
                                 CreatedAt = DateTime.UtcNow,
                                 UpdatedAt = null,
                                 UserId = Guid.Empty
-                            }
+                            },
+                            new TestimonialViewModel
+                            {
+                                Avatar = null,
+                                Bio = "تکنسین برق",
+                                FullName = "علی زمانی",
+                                Message = "با سلام و خسته نباشید خدمت مدیریت سایت آسوده باید بگم که با یک برنامه بسیار کاربردی با کارایی ساده برخورد کردم و فکر میکنم می‌تونه جایگاه خودش رو تو جامعه داشته باشه. خدا قوت",
+                                Approved = true,
+                                Culture = culture,
+                                Id = Guid.Empty,
+                                Rate = 5,
+                                CreatedAt = DateTime.UtcNow,
+                                UpdatedAt = null,
+                                UserId = Guid.Empty
+                            },
                         };
                     }
                     
