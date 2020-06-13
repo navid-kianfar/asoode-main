@@ -11,7 +11,10 @@ namespace Asoode.Main.Data
             this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<ApplicationDbContext>(options => { options.UseMySql(connectionString); });
+            services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseSqlServer(connectionString);
+            });
             services.AddTransient<ApplicationDbContext, ApplicationDbContext>();
             return services;
         }
