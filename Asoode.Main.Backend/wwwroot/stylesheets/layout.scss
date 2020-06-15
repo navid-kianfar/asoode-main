@@ -291,29 +291,17 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     
-    .card {
-      .card-header {
-        h2 {
-          button {
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: #333333;
-            white-space: normal;
-          }
-        }
-      }
-      
-      .collapse {
-        .card-body {
-          font-size: 0.7rem;
-          text-align: justify;
-        }
-      }
-      .collapsing {
-        .card-body {
-          font-size: 0.7rem;
-          text-align: justify;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      li {
+        display: flex;
+        padding: 10px 0;
+        a {
+          color: #3c2359;
         }
       }
     }

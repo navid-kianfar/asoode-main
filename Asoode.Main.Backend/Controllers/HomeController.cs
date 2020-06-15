@@ -49,7 +49,7 @@ namespace Asoode.Main.Backend.Controllers
             var posts = await blogBiz.Posts(blog.Data.Id, new GridFilter
             {
                 Page = page,
-                PageSize = 5
+                PageSize = 20
             });
             return View(new BlogResultViewModel
             {

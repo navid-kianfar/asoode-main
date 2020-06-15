@@ -352,20 +352,19 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
-.page-faq .faq-holder .card .card-header h2 button {
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #333333;
-  white-space: normal;
+.page-faq .faq-holder ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
-.page-faq .faq-holder .card .collapse .card-body {
-  font-size: 0.7rem;
-  text-align: justify;
+.page-faq .faq-holder ul li {
+  display: flex;
+  padding: 10px 0;
 }
-.page-faq .faq-holder .card .collapsing .card-body {
-  font-size: 0.7rem;
-  text-align: justify;
+.page-faq .faq-holder ul li a {
+  color: #3c2359;
 }
 
 .page-blog h2.summary {
