@@ -11,7 +11,7 @@ namespace Asoode.Main.Data
             this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContextPool<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(connectionString);
             });
