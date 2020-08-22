@@ -1,5 +1,5 @@
 ﻿@using Asoode.Main.Core.Contracts.General
-@using Asoode.Main.Core.Helpers
+@inject IServerInfo serverInfo
 @inject ITranslateBiz translate
 @model Asoode.Main.Core.ViewModel.Blog.BlogResultViewModel
 @{
@@ -15,7 +15,7 @@
                         @foreach (var faq in Model.Posts.Items)
                         {
                             <li>
-                                <a title="@(faq.Title)" href="@faq.Permalink">
+                                <a title="@(faq.Title)" href="@faq.Permalink(serverInfo.Domain)">
                                     @(faq.Title)
                                 </a>
                             </li>

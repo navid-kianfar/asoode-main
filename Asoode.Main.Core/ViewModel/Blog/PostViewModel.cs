@@ -20,6 +20,6 @@ namespace Asoode.Main.Core.ViewModel.Blog
         public string LargeImage { get; set; }
         public string Key { get; set; }
         
-        public string Permalink => $"https://asoode.com/{Culture}/post/{Key}/{NormalizedTitle}";
+        public string Permalink(string domain) => $"https://{domain}/{Culture}/post/{Key}/{NormalizedTitle}";
     }
 }

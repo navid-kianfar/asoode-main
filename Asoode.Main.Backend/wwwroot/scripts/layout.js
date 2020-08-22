@@ -48,7 +48,7 @@
                 contactFormButton.attr('disabled', 'true');
                 
                 $.ajax({
-                    url : 'https://api.asoode.com/v2/contact',
+                    url : 'https://api.' + window.location.host + '/v2/contact',
                     type : 'POST',
                     data: JSON.stringify(model),
                     contentType: "application/json",

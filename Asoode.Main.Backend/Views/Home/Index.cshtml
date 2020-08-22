@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 @using Asoode.Main.Core.Contracts.General
 @using Asoode.Main.Core.Primitives.Enums
+@inject IServerInfo serverInfo
 @inject ITranslateBiz translate
 @inject ITestimonailBiz testimonailBiz
 @{
@@ -49,10 +50,10 @@
             </a>
         </div>
         <div class="box">
-            <a class="link login" href="https://panel.asoode.com/login?lang=@(ViewBag.Lang)">
+            <a class="link login" href="https://panel.@(serverInfo.Domain)/login?lang=@(ViewBag.Lang)">
                 @translate.Get("LOGIN", ViewBag.Lang)
             </a>
-            <a class="link bordered" href="https://panel.asoode.com/register?lang=@(ViewBag.Lang)">
+            <a class="link bordered" href="https://panel.@(serverInfo.Domain)/register?lang=@(ViewBag.Lang)">
                 @translate.Get("REGISTER", ViewBag.Lang)
             </a>
         </div>
@@ -64,18 +65,18 @@
     </div>
 
     <div class="join">
-        <a href="https://panel.asoode.com/register">
+        <a href="https://panel.@(serverInfo.Domain)/register">
             @translate.Get("JOIN_NOW", ViewBag.Lang)
         </a>
     </div>
 
     <div class="slider">
         <div class="owl-carousel">
-            <img src="/images/slider/slide-1.png" alt="light-theme">
-            <img src="/images/slider/slide-2.png" alt="dark-theme">
-            <img src="/images/slider/slide-3.png" alt="dark-theme">
-            <img src="/images/slider/slide-4.png" alt="dark-theme">
-            <img src="/images/slider/slide-5.png" alt="dark-theme">
+            <img src="/images/slider/slide-1-@(ViewBag.Lang).png" alt="light-theme">
+            <img src="/images/slider/slide-2-@(ViewBag.Lang).png" alt="dark-theme">
+            <img src="/images/slider/slide-3-@(ViewBag.Lang).png" alt="dark-theme">
+            <img src="/images/slider/slide-4-@(ViewBag.Lang).png" alt="dark-theme">
+            <img src="/images/slider/slide-5-@(ViewBag.Lang).png" alt="dark-theme">
             <img src="/images/slider/slide-6.png" alt="api">
         </div>
     </div>
@@ -243,7 +244,7 @@
 <div class="from-today">
     <h4>@translate.Get("FROM_TODAY_JOIN", ViewBag.Lang)</h4>
     <div class="join">
-        <a href="https://panel.asoode.com/register">
+        <a href="https://panel.@(serverInfo.Domain)/register">
             @translate.Get("JOIN_NOW", ViewBag.Lang)
         </a>
     </div>
@@ -314,7 +315,7 @@
         <a href="javascript:void(0)">@translate.Get("JOB_OPPORTUNITIES", ViewBag.Lang)</a>
         <a href="/@ViewBag.Lang/about"> @translate.Get("ABOUT_US", ViewBag.Lang) </a>
         <a href="/@ViewBag.Lang/blog">@translate.Get("BLOG", ViewBag.Lang)</a>
-        <a href="https://api.asoode.com/">@translate.Get("API_FOR_DEVELOPERS", ViewBag.Lang)</a>
+        <a href="https://api.@(serverInfo.Domain)/">@translate.Get("API_FOR_DEVELOPERS", ViewBag.Lang)</a>
     </div>
     <div class="box middle">
         <div>

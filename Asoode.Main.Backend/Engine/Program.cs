@@ -22,6 +22,7 @@ namespace Asoode.Main.Backend
                 {
                     var configuration = scope.ServiceProvider.GetService<IConfiguration>();
                     var serverInfo = scope.ServiceProvider.GetService<IServerInfo>();
+                    serverInfo.Domain = configuration.GetValue<string>("Setting:Domain");
                     serverInfo.RootPath = configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
                     serverInfo.ContentRootPath = Path.Combine(serverInfo.RootPath, "wwwroot");
                     serverInfo.FilesRootPath = Path.Combine(serverInfo.ContentRootPath, "storage");

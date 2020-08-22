@@ -8,5 +8,6 @@ namespace Asoode.Main.Core.Contracts.General
         string I18nRootPath { get; set; }
         string RootPath { get; set; }
         string SmsRootPath { get; set; }
+        string Domain { get; set; }
     }
 }

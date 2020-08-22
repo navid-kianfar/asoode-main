@@ -10,5 +10,6 @@ namespace Asoode.Main.Backend.Engine
         public string I18nRootPath { get; set; }
         public string RootPath { get; set; }
         public string SmsRootPath { get; set; }
+        public string Domain { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿@using Asoode.Main.Core.Contracts.General
 @using Asoode.Main.Core.Helpers
+@inject IServerInfo serverInfo
 @inject ITranslateBiz translate
 @model Asoode.Main.Core.ViewModel.Blog.BlogResultViewModel
 @{
@@ -18,12 +19,12 @@
             var post = Model.Posts.Items[counter];
             <section class="row post @(counter == 0 ? "large" : "")">
                 <div class="col-md-@(counter == 0 ? "6" : "4")">
-                    <a title="@post.Title" href="@post.Permalink">
+                    <a title="@post.Title" href="@post.Permalink(serverInfo.Domain)">
                         <img src="@post.MediumImage" alt="">
                     </a>
                 </div>
                 <div class="col-md-@(counter == 0 ? "6" : "8")">
-                    <a title="@post.Title" href="@post.Permalink">
+                    <a title="@post.Title" href="@post.Permalink(serverInfo.Domain)">
                         <h2>@post.Title</h2>
                     </a>
                     <h3>@(string.IsNullOrEmpty(post.Summary) ? post.Description : post.Summary)</h3>
