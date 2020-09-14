@@ -140,6 +140,11 @@ body {
     font-family: Roboto, 'Helvetica Neue', sans-serif;
   }
 
+  &.lang-ar {
+    margin: 0;
+    font-family: 'Almarai';
+  }
+
   &.dir-rtl {
     direction: rtl;
     text-align: right;
