@@ -1,8 +1,11 @@
 using System;
 using System.Globalization;
 using System.Threading;
+using Asoode.Main.Core.Contracts.General;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Asoode.Main.Backend.Filters
 {
@@ -12,7 +15,10 @@ namespace Asoode.Main.Backend.Filters
         {
             if (context.HttpContext.Request.Path.Value.Contains(".")) return;
             string culture = context.RouteData.Values["culture"]?.ToString();
-            if (string.IsNullOrEmpty(culture)) culture = "fa";
+            if (string.IsNullOrEmpty(culture))
+            {
+                culture = context.HttpContext.RequestServices.GetService<IConfiguration>().GetValue<string>("Setting:I18n:Default");
+            }
 
             context.HttpContext.Response.Cookies.Delete("culture");
             context.HttpContext.Response.Cookies.Append("culture", culture);

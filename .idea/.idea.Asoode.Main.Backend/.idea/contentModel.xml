@@ -22,6 +22,7 @@
           <e p="LocalizeAttribute.cs" t="Include" />
         </e>
         <e p="I18n" t="Include">
+          <e p="ar.json" t="Include" />
           <e p="en.json" t="Include" />
           <e p="fa.json" t="Include" />
         </e>
@@ -147,7 +148,8 @@
             <e p="artwich.png" t="Include" />
             <e p="asoode-logo.svg" t="Include" />
             <e p="axess-logo.png" t="Include" />
-            <e p="bicycle.png" t="Include" />
+            <e p="bicycle-ltr.png" t="Include" />
+            <e p="bicycle-rtl.png" t="Include" />
             <e p="brands" t="Include">
               <e p="as-ico.png" t="Include" />
               <e p="bn-ico.png" t="Include" />
@@ -155,8 +157,12 @@
               <e p="tk-ico.png" t="Include" />
               <e p="tr-ico.png" t="Include" />
             </e>
-            <e p="cards.png" t="Include" />
-            <e p="dashboard.png" t="Include" />
+            <e p="cards-ar.png" t="Include" />
+            <e p="cards-en.png" t="Include" />
+            <e p="cards-fa.png" t="Include" />
+            <e p="dashboard-ar.png" t="Include" />
+            <e p="dashboard-en.png" t="Include" />
+            <e p="dashboard-fa.png" t="Include" />
             <e p="favicons" t="Include">
               <e p="android-chrome-192x192.png" t="Include" />
               <e p="android-chrome-512x512.png" t="Include" />
@@ -172,13 +178,17 @@
               <e p="safari-pinned-tab.svg" t="Include" />
             </e>
             <e p="header.png" t="Include" />
-            <e p="holding.png" t="Include" />
+            <e p="holding-ar.png" t="Include" />
+            <e p="holding-en.png" t="Include" />
+            <e p="holding-fa.png" t="Include" />
             <e p="main-bg.png" t="Include" />
             <e p="main-bg@2x.png" t="Include" />
             <e p="mashver-app.png" t="Include" />
             <e p="max-duel.png" t="Include" />
             <e p="message.png" t="Include" />
-            <e p="messenger-bot.png" t="Include" />
+            <e p="messenger-bot-ar.png" t="Include" />
+            <e p="messenger-bot-en.png" t="Include" />
+            <e p="messenger-bot-fa.png" t="Include" />
             <e p="owl" t="Include">
               <e p="ajax-loader.gif" t="Include" />
               <e p="owl.carousel.css" t="Include" />
@@ -188,7 +198,9 @@
             </e>
             <e p="phone.png" t="Include" />
             <e p="quotation.png" t="Include" />
-            <e p="report-1.png" t="Include" />
+            <e p="report-1-ar.png" t="Include" />
+            <e p="report-1-en.png" t="Include" />
+            <e p="report-1-fa.png" t="Include" />
             <e p="slider" t="Include">
               <e p="slide-1-ar.png" t="Include" />
               <e p="slide-1-en.png" t="Include" />
@@ -207,8 +219,12 @@
               <e p="slide-5-fa.png" t="Include" />
               <e p="slide-6.png" t="Include" />
             </e>
-            <e p="timespent.png" t="Include" />
-            <e p="wbs.png" t="Include" />
+            <e p="timespent-ar.png" t="Include" />
+            <e p="timespent-en.png" t="Include" />
+            <e p="timespent-fa.png" t="Include" />
+            <e p="wbs-ar.png" t="Include" />
+            <e p="wbs-en.png" t="Include" />
+            <e p="wbs-fa.png" t="Include" />
           </e>
           <e p="scripts" t="Include">
             <e p="bootstrap.min.js" t="Include" />

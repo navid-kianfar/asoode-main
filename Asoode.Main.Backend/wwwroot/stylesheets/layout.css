@@ -199,13 +199,17 @@ body {
 }
 
 .page-about {
-  background: url("/images/bicycle.png") left top no-repeat;
+  background: url("/images/bicycle-rtl.png") left top no-repeat;
   min-height: 450px;
 }
 .page-about .about {
   font-size: 0.9rem;
   text-align: justify;
   line-height: 2.2rem;
+}
+
+body.dir-ltr .page-about {
+  background: url("/images/bicycle-ltr.png") right top no-repeat !important;
 }
 
 .page-why table {

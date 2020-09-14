@@ -50,7 +50,7 @@ namespace Asoode.Main.Business.General
                         UserId = t.Testimonial.UserId
                     }).ToArray();
 
-                    if (!result.Any())
+                    if (!result.Any() && culture == "fa")
                     {
                         result = new[]
                         {
