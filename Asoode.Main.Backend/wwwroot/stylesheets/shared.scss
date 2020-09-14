@@ -142,7 +142,10 @@ body {
 
   &.lang-ar {
     margin: 0;
-    font-family: 'Almarai';
+    * {
+      font-family: 'Almarai';
+      font-weight: 300;
+    }
   }
 
   &.dir-rtl {

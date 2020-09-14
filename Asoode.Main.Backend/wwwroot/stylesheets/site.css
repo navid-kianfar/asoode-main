@@ -87,6 +87,10 @@ body.lang-en {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+body.lang-ar *{
+  font-family: 'Almarai';
+  font-weight: 300;
+}
 body.dir-rtl {
   direction: rtl;
   text-align: right;
