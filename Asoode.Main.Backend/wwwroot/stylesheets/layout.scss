@@ -141,6 +141,7 @@ body.dir-ltr {
     max-width: 1000px;
     margin: 50px auto;
   }
+
   th {
     border-bottom: 1px dashed #ddd;
     padding: 5px;
@@ -149,6 +150,7 @@ body.dir-ltr {
     vertical-align: bottom;
     border-inline-end: 2px solid #ddd;
   }
+
   td {
     border-inline-end: 2px solid #ddd;
     border-bottom: 1px dashed #ddd;
@@ -156,6 +158,7 @@ body.dir-ltr {
     text-align: center;
     font-size: 0.7rem;
     vertical-align: bottom;
+
     &:first-child {
       text-align: inherit;
     }
@@ -164,6 +167,7 @@ body.dir-ltr {
       font-size: 30px;
       padding: 5px;
       font-weight: 300;
+
       i {
         font-size: 15px;
         color: #FF5584 !important;
@@ -173,14 +177,19 @@ body.dir-ltr {
         }
       }
     }
+    &.half {
+      i.icon-checkmark3 {
+        color: #d6d5d5 !important;
+      }
+    }
   }
-  
+
   h1 {
     text-align: center;
     font-size: 1.3rem;
     font-weight: 400;
   }
-  
+
   .video-container {
     margin: 50px auto;
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
@@ -196,6 +205,7 @@ body.dir-ltr {
     font-size: 1.2rem;
     font-weight: 400;
   }
+
   .header i {
     color: #D4AF37;
     margin: 20px 0;
@@ -210,6 +220,7 @@ body.dir-ltr {
     max-width: 1000px;
     margin: 50px auto;
   }
+
   th {
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
@@ -218,26 +229,28 @@ body.dir-ltr {
     font-size: 0.7rem;
     vertical-align: top;
     border-inline-end: 2px solid #ddd;
-    
+
     &:first-child {
       border-inline-start: none;
     }
-    
+
     .title {
       color: #333333;
       font-weight: 500;
       font-size: 1rem;
     }
+
     .price {
       color: #FF5584;
       font-weight: 400;
       font-size: 1.2rem;
     }
+
     .price-unit {
       color: #626061;
       font-size: 0.7rem;
     }
-    
+
     button {
       color: #333333;
       margin: 10px 0;
@@ -249,6 +262,7 @@ body.dir-ltr {
       cursor: pointer;
     }
   }
+
   td {
     border-inline-end: 2px solid #ddd;
     border-bottom: 1px dashed #ddd;
@@ -257,36 +271,41 @@ body.dir-ltr {
     font-size: 0.9rem;
     vertical-align: bottom;
     font-weight: 500;
+
     &:first-child {
       text-align: inherit;
     }
-    
+
     &.ico {
       font-size: 30px;
       padding: 5px;
       font-weight: 300;
-       i {
-         font-size: 15px;
-         color: #FF5584;
-         
-         &.icon-checkmark3 {
-           color: #40a220;
-         }
-       }
+
+      i {
+        font-size: 15px;
+        color: #FF5584;
+
+        &.icon-checkmark3 {
+          color: #40a220;
+        }
+      }
     }
   }
-  
+
   .more {
     padding: 50px;
-    
+
     h3 {
       font-size: 1.2rem;
       font-weight: 500;
       margin-bottom: 20px;
     }
+
     h4 {
       font-size: 0.9rem;
       font-weight: 400;
+      line-height: 1.8rem;
+      text-align: justify;
     }
   }
 }
@@ -296,16 +315,18 @@ body.dir-ltr {
     padding: 30px 0;
     max-width: 1000px;
     margin: 0 auto;
-    
+
     ul {
       list-style: none;
       display: flex;
       flex-direction: column;
       margin: 0;
       padding: 0;
+
       li {
         display: flex;
         padding: 10px 0;
+
         a {
           color: #3c2359;
         }
@@ -320,35 +341,42 @@ body.dir-ltr {
     font-weight: 400;
     text-align: center;
   }
-  
+
   .post {
     margin-bottom: 50px;
+
     &.large {
       margin-top: 50px;
     }
+
     img {
       width: 100%;
       max-width: 100%;
       margin-bottom: 10px;
     }
+
     a {
       color: #2b2a2a;
     }
+
     h2 {
       font-size: 1.1rem;
       font-weight: 400;
     }
+
     h3 {
       font-size: 0.9rem;
       color: #858282;
       text-align: justify;
     }
+
     .info {
       .name {
         color: #454343;
         font-size: 0.7rem;
         font-weight: 400;
       }
+
       .date {
         color: #454343;
         font-size: 0.7rem;
@@ -365,6 +393,7 @@ body.dir-ltr {
     text-align: justify;
     line-height: 1.5rem;
   }
+
   img {
     max-width: 100%;
     height: auto !important;
@@ -373,7 +402,7 @@ body.dir-ltr {
       width: 100%;
     }
   }
-  
+
   .content {
     color: #5f5c5c;
     padding: 30px;
@@ -387,27 +416,30 @@ body.dir-ltr {
   img {
     max-width: 100%;
   }
-  
+
   form {
     padding: 30px 0;
+
     .form-group {
       small {
         font-size: 0.7rem;
         font-weight: 500;
-        color: #bd2130!important;
+        color: #bd2130 !important;
       }
+
       input {
         border: 2px solid #ddd;
         padding: 15px;
         font-size: 0.8rem;
         width: 350px;
         max-width: 100%;
-        
+
         &:focus {
           outline: none;
           border-color: #80bdff;
         }
       }
+
       textarea {
         border: 2px solid #ddd;
         padding: 15px;
@@ -415,18 +447,18 @@ body.dir-ltr {
         width: 350px;
         max-width: 100%;
         resize: none;
-        
+
         &:focus {
           outline: none;
           border-color: #80bdff;
         }
       }
-      
+
       &.error {
         input, textarea {
-          border-color: #bd2130!important;
-          color: #bd2130!important;
-          
+          border-color: #bd2130 !important;
+          color: #bd2130 !important;
+
           &:focus {
             outline: none;
             border-color: #bd2130;
@@ -434,8 +466,9 @@ body.dir-ltr {
         }
       }
     }
+
     button {
-      background: #6f42c1!important;
+      background: #6f42c1 !important;
       border: none;
       cursor: pointer;
       font-size: 0.7rem;
@@ -448,7 +481,7 @@ body.dir-ltr {
 .pagination {
   margin: 0 auto 20px;
   max-width: 500px;
-  
+
   .page-link {
     color: #3c2359;
     border-color: transparent;
@@ -460,6 +493,7 @@ body.dir-ltr {
     padding: 350px 50px 50px;
   }
 }
+
 @media (max-width: 750px) {
   .header nav {
     padding: 10px;
@@ -472,6 +506,7 @@ body.dir-ltr {
     }
   }
 }
+
 @media (max-width: 460px) {
   .footer {
     flex-direction: column;
@@ -481,6 +516,7 @@ body.dir-ltr {
     }
   }
 }
+
 @media (max-width: 400px) {
   .header {
     .box {
@@ -495,6 +531,7 @@ body.dir-ltr {
     }
   }
 }
+
 @media (max-width: 350px) {
   .header {
     .box {
