@@ -87,8 +87,11 @@ body.lang-en {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-body.lang-ar *{
-  font-family: 'Almarai';
+body.lang-ar {
+  margin: 0;
+}
+body.lang-ar * {
+  font-family: "Almarai";
   font-weight: 300;
 }
 body.dir-rtl {
@@ -252,6 +255,9 @@ body.dir-ltr .page-about {
 .page-why td.ico i.icon-checkmark3 {
   color: #40a220 !important;
 }
+.page-why td.half i.icon-checkmark3 {
+  color: #d6d5d5 !important;
+}
 .page-why h1 {
   text-align: center;
   font-size: 1.3rem;
@@ -353,6 +359,8 @@ body.dir-ltr .page-about {
 .page-plans .more h4 {
   font-size: 0.9rem;
   font-weight: 400;
+  line-height: 1.8rem;
+  text-align: justify;
 }
 
 .page-faq .faq-holder {
