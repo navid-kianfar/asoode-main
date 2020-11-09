@@ -90,6 +90,25 @@ namespace Asoode.Main.Business.General
                 return OperationResult<GridResult<PostViewModel>>.Failed();
             }
         }
+        public async Task<OperationResult<PostViewModel[]>> AllPosts(string culture)
+        {
+            try
+            {
+                using (var unit = _serviceProvider.GetService<ApplicationDbContext>())
+                {
+                    var posts = await unit.BlogPosts.Where(p => p.Culture == culture)
+                        .AsNoTracking()
+                        .OrderByDescending(i => i.CreatedAt)
+                        .ToArrayAsync();
+                    return OperationResult<PostViewModel[]>.Success(posts.Select(p => p.ToViewModel()).ToArray());
+                }
+            }
+            catch (Exception ex)
+            {
+                await _serviceProvider.GetService<IErrorBiz>().LogException(ex);
+                return OperationResult<PostViewModel[]>.Failed();
+            }
+        }
 
         public async Task<OperationResult<PostViewModel>> Post(string postKey)
         {

@@ -48,6 +48,8 @@
             <e p="Index.cshtml" t="Include" />
             <e p="Plans.cshtml" t="Include" />
             <e p="Post.cshtml" t="Include" />
+            <e p="Rss.cshtml" t="Include" />
+            <e p="SiteMap.cshtml" t="Include" />
             <e p="Why.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
@@ -260,6 +262,7 @@
         </e>
         <e p="General" t="Include">
           <e p="BlogBiz.cs" t="Include" />
+          <e p="SeoBiz.cs" t="Include" />
           <e p="TestimonialBiz.cs" t="Include" />
           <e p="TranslateBiz.cs" t="Include" />
         </e>
@@ -286,6 +289,7 @@
           <e p="General" t="Include">
             <e p="IBlogBiz.cs" t="Include" />
             <e p="IJsonBiz.cs" t="Include" />
+            <e p="ISeoBiz.cs" t="Include" />
             <e p="IServerInfo.cs" t="Include" />
             <e p="ITestimonailBiz.cs" t="Include" />
             <e p="ITranslateBiz.cs" t="Include" />
@@ -343,6 +347,7 @@
             <e p="GridFilterWithParams.cs" t="Include" />
             <e p="GridResult.cs" t="Include" />
             <e p="SelectableItem.cs" t="Include" />
+            <e p="SiteMapViewModel.cs" t="Include" />
             <e p="TestimonialViewModel.cs" t="Include" />
           </e>
           <e p="Membership" t="Include">

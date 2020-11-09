@@ -20,6 +20,16 @@ namespace Asoode.Main.Backend.Controllers
         {
             _serviceProvider = serviceProvider;
         }
+        public IActionResult SiteMap()
+        {
+            Response.ContentType = "text/xml";
+            return View();
+        }
+        public IActionResult Rss()
+        {
+            Response.ContentType = "text/xml";
+            return View();
+        }
         public IActionResult Index()
         {
             return View();

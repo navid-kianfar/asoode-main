@@ -52,6 +52,11 @@ namespace Asoode.Main.Backend.Engine
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    "sitemap", 
+                    "sitemap.xml", 
+                    new { controller = "Home", action = "SiteMap" }
+                );
+                endpoints.MapControllerRoute(
                     "root", 
                     "{culture?}", 
                     new { controller = "Home", action = "Index" }, 

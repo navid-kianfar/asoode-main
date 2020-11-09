@@ -19,6 +19,7 @@ namespace Asoode.Main.Business
             services.AddTransient<IBlogBiz, BlogBiz>();
             services.AddTransient<IPlanBiz, PlanBiz>();
             services.AddTransient<IErrorBiz, ErrorBiz>();
+            services.AddTransient<ISeoBiz, SeoBiz>();
             return services;
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using Asoode.Main.Core.Primitives;
 using Asoode.Main.Core.ViewModel.Blog;
@@ -12,5 +13,6 @@ namespace Asoode.Main.Core.Contracts.General
         Task<OperationResult<GridResult<PostViewModel>>> Posts(Guid blogId, GridFilter model);
         Task<OperationResult<PostViewModel>> Post(string blogId);
         Task<OperationResult<BlogViewModel>> Faq(string culture);
+        Task<OperationResult<PostViewModel[]>> AllPosts(string culture);
     }
 }
