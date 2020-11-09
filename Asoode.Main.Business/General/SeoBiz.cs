@@ -77,6 +77,7 @@ namespace Asoode.Main.Business.General
                 var blog = channels.Data.Single(b => b.Type == BlogType.Post);
                 return new RssViewModel
                 {
+                    Location = $"https://{baseDomain}/rss.xml",
                     Description = blog.Description,
                     Link = blog.Permalink(domainWithLang),
                     Title = blog.Title,

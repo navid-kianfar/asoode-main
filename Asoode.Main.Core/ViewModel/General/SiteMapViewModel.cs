@@ -16,6 +16,7 @@ namespace Asoode.Main.Core.ViewModel.General
         public string Description { get; set; }
         public string Link { get; set; }
         public RssItemViewModel[] Items { get; set; }
+        public string Location { get; set; }
     }
 
     public class RssItemViewModel
