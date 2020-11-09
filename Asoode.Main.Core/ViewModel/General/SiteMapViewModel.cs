@@ -12,7 +12,10 @@ namespace Asoode.Main.Core.ViewModel.General
 
     public class RssViewModel
     {
-        public RssItemViewModel[] Channels { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Link { get; set; }
+        public RssItemViewModel[] Items { get; set; }
     }
 
     public class RssItemViewModel
@@ -20,6 +23,5 @@ namespace Asoode.Main.Core.ViewModel.General
         public string Title { get; set; }
         public string Description { get; set; }
         public string Link { get; set; }
-        public RssItemViewModel[] Items { get; set; }
     }
 }

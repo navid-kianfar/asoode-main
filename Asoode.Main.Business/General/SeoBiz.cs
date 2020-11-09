@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Asoode.Main.Core.Contracts.General;
 using Asoode.Main.Core.Contracts.Logging;
+using Asoode.Main.Core.Primitives.Enums;
 using Asoode.Main.Core.ViewModel.General;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -72,27 +73,21 @@ namespace Asoode.Main.Business.General
                 var blogBiz = _serviceProvider.GetService<IBlogBiz>();
                 var channels = await blogBiz.AllBlogs(culture);
                 var posts = await blogBiz.AllPosts(culture);
-                
-                var result = new RssViewModel();
 
-                result.Channels = channels.Data.Select(c => new RssItemViewModel
+                var blog = channels.Data.Single(b => b.Type == BlogType.Post);
+                return new RssViewModel
                 {
-                    Description = c.Description,
-                    Link = c.Permalink(domainWithLang),
-                    Title = c.Title,
+                    Description = blog.Description,
+                    Link = blog.Permalink(domainWithLang),
+                    Title = blog.Title,
                     Items = posts.Data
-                        .Where(p => p.BlogId == c.Id)
                         .OrderByDescending(i => i.CreatedAt)
                         .Select(p => new RssItemViewModel
                         {
-                            Description = p.Description,
-                            Link = p.Permalink(baseDomain),
-                            Title = p.Title
+                            Description = p.Description, Link = p.Permalink(baseDomain), Title = p.Title
                         })
                         .ToArray()
-                }).ToArray();
-
-                return result;
+                };
             }
             catch (Exception ex)
             {
