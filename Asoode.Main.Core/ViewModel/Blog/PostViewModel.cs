@@ -1,4 +1,5 @@
 using System;
+using System.Text.Encodings.Web;
 using Asoode.Main.Core.ViewModel.General;
 
 namespace Asoode.Main.Core.ViewModel.Blog
@@ -20,6 +21,6 @@ namespace Asoode.Main.Core.ViewModel.Blog
         public string LargeImage { get; set; }
         public string Key { get; set; }
         
-        public string Permalink(string domain) => $"https://{domain}/{Culture}/post/{Key}/{NormalizedTitle}";
+        public string Permalink(string domain) => $"https://{domain}/{Culture}/post/{Key}/{UrlEncoder.Default.Encode(NormalizedTitle)}";
     }
 }

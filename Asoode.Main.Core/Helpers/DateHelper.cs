@@ -18,7 +18,13 @@ namespace Asoode.Main.Core.Helpers
             return (long) (datetime - sTime).TotalSeconds;
         }
         
-        
+        public static string PubDate(DateTime pubDate)
+        {
+            var value = pubDate.ToString("ddd',' d MMM yyyy HH':'mm':'ss") +
+                        " " +
+                        pubDate.ToString("zzzz").Replace(":", "");
+            return value;
+        }
 
         public static string Format(DateTime date, string format = "yyyy/MM/dd", string culture = null)
         {
