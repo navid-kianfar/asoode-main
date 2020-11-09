@@ -20,8 +20,10 @@ namespace Asoode.Main.Core.ViewModel.General
 
     public class RssItemViewModel
     {
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Link { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

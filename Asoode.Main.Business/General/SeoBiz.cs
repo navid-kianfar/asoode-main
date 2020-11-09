@@ -84,7 +84,11 @@ namespace Asoode.Main.Business.General
                         .OrderByDescending(i => i.CreatedAt)
                         .Select(p => new RssItemViewModel
                         {
-                            Description = p.Description, Link = p.Permalink(baseDomain), Title = p.Title
+                            Id = p.Id,
+                            Description = p.Description, 
+                            Link = p.Permalink(baseDomain), 
+                            Title = p.Title,
+                            CreatedAt = p.CreatedAt
                         })
                         .ToArray()
                 };

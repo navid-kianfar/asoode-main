@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 @using Asoode.Main.Core.Contracts.General
+@using Microsoft.AspNetCore.Http.Extensions
 @inject ISeoBiz seoBiz
 @{
     Layout = null;
@@ -14,9 +15,11 @@
         @foreach (var post in rss.Items)
         {
             <item>
+                <guid>@post.Link</guid>
                 <title> @post.Title </title>
                 @Html.Raw("<link>") @post.Link @Html.Raw("</link>")
                 <description>@post.Description</description>
+                <pubDate>@post.CreatedAt.ToString("f")</pubDate>
             </item>
         }
     </channel>
