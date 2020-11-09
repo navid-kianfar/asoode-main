@@ -57,6 +57,11 @@ namespace Asoode.Main.Backend.Engine
                     new { controller = "Home", action = "SiteMap" }
                 );
                 endpoints.MapControllerRoute(
+                    "rss", 
+                    "rss.xml", 
+                    new { controller = "Home", action = "Rss" }
+                );
+                endpoints.MapControllerRoute(
                     "root", 
                     "{culture?}", 
                     new { controller = "Home", action = "Index" }, 

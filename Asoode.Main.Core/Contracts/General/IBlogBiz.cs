@@ -14,5 +14,6 @@ namespace Asoode.Main.Core.Contracts.General
         Task<OperationResult<PostViewModel>> Post(string blogId);
         Task<OperationResult<BlogViewModel>> Faq(string culture);
         Task<OperationResult<PostViewModel[]>> AllPosts(string culture);
+        Task<OperationResult<BlogViewModel[]>> AllBlogs(string culture);
     }
 }

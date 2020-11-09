@@ -12,5 +12,14 @@ namespace Asoode.Main.Core.ViewModel.Blog
         public string Keywords { get; set; }
         public string Description { get; set; }
         public string Title { get; set; }
+        
+        public string Permalink(string domain) {
+            switch (this.Type)
+            {
+                case BlogType.Page: return $"{domain}/pages/";
+                case BlogType.Faq: return $"{domain}/faq";
+                default: return $"{domain}/blog";
+            }
+        }
     }
 }

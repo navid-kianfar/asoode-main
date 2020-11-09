@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Asoode.Main.Core.Contracts.General;
 using Asoode.Main.Core.Contracts.Logging;
@@ -58,6 +59,45 @@ namespace Asoode.Main.Business.General
             {
                 await _serviceProvider.GetService<IErrorBiz>().LogException(ex);
                 return new SiteMapViewModel[0];
+            }
+        }
+
+        public async Task<RssViewModel> Rss()
+        {
+            try
+            {
+                var culture = _configuration["Setting:I18n:Default"];
+                var baseDomain = _configuration["Setting:Domain"];
+                var domainWithLang = $"https://{baseDomain}/{culture}";
+                var blogBiz = _serviceProvider.GetService<IBlogBiz>();
+                var channels = await blogBiz.AllBlogs(culture);
+                var posts = await blogBiz.AllPosts(culture);
+                
+                var result = new RssViewModel();
+
+                result.Channels = channels.Data.Select(c => new RssItemViewModel
+                {
+                    Description = c.Description,
+                    Link = c.Permalink(domainWithLang),
+                    Title = c.Title,
+                    Items = posts.Data
+                        .Where(p => p.BlogId == c.Id)
+                        .OrderByDescending(i => i.CreatedAt)
+                        .Select(p => new RssItemViewModel
+                        {
+                            Description = p.Description,
+                            Link = p.Permalink(baseDomain),
+                            Title = p.Title
+                        })
+                        .ToArray()
+                }).ToArray();
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                await _serviceProvider.GetService<IErrorBiz>().LogException(ex);
+                return null;
             }
         }
     }

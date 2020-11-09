@@ -110,6 +110,27 @@ namespace Asoode.Main.Business.General
             }
         }
 
+        public async Task<OperationResult<BlogViewModel[]>> AllBlogs(string culture)
+        {
+            try
+            {
+                using (var unit = _serviceProvider.GetService<ApplicationDbContext>())
+                {
+                    var blog = await unit.Blogs.Where(b => b.Culture == culture)
+                        .AsNoTracking()
+                        .OrderByDescending(o => o.CreatedAt)
+                        .ToArrayAsync();
+                    
+                    return OperationResult<BlogViewModel[]>.Success(blog.Select(b => b.ToViewModel()).ToArray());
+                }
+            }
+            catch (Exception ex)
+            {
+                await _serviceProvider.GetService<IErrorBiz>().LogException(ex);
+                return OperationResult<BlogViewModel[]>.Failed();
+            }
+        }
+
         public async Task<OperationResult<PostViewModel>> Post(string postKey)
         {
             try

@@ -1,3 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+@using Asoode.Main.Core.Contracts.General
+@inject ISeoBiz seoBiz
 @{
     Layout = null;
+    var rss = await seoBiz.Rss();
 }
+<rss version="2.0">
+    
+    @foreach (var channel in rss.Channels)
+    {
+        <channel>
+            <title> @channel.Title </title>
+            @Html.Raw("<link>") @channel.Link @Html.Raw("</link>")
+            <description>@channel.Description</description>
+            @foreach (var post in channel.Items)
+            {
+                <item>
+                    <title> @post.Title </title>
+                    @Html.Raw("<link>") @post.Link @Html.Raw("</link>")
+                    <description>@post.Description</description>
+                </item>
+            }
+        </channel>
+    }
+    
+</rss>
