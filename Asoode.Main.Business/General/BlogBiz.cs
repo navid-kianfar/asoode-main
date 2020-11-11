@@ -71,7 +71,8 @@ namespace Asoode.Main.Business.General
                 {
                     var query = unit.BlogPosts
                         .Where(i => i.BlogId == blogId)
-                        .OrderByDescending(i => i.CreatedAt);
+                        .OrderByDescending(i => i.Priority)
+                        .ThenByDescending(i => i.CreatedAt);
                     return await DbHelper.GetPaginatedData(query, tuple =>
                     {
                         var (items, startIndex) = tuple;
