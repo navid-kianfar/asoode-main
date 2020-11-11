@@ -5,6 +5,8 @@
 @{
     ViewData.Add("PAGE_TITLE", Model.Blog.Title);
     ViewData.Add("PAGE_DESCRIPTION", Model.Blog.Description);
+    ViewData.Add("PAGE_CREATE_TIME", Model.Blog.CreatedAt);
+    ViewData.Add("PAGE_UPDATE_TIME", Model.Blog.UpdatedAt ?? Model.Blog.CreatedAt);
 }
 <div class="page-faq pg">
     <div class="container-fluid">

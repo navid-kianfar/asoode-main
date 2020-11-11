@@ -443,6 +443,13 @@ body.dir-ltr .page-about {
   line-height: 2rem;
 }
 
+.page-error h1 {
+  font-size: 1.2rem !important;
+  font-weight: 500;
+  text-align: center;
+  margin: 20vh 0 30vh;
+}
+
 .page-contact img {
   max-width: 100%;
 }

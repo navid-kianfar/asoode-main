@@ -6,26 +6,21 @@
 @inject ITestimonailBiz testimonailBiz
 @{
     Layout = "";
+    ViewData["PAGE_TITLE"] = @translate.Get("EVERY_THING_YOU_NEED", ViewBag.Lang);
+    ViewData["PAGE_DESCRIPTION"] = @translate.Get("APP_DESCRIPTION", ViewBag.Lang);
     var testimonials = await testimonailBiz.Top5(ViewBag.Lang);
 }
 <html dir="@ViewBag.Direction" lang="@ViewBag.Lang">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"/>
-    <meta name="description" content="@translate.Get("SUMMARY", ViewBag.Lang)">
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>@translate.Get("EVERY_THING_YOU_NEED", ViewBag.Lang)</title>
-    <link rel="stylesheet" href="~/stylesheets/bootstrap.@(ViewBag.Direction).min.css"/>
-    <link rel="stylesheet" href="~/stylesheets/site.css"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="/images/favicons/app.@(ViewBag.Lang).manifest.txt" />
-    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Almarai&display=swap">
+<partial name="_Meta"/>
+<link rel="stylesheet" href="~/stylesheets/bootstrap.@(ViewBag.Direction).min.css"/>
+<link rel="stylesheet" href="~/stylesheets/site.css"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/images/favicons/app.@(ViewBag.Lang).manifest.txt" />
+<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Almarai&display=swap">
 </head>
 <body class="home-page lang-@ViewBag.Lang dir-@ViewBag.Direction">
 @* <div class="change-password">@translate.Get("OLD_USERS_CHANGE_PASSWORD")</div> *@
@@ -117,7 +112,7 @@
             <h5 class="description">@translate.Get("FEATURE_WBS_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
-            <img src="/images/wbs-@(ViewBag.Lang).png" alt="temp">
+            <img src="/images/wbs-@(ViewBag.Lang).png" alt="wbs">
         </div>
     </section>
     <section class="feature">
@@ -126,7 +121,7 @@
             <h5 class="description">@translate.Get("FEATURE_WP_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
-            <img src="/images/cards-@(ViewBag.Lang).png" alt="temp">
+            <img src="/images/cards-@(ViewBag.Lang).png" alt="tasks">
         </div>
     </section>
     <section class="feature">
@@ -135,7 +130,7 @@
             <h5 class="description">@translate.Get("FEATURE_BOT_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
-            <img src="/images/messenger-bot-@(ViewBag.Lang).png" alt="temp">
+            <img src="/images/messenger-bot-@(ViewBag.Lang).png" alt="messenger">
         </div>
     </section>
     <section class="feature">
@@ -144,7 +139,7 @@
             <h5 class="description">@translate.Get("FEATURE_TS_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
-            <img src="/images/timespent-@(ViewBag.Lang).png" alt="temp">
+            <img src="/images/timespent-@(ViewBag.Lang).png" alt="time spent">
         </div>
     </section>
     <section class="feature">
@@ -153,7 +148,7 @@
             <h5 class="description">@translate.Get("FEATURE_DASHBOARD_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
-            <img src="/images/dashboard-@(ViewBag.Lang).png" alt="temp">
+            <img src="/images/dashboard-@(ViewBag.Lang).png" alt="dashboard">
         </div>
     </section>
     <section class="feature">
@@ -162,7 +157,7 @@
             <h5 class="description">@translate.Get("FEATURE_HOLDING_DESCRIPTION", ViewBag.Lang)</h5>
         </div>
         <div class="image">
-            <img src="/images/holding-@(ViewBag.Lang).png" alt="temp">
+            <img src="/images/holding-@(ViewBag.Lang).png" alt="holding">
         </div>
     </section>
 </div>
@@ -253,19 +248,19 @@
 
     <div class="customers">
         <a href="#">
-            <img src="/images/adam-o-hava.png" alt="">
+            <img src="/images/adam-o-hava.png" alt="adam-o-hava">
         </a>
         <a href="#">
-            <img src="/images/artwich.png" alt="">
+            <img src="/images/artwich.png" alt="artwich">
         </a>
         <a href="#">
-            <img src="/images/axess-logo.png" alt="">
+            <img src="/images/axess-logo.png" alt="axess">
         </a>
         <a class="mashverapp" href="#">
-            <img src="/images/mashver-app.png" alt="">
+            <img src="/images/mashver-app.png" alt="mashverapp">
         </a>
         <a href="https://maxduel.com">
-            <img src="/images/max-duel.png" alt="">
+            <img src="/images/max-duel.png" alt="maxduel">
         </a>
     </div>
 
@@ -294,7 +289,7 @@
                             <div class="name">@testimonail.FullName</div>
                             <div class="job-title">@testimonail.Bio</div>
                             <div class="description">
-                                <img src="/images/quotation.png" alt="">
+                                <img src="/images/quotation.png" alt="testimonail">
                                 @testimonail.Message
                             </div>
                         </div>
@@ -310,7 +305,7 @@
 <div class="footer">
     <div class="box asoode">
         <a class="logo" href="/@(ViewBag.Lang)/">
-            <img src="/images/asoode-logo.svg" alt="">
+            <img src="/images/asoode-logo.svg" alt="asoode-logo">
         </a>
         <a href="/@ViewBag.Lang/contact">@translate.Get("CONTACT_US", ViewBag.Lang)</a>
         <a href="javascript:void(0)">@translate.Get("JOB_OPPORTUNITIES", ViewBag.Lang)</a>

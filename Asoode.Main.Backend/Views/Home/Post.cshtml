@@ -4,6 +4,8 @@
 @{
     ViewData.Add("PAGE_TITLE", Model.Title);
     ViewData.Add("PAGE_DESCRIPTION", Model.Description);
+    ViewData.Add("PAGE_CREATE_TIME", Model.CreatedAt);
+    ViewData.Add("PAGE_UPDATE_TIME", Model.UpdatedAt ?? Model.CreatedAt);
 }
 <div class="page-post pg">
     <div class="container">

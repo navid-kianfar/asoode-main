@@ -87,8 +87,11 @@ body.lang-en {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-body.lang-ar *{
-  font-family: 'Almarai';
+body.lang-ar {
+  margin: 0;
+}
+body.lang-ar * {
+  font-family: "Almarai";
   font-weight: 300;
 }
 body.dir-rtl {

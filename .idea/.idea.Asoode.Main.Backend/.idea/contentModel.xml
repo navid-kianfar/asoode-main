@@ -9,6 +9,7 @@
         <e p="Asoode.Main.Backend.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="ErrorController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
         </e>
         <e p="Engine" t="Include">
@@ -40,6 +41,10 @@
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Error" t="Include">
+            <e p="NotFound.cshtml" t="Include" />
+            <e p="Server.cshtml" t="Include" />
+          </e>
           <e p="Home" t="Include">
             <e p="About.cshtml" t="Include" />
             <e p="Blog.cshtml" t="Include" />
@@ -54,6 +59,7 @@
           </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
+            <e p="_Meta.cshtml" t="Include" />
           </e>
         </e>
         <e p="wwwroot" t="Include">
@@ -229,6 +235,7 @@
             <e p="wbs-en.png" t="Include" />
             <e p="wbs-fa.png" t="Include" />
           </e>
+          <e p="robots.txt" t="Include" />
           <e p="scripts" t="Include">
             <e p="bootstrap.min.js" t="Include" />
             <e p="jquery-3.4.1.min.js" t="Include" />

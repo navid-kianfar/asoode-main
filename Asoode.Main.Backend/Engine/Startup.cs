@@ -46,7 +46,22 @@ namespace Asoode.Main.Backend.Engine
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
+            app.Use(async (context, next) =>
+            {
+                await next();
 
+                switch (context.Response.StatusCode)
+                {
+                    case 404:
+                        context.Request.Path = "/error/400";
+                        await next();
+                        break;
+                    case 500:
+                        context.Request.Path = "/error/500";
+                        await next();
+                        break;
+                }
+            });
             app.UseStaticFiles();
             app.UseRouting();
             app.UseEndpoints(endpoints =>

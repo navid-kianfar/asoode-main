@@ -6,6 +6,8 @@
 @{
     ViewData.Add("PAGE_TITLE", Model.Blog.Title);
     ViewData.Add("PAGE_DESCRIPTION", Model.Blog.Description);
+    ViewData.Add("PAGE_CREATE_TIME", Model.Blog.CreatedAt);
+    ViewData.Add("PAGE_UPDATE_TIME", Model.Blog.UpdatedAt ?? Model.Blog.CreatedAt);
 }
 <div class="page-blog pg">
     <div class="container-fluid">
@@ -20,7 +22,7 @@
             <section class="row post @(counter == 0 ? "large" : "")">
                 <div class="col-md-@(counter == 0 ? "6" : "4")">
                     <a title="@post.Title" href="@post.Permalink(serverInfo.Domain)">
-                        <img src="@post.MediumImage" alt="">
+                        <img src="@post.MediumImage" alt="@post.Title">
                     </a>
                 </div>
                 <div class="col-md-@(counter == 0 ? "6" : "8")">
