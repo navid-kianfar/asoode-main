@@ -13,7 +13,7 @@ namespace Asoode.Main.Backend.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            if (context.HttpContext.Request.Path.Value.Contains(".")) return;
+            // if (context.HttpContext.Request.Path.Value.Contains(".")) return;
             string culture = context.RouteData.Values["culture"]?.ToString();
             if (string.IsNullOrEmpty(culture))
             {
