@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Asoode.Main.Data.Models.Base;
 
@@ -20,5 +21,6 @@ namespace Asoode.Main.Data.Models
         [MaxLength(500)]public string MediumImage { get; set; }
         [MaxLength(500)]public string LargeImage { get; set; }
         [MaxLength(20)]public string Key { get; set; }
+        [DefaultValue(0)]public int Priority { get; set; }
     }
 }

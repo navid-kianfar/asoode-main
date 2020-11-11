@@ -4,7 +4,8 @@ using Asoode.Main.Data.Models.Base;
 
 namespace Asoode.Main.Data.Models
 {
-    public class Plan : BaseEntity {
+    public class Plan : BaseEntity
+    {
         #region Props
 
         [MaxLength(2000)] public string Title { get; set; }
