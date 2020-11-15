@@ -6,7 +6,9 @@ using Asoode.Main.Core.Contracts.General;
 using Asoode.Main.Core.Contracts.Membership;
 using Asoode.Main.Core.ViewModel.Blog;
 using Asoode.Main.Core.ViewModel.General;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Asoode.Main.Backend.Controllers
@@ -15,10 +17,12 @@ namespace Asoode.Main.Backend.Controllers
     public class HomeController : Controller
     {
         private readonly IServiceProvider _serviceProvider;
+        private readonly IConfiguration _configuration;
 
-        public HomeController(IServiceProvider serviceProvider)
+        public HomeController(IServiceProvider serviceProvider, IConfiguration configuration)
         {
             _serviceProvider = serviceProvider;
+            _configuration = configuration;
         }
         public IActionResult SiteMap()
         {
@@ -32,6 +36,21 @@ namespace Asoode.Main.Backend.Controllers
         }
         public IActionResult Index()
         {
+            if (Request.QueryString.HasValue)
+            {
+                string marketer = Request.Query["MARKETER"].ToString();
+                if (!string.IsNullOrEmpty(marketer))
+                {
+                    Response.Cookies.Delete("MARKETER");
+                    Response.Cookies.Append("MARKETER", marketer, new CookieOptions
+                    {
+                        HttpOnly = false,
+                        Path = "/",
+                        IsEssential = true,
+                        Domain = _configuration["Setting:Domain"]
+                    });
+                }
+            }
             return View();
         }
         public IActionResult Why()
