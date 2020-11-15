@@ -38,7 +38,7 @@ namespace Asoode.Main.Backend.Controllers
         {
             if (Request.QueryString.HasValue)
             {
-                string marketer = Request.Query["MARKETER"].ToString();
+                string marketer = Request.Query["marketer"].ToString();
                 if (!string.IsNullOrEmpty(marketer))
                 {
                     Response.Cookies.Delete("MARKETER");
