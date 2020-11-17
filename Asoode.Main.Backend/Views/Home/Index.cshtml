@@ -8,6 +8,7 @@
     Layout = "";
     ViewData["PAGE_TITLE"] = @translate.Get("EVERY_THING_YOU_NEED", ViewBag.Lang);
     ViewData["PAGE_DESCRIPTION"] = @translate.Get("APP_DESCRIPTION", ViewBag.Lang);
+    ViewData["PAGE_KEYWORDS"] = @translate.Get("APP_KEYWORDS", ViewBag.Lang);
     var testimonials = await testimonailBiz.Top5(ViewBag.Lang);
 }
 <html dir="@ViewBag.Direction" lang="@ViewBag.Lang">

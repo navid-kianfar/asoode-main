@@ -14,10 +14,10 @@
 <meta property="og:title" content="@ViewData["PAGE_TITLE"]" />
 <meta property="og:url" content="https://@configuration["Setting:Domain"]/@configuration["Setting:I18n:Default"]/" />
 <meta property="og:site_name" content="Asoode" />
-<meta property="og:updated_time" content="@modifiedDate.ToString("o")" />
+<meta property="og:updated_time" content="@Html.Raw(modifiedDate.ToString("o"))" />
 <meta property="article:publisher" content="https://facebook.com/Asoode" />
-<meta property="article:published_time" content="@createdDate.ToString("o")" />
-<meta property="article:modified_time" content="@modifiedDate.ToString("o")" />
+<meta property="article:published_time" content="@Html.Raw(@createdDate.ToString("o"))" />
+<meta property="article:modified_time" content="@Html.Raw(modifiedDate.ToString("o"))" />
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="@ViewData["PAGE_TITLE"]" />
 <meta name="twitter:description" content="@ViewData["PAGE_DESCRIPTION"]">
@@ -25,6 +25,7 @@
 <meta name="twitter:creator" content="@@nvdknfr">
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <meta name="description" content="@ViewData["PAGE_DESCRIPTION"]">
+<meta name="keywords" content="@ViewData["PAGE_KEYWORDS"]">
 @* <meta property="fb:app_id" content="1711491389121582" /> *@
 @* <link rel="alternate" hreflang="en" href="@configuration["Setting:Domain"]" /> *@
 @* <link rel="alternate" hreflang="fa" href="@configuration["Setting:Domain"]/fa/" /> *@
