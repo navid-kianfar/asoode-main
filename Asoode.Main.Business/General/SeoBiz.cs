@@ -40,6 +40,8 @@ namespace Asoode.Main.Business.General
                     new SiteMapViewModel{ Location = $"{domainWithLang}/contact", Priority = "0.8", LastModified = lastModified},
                     new SiteMapViewModel{ Location = $"{domainWithLang}/about", Priority = "0.8", LastModified = lastModified},
                     new SiteMapViewModel{ Location = $"{domainWithLang}/blog", Priority = "0.8", LastModified = lastModified},
+                    new SiteMapViewModel{ Location = $"https://panel.{baseDomain}/login?lang={culture}", Priority = "0.8", LastModified = lastModified},
+                    new SiteMapViewModel{ Location = $"https://panel.{baseDomain}/register?lang={culture}", Priority = "0.8", LastModified = lastModified},
                 };
 
                 var posts = await _serviceProvider.GetService<IBlogBiz>().AllPosts(culture);
