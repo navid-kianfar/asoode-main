@@ -14,7 +14,7 @@
 {
     <url>
         <loc>@post.Location</loc>
-        <lastmod>@Html.Raw(post.LastModified.ToString("o"))</lastmod>
+        <lastmod>@Html.Raw(post.LastModified.ToString("yyyy-MM-dd"))</lastmod>
         <priority>@post.Priority</priority>
     </url>
 }
