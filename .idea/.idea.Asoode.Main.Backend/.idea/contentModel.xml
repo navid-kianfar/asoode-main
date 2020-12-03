@@ -5,6 +5,9 @@
       <e p=".git/info/exclude" t="IncludeRecursive" />
       <e p="Asoode.Main.Backend" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
+        <e p="appSetting.alrahah.json" t="Include" />
+        <e p="appSetting.asoode.json" t="Include" />
+        <e p="appSetting.ciblsoft.json" t="Include" />
         <e p="appSetting.json" t="Include" />
         <e p="Asoode.Main.Backend.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
@@ -58,6 +61,7 @@
             <e p="Why.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
+            <e p="_GA.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_Meta.cshtml" t="Include" />
           </e>
