@@ -6,7 +6,7 @@
 @inject ITestimonailBiz testimonailBiz
 @{
     Layout = "";
-    ViewData["PAGE_TITLE"] = @translate.Get("EVERY_THING_YOU_NEED", ViewBag.Lang);
+    ViewData["PAGE_TITLE"] = @translate.Get("SUMMARY", ViewBag.Lang);
     ViewData["PAGE_DESCRIPTION"] = @translate.Get("APP_DESCRIPTION", ViewBag.Lang);
     ViewData["PAGE_KEYWORDS"] = @translate.Get("APP_KEYWORDS", ViewBag.Lang);
     var testimonials = await testimonailBiz.Top5(ViewBag.Lang);
@@ -57,8 +57,8 @@
     </nav>
 
     <div class="summary">
-        <h1>@translate.Get("EVERY_THING_YOU_NEED", ViewBag.Lang)</h1>
-        <h2>@translate.Get("SUMMARY", ViewBag.Lang)</h2>
+        <h1>@translate.Get("SUMMARY", ViewBag.Lang)</h1>
+        <h2>@translate.Get("EVERY_THING_YOU_NEED", ViewBag.Lang)</h2>
     </div>
 
     <div class="join">
