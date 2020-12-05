@@ -1,5 +1,5 @@
 {
-  "ABOUT_TEXT": "Asoudeh is an online project and employee management system that, by recognizing the needs of its users, provides users with the possibility of custom planning, from personal businesses and managing home-based and small businesses to the management of large companies and various organizations. Available in the context of websites, desktops and mobile applications, it provides users with the best features at the most reasonable prices and in the easiest way.\nThe Asoudeh system, designed and implemented by Bojan Rahkar Sharif Company, is now working with an eight-member team to continuously improve and design and implement innovative solutions to excel in the field of project management and organizational personnel tasks.",
+  "ABOUT_TEXT": "Asoode is an online project and employee management system that, by recognizing the needs of its users, provides users with the possibility of custom planning, from personal businesses and managing home-based and small businesses to the management of large companies and various organizations. Available in the context of websites, desktops and mobile applications, it provides users with the best features at the most reasonable prices and in the easiest way.\nThe Asoode system, designed and implemented by Bojan Rahkar Sharif Company, is now working with an eight-member team to continuously improve and design and implement innovative solutions to excel in the field of project management and organizational personnel tasks.",
   "ABOUT_US": "About us",
   "ADDITIONAL_COMPLEX_COST": "Every new complex group",
   "ADDITIONAL_COMPLEX_GROUP_COST": "New group structure",
@@ -122,7 +122,7 @@
   "SIMPLE_PROJECT": "Simple project",
   "STARTUPS": "Start-ups",
   "STARTUPS_DESCRIPTION": "Asoode has considered a 50% discount for all its non-free features to support start-ups and the newly registered companies.If less than a year has passed since your company was registered or you are a member of accelerators and growth centers,you are included in this plan.",
-  "SUMMARY": "A software for project and personnel management, team collaboration, and task management",
+  "SUMMARY": "Project, team, time spent and task management",
   "TASKULU": "Taskulu",
   "TEAM_CAMP": "Team camp",
   "THOSE_JOINED": "The teams joined us",
@@ -134,5 +134,11 @@
   "WE_DONT_SHARE_EMAIL": "We won't share your email",
   "WHAT_IS_ON_YOUR_MIND": "Please write your message",
   "WHAT_OTHERS_SAY": "What others say",
-  "WHY_ASOODE": "Why?"
+  "WHY_ASOODE": "Why?",
+  "ERR_404_DESCRIPTION": "Resource Not Found",
+  "ERR_404_TITLE": "Not Found",
+  "ERR_500_DESCRIPTION": "Please try again",
+  "ERR_500_TITLE": "Server Error",
+  "APP_DESCRIPTION": "Project, team, time spent and task management",
+  "APP_KEYWORDS": "Project, team, time spent and task management"
 }
