@@ -57,11 +57,11 @@ namespace Asoode.Main.Backend.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> Plans()
-        {
-            var op = await _serviceProvider.GetService<IPlanBiz>().List();
-            return View(op.Data);
-        }
+        // public async Task<IActionResult> Plans()
+        // {
+        //     var op = await _serviceProvider.GetService<IPlanBiz>().List();
+        //     return View(op.Data);
+        // }
         public IActionResult About()
         {
             return View();

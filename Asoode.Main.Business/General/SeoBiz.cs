@@ -35,7 +35,7 @@ namespace Asoode.Main.Business.General
                     new SiteMapViewModel{ Location = $"{domain}", Priority = "1.0", LastModified = lastModified},
                     new SiteMapViewModel{ Location = $"{domainWithLang}", Priority = "0.9", LastModified = lastModified},
                     new SiteMapViewModel{ Location = $"{domainWithLang}/why", Priority = "0.8", LastModified = lastModified},
-                    new SiteMapViewModel{ Location = $"{domainWithLang}/plans", Priority = "0.8", LastModified = lastModified},
+                    // new SiteMapViewModel{ Location = $"{domainWithLang}/plans", Priority = "0.8", LastModified = lastModified},
                     new SiteMapViewModel{ Location = $"{domainWithLang}/faq", Priority = "0.8", LastModified = lastModified},
                     new SiteMapViewModel{ Location = $"{domainWithLang}/contact", Priority = "0.8", LastModified = lastModified},
                     new SiteMapViewModel{ Location = $"{domainWithLang}/about", Priority = "0.8", LastModified = lastModified},
