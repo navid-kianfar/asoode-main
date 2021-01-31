@@ -16,6 +16,7 @@ namespace Asoode.Main.Data.Models
         [Required][MaxLength(1000)]public string Title { get; set; }
         [Required][MaxLength(1000)]public string NormalizedTitle { get; set; }
         [Required][MaxLength(2000)]public string Summary { get; set; }
+        [MaxLength(1000)]public string EmbedCode { get; set; }
         [Required][MaxLength(10000)]public string Text { get; set; }
         [MaxLength(500)]public string ThumbImage { get; set; }
         [MaxLength(500)]public string MediumImage { get; set; }

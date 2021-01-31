@@ -29,6 +29,7 @@ namespace Asoode.Main.Data.Models.Base
                 Id = post.Id,
                 Keywords = post.Keywords,
                 Summary = post.Summary,
+                EmbedCode = post.EmbedCode,
                 Text = post.Text,
                 Title = post.Title,
                 CreatedAt = post.CreatedAt,
