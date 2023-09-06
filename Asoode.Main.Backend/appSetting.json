@@ -1,0 +1,19 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": ""
+  },
+  "Setting": {
+    "Ga": "",
+    "Domain": "",
+    "I18n": {
+      "Default": "fa",
+      "Allowed": "['fa']"
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
